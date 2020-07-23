@@ -403,6 +403,7 @@ function getDistance(x1, y1, z1, x2, y2, z2)
     return sqrt(x*x+y*y+z*z);
 end
 
+--[[
 function getAngle(x1, y1, x2, y2)
     if(x1 == x2 and y1 == y2) then
         return 0;
@@ -419,6 +420,31 @@ function getAngle(x1, y1, x2, y2)
     end
     return tonumber(angle);
 end
+
+]]--
+
+
+function getAngle(x1, y1, x2, y2)
+
+    if(x1 == x2 and y1 == y2) then
+        return 0;
+    end
+    local x, y = x2-x1, y2- y1;
+
+	local angle =  math.atan(math.abs(y) / math.abs(x)) * 180.0 / 3.14;
+	
+	if(x < 0 and y > 0) then
+		angle = 180-angle
+	elseif (x<0 and y<0) then
+		angle = angle +180
+	elseif (x>0 and y<0) then
+		angle = 360 - angle
+	end
+
+	return tonumber(angle);
+
+end
+
 
 function turnPlayer(_player, _angle)
     SetPlayerAngle(_player, tonumber(_angle));

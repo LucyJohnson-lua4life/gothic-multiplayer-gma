@@ -655,7 +655,7 @@ function InitNewWorldNPC()
   SpawnNPC(Rufus_Dead(), "FP_RUFUS_DEAD", world);
   --wisp forest lake
   SpawnNPC(VLK_1000_Ambient(), "NW_CITY_TAVERN_IN_07 ", world);
-  SpawnNPC(VLK_2000_Vivien(), "FP_STAND_CITY_20", world);
+  SpawnNPC(VLK_2000_Rose(), "FP_STAND_CITY_20", world);
   SpawnNPC(VLK_2001_Olga(), "FP_TAVERN_BAR", world);
 
   SpawnNPC(VLK_7000_Goffrey(), "FP_STAND_SARAH", world);

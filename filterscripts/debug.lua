@@ -1,5 +1,17 @@
 local debug = {}
 
+local function printPointsForAngle(angle, distance, playerid)
+	local ang =  angle * math.pi / 180
+
+	local pos_x = distance * math.cos(ang)
+    local pos_y = distance * math.sin(ang)
+    print("angle: ".. angle)
+	print("x: " .. tostring(pos_x))
+    print("y: " .. tostring(pos_y))
+    
+    SendPlayerMessage(playerid,255,255,255,"angle: " .. angle .. ", x: " .. pos_x .. ", y: " .. pos_y .. ".")
+
+end
 
 function debug.OnPlayerCommandText(playerid, cmdtext)
     local cmd, params = GetCommand(cmdtext);
@@ -77,27 +89,23 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
     if cmdtext == "/npc" then
         --38994, 3901, -2235
         SpawnNPC(PaladinKing("FG"), "TAVERNE", "NEWWORLD\\NEWWORLD.ZEN");
-        print("paladin king inserted")
     end
 
     
     if cmdtext == "/npc1" then
         --38994, 3901, -2235
         SpawnNPC(KnightGuard("FG"), "TAVERNE", "NEWWORLD\\NEWWORLD.ZEN");
-        print("paladin king inserted")
     end
 
     
     if cmdtext == "/npc2" then
         --38994, 3901, -2235
         SpawnNPC(OrcElite(), "TAVERNE", "NEWWORLD\\NEWWORLD.ZEN");
-        print("paladin king inserted")
     end
 
     if cmdtext == "/npc3" then
         --38994, 3901, -2235
         SpawnNPC(MilitiaGuard("FG"), "TAVERNE", "NEWWORLD\\NEWWORLD.ZEN");
-        print("paladin king inserted")
     end
 
     if cmdtext == "/npc4" then
@@ -139,6 +147,11 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
 
     if cmdtext == "/brief" then
         GiveItem(playerid, "STANDARDBRIEF", 1)
+    end
+
+
+    if cmdtext == "/angle" then
+        printPointsForAngle(GetPlayerAngle(playerid),1,playerid)
     end
 
     
