@@ -85,8 +85,10 @@ local function getNpcForName(name)
         return XardasDemon();
     elseif (string.match(name, "^Captn Hook.*")) then
         return DeadPirateCaptn();
-    elseif (string.match(name, "^Rufus.*")) then
-        return Rufus_Dead();
+    elseif (string.match(name, "^Zek.*")) then
+        return Zek_Dead();
+    elseif (string.match(name, "^Betrunkener Schlaeger.*")) then
+        return VLK_2005_BetrunkenerSchlaeger();
     end
 end
 

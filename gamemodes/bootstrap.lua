@@ -107,6 +107,7 @@ function OnPlayerDisconnect(playerid, reason)
 		player_death_module.OnPlayerDisconnect(playerid, reason)
 	end
 	npc_module.OnPlayerDisconnect(playerid, reason)
+	npc_interaction_module.OnPlayerDisconnect(playerid, reason)
 end
 
 function OnPlayerSpawn(playerid, classid)
@@ -121,6 +122,7 @@ function OnPlayerDeath(playerid, p_classid, killerid, k_classid)
 	player_death_module.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
 	spells_module.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
 	npc_module.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
+	npc_interaction_module.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
 end
 
 function OnPlayerHit(playerid, killerid)

@@ -4,30 +4,32 @@ require "serverscripts/has_item_globals"
 require "serverscripts/price_table"
 
 local dia_vlk_2001_olga = {}
+local drunk_calmed_by = {}
  
 local function handleBuddlertruppDia(playerid, text)
-    if string.match(text, "Buddlertrupp") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Hmm tasaechlich. Vor etwa einer Woche kamen hier ein paar <Jungs> mit Schuerfausruestung an.")
+    if string.match(text, "Buddlertrupp") and drunk_calmed_by[playerid] == nil then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Ich wuerde dir gerne helfen, aber ich befuerchte der Betrunkene da drueben macht gleich Aerger. Wenn du dich um ihn kuemmerst erzahl ich dir uber den 'Buddlertrupp'.")
         return true
-    elseif string.match(text, "Jungs") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Sie haben leider nicht genau gesagt wohin sie wollen. Aber <Einer> von ihnen wurde ganz schoen betrunken.")
+    elseif string.match(text, "Buddlertrupp") and drunk_calmed_by[playerid] == true then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Danke erstmal fuer die Hilfe! Also ja der Buddlertruppe hat vor ein paar Tagen hier <Rast> gemacht.")
         return true
-    elseif string.match(text, "Einer") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Er beschwerte sich ueber seine Freundin, wie sie ihn die ganze Zeit schikanierte fuer sein geringes <Gehalt>.")
+    elseif string.match(text, "Rast") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Sie haben nicht erzaehlt wo sie hinwollen. Alle waren sehr ruhig. Insgesamt wirkten sie schon sehr <verdaechtig>.")
         return true
-    elseif string.match(text, "Gehalt") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Sie schien ziemlich viel von seinem Einkommen fuer Kleider und teure Weine <ausgegeben> zu haben.")
+    elseif string.match(text, "verdaechtig") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Einer von den Typen hat sich staendig mit einem <vermummten Mann> draussen unterhalten. Der vermummte Mann selbst ist aber nie in die Taverne gekommen.")
         return true
-    elseif string.match(text, "ausgegeben") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Tja was soll ich sagen. Junge Menschen wissen noch nicht viel ueber die Welt. Also haben sie manchmal schlechte <Prioritaeten>.")
+    elseif string.match(text, "vermummten Mann") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Genaueres kann ich dir nicht erzaehlen, weil der Kerl halt nie reingekommen ist. Was den <Rest> betrifft...")
         return true
-    elseif string.match(text, "Prioritaeten") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Wenn du die Jungs finden willst. Solltest du dich einfach auf dem Weg zur <Goldmine> nahe Onars Hof machen.");
+    elseif string.match(text, "Rest") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Waren ganz normale Jungs schaetze ich. <Einer von denen> ist aber den Abend besonders betrunken geworden. (lacht)");
         return true
-    elseif string.match(text, "Goldmine") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Von Onars Hof aus, siehst du in den Bergen einen kleinen <Leuchtturm>.");
-    elseif string.match(text, "Leuchtturm") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Neben dem vergitterten Haupteingang muss es irgendo auch einen weiteren Eingang zur neuen Goldader geben.");
+    elseif string.match(text, "Einer von denen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Er erzaehlte davon, dass er vorhat aus dem Geld dass er machen wird, seiner Freundin etwas ganz besonderes zu <schenken>.");
+        return true
+    elseif string.match(text, "schenken") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Genaueres hat er nicht erzaehlt. Er ist irgendwann wie ein kleiner Junge eingeschlafen und am naechsten Morgen mit den Anderen Richtung Grossbauer verschwunden.");
         return true
     else
         return false
@@ -44,6 +46,17 @@ function dia_vlk_2001_olga.handleDialogue(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Hallo Fremder! Wie kann ich dir helfen?")
     end
 
+end
+
+
+function dia_vlk_2001_olga.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
+    if IsNPC(playerid) and string.match(GetPlayerName(playerid), "^Betrunkener Schlaeger.*") ~= nil then
+        drunk_calmed_by[killerid] = true
+    end
+end
+
+function dia_vlk_2001_olga.OnPlayerDisconnect(playerid, reason)
+    drunk_calmed_by[playerid] = nil
 end
 
 

@@ -1,5 +1,5 @@
 local debug = {}
-
+PPPID = 0
 local function printPointsForAngle(angle, distance, playerid)
 	local ang =  angle * math.pi / 180
 
@@ -12,6 +12,12 @@ local function printPointsForAngle(angle, distance, playerid)
     SendPlayerMessage(playerid,255,255,255,"angle: " .. angle .. ", x: " .. pos_x .. ", y: " .. pos_y .. ".")
 
 end
+
+function CheckAni()
+    local name = GetPlayerAnimationName(0);
+    print(name)
+end
+
 
 function debug.OnPlayerCommandText(playerid, cmdtext)
     local cmd, params = GetCommand(cmdtext);
@@ -26,6 +32,23 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         GiveItem(playerid, "ITMI_DARKPEARL", 1)
     end
 
+    if cmdtext == "/checkani" then
+        PPPID = playerid
+        Ani_Checker = SetTimer("CheckAni", 2000, 1);
+    end
+
+    if cmd == "/dia1" then
+        PlayAnimation(playerid,"T_DIALOGGESTURE_01_2_DIALOGGESTURE_02_2_DIALOGGESTURE_03_2_DIALOGGESTURE_04")
+    end
+    if cmd == "/dia2" then
+        PlayAnimation(playerid,"T_DIALOGGESTURE_02")
+    end
+    if cmd == "/dia3" then
+        PlayAnimation(playerid,"T_DIALOGGESTURE_03")
+    end
+    if cmd == "/dia4" then
+        PlayAnimation(playerid,"T_DIALOGGESTURE_04")
+    end
 
     if (cmd == "/goto") then
         local spl = params:split(" ");
@@ -39,6 +62,15 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
             end
         end
     
+    end
+
+    if cmd == "/bench" then
+        PlayAnimation(playerid,"S_BENCH_S1")
+    end
+
+    if cmd == "/weak" then
+        SetPlayerHealth(playerid, 1000);
+        SetPlayerMaxHealth(playerid, 1000);
     end
 
     if cmd == "/op" then

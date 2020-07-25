@@ -20,7 +20,7 @@ local function handleMissingBoyfriendDia(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Ich hatte meine Unzufriedenheit an Ihm ausgelassen und nach einem grossen Streit hatte er mich verlassen. Ich war so ein Dummkopf...")
         return true
     elseif string.match(text, "Buddlertrupp") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Ja...das war ein seltsamer Haufen. Sie lungerten in allen Tavernen der Stadt herum und suchten nach Helfern um anscheinend eine neu erschlossene magische <Erzader> auszuheben.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Ja...das war ein seltsamer Haufen. Sie lungerten in allen Tavernen der Stadt herum und suchten nach Helfern um anscheinend eine neu erschlossene <magische Erzader> auszuheben.")
         return true
     elseif string.match(text, "Erzader") then
         SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Genaueres weiss ich nicht darueber. Wenn du aber in den <Tavernen> der Stadt nach dem 'Buddlertrupp' rumfragst, können die Leute bestimmt mehr sagen.")

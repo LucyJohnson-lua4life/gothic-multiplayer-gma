@@ -49,12 +49,27 @@ end
 
 
 function DR_FUNC_GUARD(_playerid)
+        local ANIMS = {"S_LGUARD", "S_HGUARD"}
+        AI_GOTOFP(_playerid, AI_NPCList[_playerid].LASTWP);
+        AI_ALIGNTOFP(_playerid, AI_NPCList[_playerid].LASTWP);
+        AI_PLAYANIMATION(_playerid,  ANIMS[math.random(1,2)]);
+end
+
+function DR_FUNC_CAMP(_playerid)
         local ANIMS = {"S_LGUARD", "S_HGUARD", "S_SIT"}
         AI_GOTOFP(_playerid, AI_NPCList[_playerid].LASTWP);
         AI_ALIGNTOFP(_playerid, AI_NPCList[_playerid].LASTWP);
         AI_PLAYANIMATION(_playerid,  ANIMS[math.random(1,3)]);
-        --AI_STOP(_playerid, math.random(10,60));
-        --AI_RESET_DR(_playerid);
+end
+
+function DR_FUNC_TAVERNE(_playerid)
+        local ANIMS = {"S_LGUARD", "S_HGUARD", "T_POTION_RANDOM_1","T_POTION_RANDOM_3"}
+        AI_GOTOFP(_playerid, AI_NPCList[_playerid].LASTWP);
+        AI_ALIGNTOFP(_playerid, AI_NPCList[_playerid].LASTWP);
+
+        AI_PLAYANIMATION(_playerid,  ANIMS[math.random(1,4)]);
+        AI_STOP(_playerid, math.random(10,60));
+        AI_RESET_DR(_playerid);
 end
 
 function DR_FUNC_TRAIN(_playerid)

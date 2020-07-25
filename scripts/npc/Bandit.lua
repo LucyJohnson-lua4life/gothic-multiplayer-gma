@@ -19,7 +19,7 @@ function Bandit()
 
     local npcarr = {};
 	npcarr.id = npc;
-	npcarr.daily_routine = DR_Guard_Lguard;
+	npcarr.daily_routine = DR_FUNC_CAMP;
 	npcarr.attack_routine = FAI_ONEH_MASTER;
 	npcarr.WeaponMode = 3;
 	npcarr.dialogs = nil;

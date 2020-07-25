@@ -1,8 +1,8 @@
-function Rufus_Dead()
-	local npc = CreateNPC(GetNewNPCName("Rufus"));
+function Zek_Dead()
+	local npc = CreateNPC(GetNewNPCName("Zek"));
 	
 	if(npc == -1)then
-		print("Creating Rufus_Dead Failed!");
+		print("Creating Zek_Dead Failed!");
 	end
 	
 	SetPlayerInstance(npc,"Zombie01");

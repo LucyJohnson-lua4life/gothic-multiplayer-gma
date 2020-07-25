@@ -651,12 +651,31 @@ function InitNewWorldNPC()
   SpawnNPC(Bandit(), "FP_BANDIT_ON_BRIDGE_05", world);
 
   --quest npcs
-  
-  SpawnNPC(Rufus_Dead(), "FP_RUFUS_DEAD", world);
+  SpawnNPC(VLK_1000_AmbientFemale(), "FP_CITY_TAVERN_01", world);
+  SpawnNPC(VLK_1000_AmbientFemale(), "FP_CITY_TAVERN_02", world);
+  SpawnNPC(VLK_1000_AmbientFemale(), "FP_CITY_TAVERN_03", world);
+  SpawnNPC(VLK_1001_AmbientMale(), "FP_CITY_TAVERN_04", world);
+
+
+  SpawnNPC(VLK_1001_AmbientMale(), "FP_HAFEN_TAVERN_01", world);
+  SpawnNPC(VLK_1001_AmbientMale(), "FP_HAFEN_TAVERN_02", world);
+  SpawnNPC(VLK_1001_AmbientMale(), "FP_HAFEN_TAVERN_03", world);
+  SpawnNPC(VLK_1001_AmbientMale(), "FP_HAFEN_TAVERN_04", world);
+
+  SpawnNPC(VLK_1000_AmbientFemale(), "FP_HAFEN_VENDOR_01", world);
+  SpawnNPC(VLK_1000_AmbientFemale(), "FP_HAFEN_VENDOR_02", world);
+
+  SpawnNPC(Zek_Dead(), "FP_RUFUS_DEAD", world);
   --wisp forest lake
-  SpawnNPC(VLK_1000_Ambient(), "NW_CITY_TAVERN_IN_07 ", world);
   SpawnNPC(VLK_2000_Rose(), "FP_STAND_CITY_20", world);
   SpawnNPC(VLK_2001_Olga(), "FP_TAVERN_BAR", world);
+  SpawnNPC(VLK_2002_Jock(), "FP_CITY_TAVERN_BARKEEPER", world);
+  SpawnNPC(VLK_2003_Barney(), "FP_HAFEN_TAVERN_BARKEEPER", world);
+  SpawnNPC(VLK_2004_Olivia(), "FP_HAFEN_VENDOR_MERCHANT", world);
+  SpawnNPC(VLK_2005_BetrunkenerSchlaeger(), "FP_TAVERN_DRUNK", world);
+  SpawnNPC(VLK_2006_Redford(), "FP_BIGFARM_PREGUARD", world);
+  SpawnNPC(VLK_2007_Hugo(), "FP_BIGFARM_TAVERN_BARKEEPER", world);
+  
 
   SpawnNPC(VLK_7000_Goffrey(), "FP_STAND_SARAH", world);
   SpawnNPC(VLK_7001_Phillipe(), "FP_STAND_JORA", world);

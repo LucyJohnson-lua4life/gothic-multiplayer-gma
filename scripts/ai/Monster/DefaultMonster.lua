@@ -76,7 +76,7 @@ function DR_BLATTCRAWLER(_playerid)
 end
 
 
-function DR_Guard_Lguard(_playerid)
+function DR_GUARD(_playerid)
     if(TA_FUNC(_playerid,  22,  00,  5,  00))then
 		DR_FUNC_GUARD(_playerid);
     end
@@ -86,6 +86,31 @@ function DR_Guard_Lguard(_playerid)
     end
 
 end
+
+
+function DR_CAMP(_playerid)
+    if(TA_FUNC(_playerid,  22,  00,  5,  00))then
+		DR_FUNC_GUARD(_playerid);
+    end
+    
+    if(TA_FUNC(_playerid,  5,  0,  22,  0))then
+        DR_FUNC_GUARD(_playerid);
+    end
+
+end
+
+
+function DR_TAVERNE(_playerid)
+    if(TA_FUNC(_playerid,  22,  00,  5,  00))then
+		DR_FUNC_TAVERNE(_playerid);
+    end
+    
+    if(TA_FUNC(_playerid,  5,  0,  22,  0))then
+        DR_FUNC_TAVERNE(_playerid);
+    end
+
+end
+
 
 function DR_Guard_Train(_playerid)
     if(TA_FUNC(_playerid,  22,  00,  5,  00))then
