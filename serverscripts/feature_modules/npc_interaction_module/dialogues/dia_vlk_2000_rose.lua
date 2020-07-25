@@ -23,10 +23,10 @@ local function handleMissingBoyfriendDia(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Ja...das war ein seltsamer Haufen. Sie lungerten in allen Tavernen der Stadt herum und suchten nach Helfern um anscheinend eine neu erschlossene <magische Erzader> auszuheben.")
         return true
     elseif string.match(text, "Erzader") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Genaueres weiss ich nicht darueber. Wenn du aber in den <Tavernen> der Stadt nach dem 'Buddlertrupp' rumfragst, können die Leute bestimmt mehr sagen.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Genaueres weiss ich nicht darueber. Wenn du aber in den <Tavernen> der Stadt nach dem 'Buddlertrupp' rumfragst, koennen die Leute bestimmt mehr sagen.")
         return true
     elseif string.match(text, "Tavernen") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Wenn du Rufus siehst, kannst du ihm bitte sagen, dass es mir Leid tut und dass ich ihn schrecklich <vermisse>?")
+        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Wenn du Zek siehst, kannst du ihm bitte sagen, dass es mir Leid tut und dass ich ihn schrecklich <vermisse>?")
         return true
     elseif string.match(text, "vermisse") then
         HasItem(playerid, "STANDARDBRIEF", check_id)
@@ -40,15 +40,15 @@ local function handleZekLetterDia(playerid, item_instance, amount, equipped, che
     if checkid == check_id and item_instance == "STANDARDBRIEF" and amount >= 1 then
         RemoveItem(playerid, "STANDARDBRIEF", amount)
         inventory_dao.deleteItemByInstance(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid], "STANDARDBRIEF")
-        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Ein Brief? Von Rufus?")
+        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Ein Brief? Von Zek?")
         SendPlayerMessage(playerid, 0, 0, 255, "Rose liest den Brief und bricht zusammen...")
-        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Das darf nicht war sein... Das war alles meine Schuld...")
+        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Das darf nicht war sein... Das ist alles meine Schuld...")
         SendPlayerMessage(playerid, 0, 255, 0, "Du hast die Quest beendet!")
         local goldToAdd = 500
         SetPlayerGold(playerid, GetPlayerGold(playerid) + goldToAdd)
         SendPlayerMessage(playerid, 0, 255, 0, tostring(goldToAdd) .. " Gold erhalten.")
     elseif checkid == check_id then
-        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Hast du Rufus gefunden und ihm gesagt dass ich ihn <vermisse>?");
+        SendPlayerMessage(playerid, 255, 255, 255, "Rose sagt: Hast du Zek gefunden und ihm gesagt dass ich ihn <vermisse>?");
     end
 end
 

@@ -2,7 +2,7 @@
 function VLK_2006_Redford()
 	local npc = CreateNPC(GetNewNPCName("Redford"));
 	
-	SetPlayerAdditionalVisual(npc,"Hum_Body_Naked0",2, "Hum_Head_Fighter", 121);
+	SetPlayerAdditionalVisual(npc,"Hum_Body_Naked0",2, "Hum_Head_FatBald", 121);
 	SetPlayerWalk(npc, "Humans_Arrogance.mds");
 	SetPlayerInstance(npc,"PC_HERO");
 	SetPlayerFatness(npc, 0.5);
@@ -11,7 +11,7 @@ function VLK_2006_Redford()
     SetPlayerMaxHealth(npc, 9999);
 	--Items:
 	EquipArmor(npc,"ITAR_SLD_H");
-	EquipMeleeWeapon(npc,"ItMw_2H_Axe_L_04");
+	EquipMeleeWeapon(npc,"ItMw_2H_Special_01");
 	
 	
 	local npcarr = {};

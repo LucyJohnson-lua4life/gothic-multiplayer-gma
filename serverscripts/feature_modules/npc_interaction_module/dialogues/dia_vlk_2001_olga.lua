@@ -43,7 +43,7 @@ function dia_vlk_2001_olga.handleDialogue(playerid, text)
         return
     else
         -- INIT DIALOGUE
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Hallo Fremder! Wie kann ich dir helfen?")
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Hallo Fremder! Was kann ich fuer dich tun?")
     end
 
 end

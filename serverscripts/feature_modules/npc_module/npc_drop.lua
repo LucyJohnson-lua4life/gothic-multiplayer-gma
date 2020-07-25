@@ -86,7 +86,7 @@ local function getDropForName(name)
         return {getRandomDrop(DROP_XARDAS_DEMON)}
     elseif (string.match(name, "^Keymaster.*")) then
         return {"ItKe_MonastarySecretLibrary_Mis"}
-    elseif (string.match(name, "^Rufus.*")) then
+    elseif (string.match(name, "^Zek.*")) then
         return {"StandardBrief"}
     else
         return {"ItFoMutton", "ItFo_Water"}

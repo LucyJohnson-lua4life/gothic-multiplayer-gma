@@ -17,7 +17,7 @@ local function handleBuddlertruppDia(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Du kannst in Khorinis kein Land betreten, ohne dass die Stadtverwaltung dir ihre <Zustimmung> gibt.")
         return true
     elseif string.match(text, "Zustimmung") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Offiziell gehoert erstmal alles Land in Khorinis der Stadtverwaltung. Mit genug Kohle kannst du dir dann Land erkaufen. Viel Spass aber, die Kohle dafuer zusammen zu bekommen.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Offiziell gehoert erstmal alles Land in Khorinis der Stadtverwaltung. Mit genug Kohle kannst du dir dann Land erkaufen. Viel Spass aber die Kohle dafuer zusammen zu bekommen.")
         return true
     else
         return false
