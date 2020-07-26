@@ -1,10 +1,9 @@
 local debug = {}
-PPPID = 0
-local function printPointsForAngle(angle, distance, playerid)
-	local ang =  angle * math.pi / 180
+local function printPointsForAngle(angle, playerid)
+	local ang =  angle * 3.14 / 180
 
-	local pos_x = distance * math.cos(ang)
-    local pos_y = distance * math.sin(ang)
+	local pos_x = math.cos(ang)
+    local pos_y =  math.sin(ang)
     print("angle: ".. angle)
 	print("x: " .. tostring(pos_x))
     print("y: " .. tostring(pos_y))
@@ -13,10 +12,8 @@ local function printPointsForAngle(angle, distance, playerid)
 
 end
 
-function CheckAni()
-    local name = GetPlayerAnimationName(0);
-    print(name)
-end
+
+
 
 
 function debug.OnPlayerCommandText(playerid, cmdtext)
@@ -30,11 +27,6 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         GiveItem(playerid, "ITAT_TEETH", 1)
         GiveItem(playerid, "ITAT_SKELETONBONE", 1)
         GiveItem(playerid, "ITMI_DARKPEARL", 1)
-    end
-
-    if cmdtext == "/checkani" then
-        PPPID = playerid
-        Ani_Checker = SetTimer("CheckAni", 2000, 1);
     end
 
     if cmd == "/dia1" then
@@ -62,6 +54,10 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
             end
         end
     
+    end
+
+    if cmd == "/setangle" then
+        SetPlayerAngle(GetFocus(playerid), tonumber(params))
     end
 
     if cmd == "/bench" then
@@ -181,9 +177,11 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         GiveItem(playerid, "STANDARDBRIEF", 1)
     end
 
+    
+
 
     if cmdtext == "/angle" then
-        printPointsForAngle(GetPlayerAngle(playerid),1,playerid)
+        printPointsForAngle(GetPlayerAngle(playerid),playerid)
     end
 
     

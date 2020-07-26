@@ -11,7 +11,7 @@ local function handleBuddlertruppDia(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Redford sagt: Gegen Anteil an der Beute haben wir ein paar unserer Jungs mitgeschickt, doch als wir die <Minen> aufgesucht haben, war niemand da.")
         return true
     elseif string.match(text, "Minen") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Redford sagt: Anscheinend soll es in der Nähe der Goldmine auf dem Bergturm hier irgendwo einen Zugang zur Erzmine geben. Wenn du aber genaueres wissen willst Frag Hugo in unserer Kneipe.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Redford sagt: Anscheinend soll es in der Naehe der Goldmine auf dem Bergturm hier irgendwo einen Zugang zur Erzmine geben. Wenn du aber genaueres wissen willst Frag Hugo in unserer Kneipe.")
         return true
     else
         return false

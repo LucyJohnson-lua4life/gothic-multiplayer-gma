@@ -24,7 +24,7 @@ local function handleBanditRewardDialogue(playerid,item_instance, amount, equipp
     if checkid == check_id and item_instance == "ITMI_ADDON_BLOODWYN_KOPF" and amount >= 1 then
         RemoveItem(playerid, "ITMI_ADDON_BLOODWYN_KOPF", amount)
         inventory_dao.deleteItemByInstance(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid], "ITMI_ADDON_BLOODWYN_KOPF")
-        SendPlayerMessage(playerid, 255, 255, 255, "Bryan sagt: Auf dich ist verlass! Hier nimm das Gold, du hast es dir verdient!")
+        SendPlayerMessage(playerid, 255, 255, 255, "Bryan sagt: Auf dich ist Verlass! Hier nimm das Gold, du hast es dir verdient!")
         local goldToAdd = 100*amount
         SetPlayerGold(playerid, GetPlayerGold(playerid)+goldToAdd)
         SendPlayerMessage(playerid, 0, 255, 0, tostring(goldToAdd).." Gold erhalten.")

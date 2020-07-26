@@ -112,7 +112,7 @@ function DR_TAVERNE(_playerid)
 end
 
 
-function DR_Guard_Train(_playerid)
+function DR_TRAIN(_playerid)
     if(TA_FUNC(_playerid,  22,  00,  5,  00))then
 		DR_FUNC_TRAIN(_playerid);
     end

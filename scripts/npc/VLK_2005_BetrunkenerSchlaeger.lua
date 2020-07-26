@@ -6,10 +6,10 @@ function VLK_2005_BetrunkenerSchlaeger()
 	SetPlayerWalk(npc, "Humans_Arrogance.mds");
 	SetPlayerInstance(npc,"DRAGONISLE_KEYMASTER");
 	SetPlayerFatness(npc, 0.5);
-    SetPlayerStrength(npc, 100);
-    SetPlayerHealth(npc, 1000);
+    SetPlayerStrength(npc, 150);
+    SetPlayerHealth(npc, 1400);
     SetPlayerSkillWeapon(npc, SKILL_1H, 50);
-    SetPlayerMaxHealth(npc, 1000);
+    SetPlayerMaxHealth(npc, 1400);
 	--Items:
 	EquipArmor(npc,"ITAR_VLK_L");
 	EquipMeleeWeapon(npc,"ItMw_Nagelknueppel");

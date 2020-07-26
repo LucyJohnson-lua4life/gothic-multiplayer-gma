@@ -5,6 +5,7 @@ local dia_vlk_2002_jock = require "serverscripts/feature_modules/npc_interaction
 local dia_vlk_2003_barney = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2003_barney"
 local dia_vlk_2006_redford = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2006_redford"
 local dia_vlk_2007_hugo = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2007_hugo"
+local dia_vlk_2008_vivi = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2008_vivi"
 local dia_vlk_7005_bryan = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7005_bryan"
 local dia_vlk_7004_lian = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7004_lian"
 local dia_vlk_7003_ryan = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7003_ryan"
@@ -37,7 +38,8 @@ local function handleNpcInteraction(playerid, npc_id, text)
         dia_vlk_2006_redford.handleDialogue(playerid, text)
     elseif string.match(npc_name, "^Hugo.*") then
         dia_vlk_2007_hugo.handleDialogue(playerid, text)
-
+    elseif string.match(npc_name, "^Vivi.*") then
+        dia_vlk_2008_vivi.handleDialogue(playerid, text)
    
     end
     --- depending on NPC, the interaction will be forwarded to the npc handler
@@ -61,6 +63,7 @@ function npc_interaction_module.OnPlayerHasItem(playerid, item_instance, amount,
     dia_vlk_7003_ryan.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     dia_vlk_7002_brad.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     dia_vlk_2000_rose.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
+    dia_vlk_2008_vivi.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 end
 
 function npc_interaction_module.OnPlayerHit(playerid, killerid)

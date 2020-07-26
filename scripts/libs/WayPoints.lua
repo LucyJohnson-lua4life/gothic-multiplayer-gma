@@ -440,7 +440,7 @@ function getAngle(x1, y1, x2, y2)
 	elseif (x>0 and y<0) then
 		angle = 360 - angle
 	end
-
+    
 	return tonumber(angle);
 
 end

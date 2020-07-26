@@ -11,9 +11,9 @@ local function handleFurSellDialogue(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Ryan sagt: Prima zurzeit bin ich sehr beschaeftigt und es gibt eine Menge <Felle> die ich jagen muss.")
         return true
     elseif string.match(text, "Felle") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Ryan sagt: Egal ob <Wolffell>, <Keilerfell>, <Wargfell>, <Schattenlaeuferfell>, oder <Trollfell>. Ich zahle fuer jedes Stueck nen guten Preis.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Ryan sagt: Egal ob <Wolfsfell>, <Keilerfell>, <Wargfell>, <Schattenlaeuferfell>, oder <Trollfell>. Ich zahle fuer jedes Stueck nen guten Preis.")
         return true
-    elseif string.match(text, "Wolffell") then
+    elseif string.match(text, "Wolfsfell") then
         HasItem(playerid, "ITAT_WOLFFUR", check_id)
         return true
     elseif string.match(text, "Keilerfell") then

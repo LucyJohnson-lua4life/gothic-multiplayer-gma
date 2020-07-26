@@ -274,7 +274,7 @@ end
 function ai_aligntofp_func(_aistate)
     local px, py, pz = GetPlayerPos(_aistate.player);
     
-    local angle = getAngle(px, pz, px-_aistate.waypoint.dirx, pz-_aistate.waypoint.dirz);
+    local angle = getAngle(px, pz, px+_aistate.waypoint.dirx, pz+_aistate.waypoint.dirz);
     if(turnPlayer(_aistate.player, angle))then
         table.remove(AI_NPCList[_aistate.player]["STATES"], 1);
     end

@@ -54,8 +54,9 @@ function OnGamemodeInit()
 	--EnableExitGame(0)
 	recovery_module.OnGamemodeInit()
 	npc_module.OnGamemodeInit()
-	print(printPointsForAngle(340))
-	print(test(0.93,-0.344))
+	print(printPointsForAngle(224))
+	print(test(0.682,-0.731))
+	print(getAngle(7837,1321,7837+(0.682),1321+(-0.731)))
 end
 
 function OnGamemodeExit()
