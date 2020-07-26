@@ -10,7 +10,7 @@ function VLK_7001_Phillipe()
     SetPlayerHealth(npc, 9999);
     SetPlayerMaxHealth(npc, 9999);
 	--Items:
-	EquipArmor(npc,"ItNm_Panzermantel1");
+	EquipArmor(npc,"ITAR_VLK_H");
 	--EquipMeleeWeapon(npc,"ItMw_1h_Bau_Mace");
 
 	
