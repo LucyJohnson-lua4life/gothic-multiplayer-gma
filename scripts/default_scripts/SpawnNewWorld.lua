@@ -21,7 +21,6 @@ function InitNewWorldNPC()
   SpawnNPC(Wolf(), "NW_FARM1_CITYWALL_FOREST_03", world);
   SpawnNPC(Shadowbeast(), "NW_FARM1_CITYWALL_FOREST_04_B", world);
   SpawnNPC(Scavenger(),"NW_FARM1_CITYWALL_FOREST_06", world);
-  SpawnNPC(OrcElite(), "NW_FARM1_CITYWALL_FOREST_08_B", world);
   SpawnNPC(Snapper(), "NW_FARM1_CITYWALL_FOREST_14", world);
   SpawnNPC(Snapper(), "NW_FARM1_CITYWALL_FOREST_15", world);
   SpawnNPC(Snapper(), "NW_FARM1_CITYWALL_FOREST_16", world);--3112
@@ -98,7 +97,7 @@ function InitNewWorldNPC()
   
   
   -- Kap3 3549
-  SpawnNPC(OrcElite(),"NW_FARM4_WOOD_MONSTER_01", world); 
+  SpawnNPC(OrcWarrior(),"NW_FARM4_WOOD_MONSTER_01", world); 
   SpawnNPC(Warg(),"NW_FARM4_WOOD_MONSTER_02", world); 
   SpawnNPC(Warg(),"NW_FARM4_WOOD_MONSTER_03", world); 
   SpawnNPC(OrcWarrior(),"NW_FARM4_WOOD_MONSTER_04", world); 
@@ -290,12 +289,11 @@ function InitNewWorldNPC()
   SpawnNPC(Shadowbeast(), "FP_ROAM_MEDIUMFOREST_KAP3_20", world);
   SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP3_27", world);
   SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP3_26", world);
-  SpawnNPC(OrcElite(), "FP_ROAM_MEDIUMFOREST_KAP3_32", world);
   -- ------- vom Osttor zum Leuchtturm ------
   SpawnNPC(Wolf(), "NW_CITY_TO_LIGHTHOUSE_03", world);
   -- ------- K�ste ------
-  SpawnNPC(OrcElite(), "FP_ROAM_SHIPWRECK_04", world); 
-  SpawnNPC(OrcWarrior(), "FP_ROAM_SHIPWRECK_01", world); 
+  SpawnNPC(Waran(), "FP_ROAM_SHIPWRECK_04", world); 
+  SpawnNPC(Waran(), "FP_ROAM_SHIPWRECK_01", world); 
   --ADDON SpawnNPC(Waran(),"FP_ROAM_FISHERCOAST_01", world);
   --ADDON SpawnNPC(Waran(),"FP_ROAM_FISHERCOAST_02", world);
   --ADDON: SpawnNPC(Scavenger(), "FP_ROAM_FISHERMAN_01", world);
@@ -333,7 +331,6 @@ function InitNewWorldNPC()
   SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_12", world);
   SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_14", world);
   SpawnNPC(Warg(), "FP_ROAM_CITYFOREST_KAP3_15", world);
-  SpawnNPC(OrcElite(), "FP_ROAM_CITYFOREST_KAP3_17", world);
   --4145
   
   -- ----------- SMForestCave ------------4154
@@ -402,14 +399,10 @@ function InitNewWorldNPC()
     SpawnNPC(Scavenger(), "NW_CITY_TO_LIGHTHOUSE_13_MONSTER7", world);
     SpawnNPC(Wolf(), "NW_CITY_TO_LIGHTHOUSE_13_MONSTER8", world);
     SpawnNPC(Keiler(), "NW_FOREST_PATH_35_MONSTER", world);
-    SpawnNPC(OrcElite(), "NW_FOREST_PATH_31_NAVIGATION_M", world);
     SpawnNPC(Warg(), "NW_FOREST_PATH_31_NAVIGATION_M", world);
-    SpawnNPC(OrcElite(), "NW_FOREST_PATH_31_NAVIGATION19", world);
-    SpawnNPC(OrcElite(), "NW_FOREST_PATH_18_MONSTER", world);
     SpawnNPC(Warg(), "NW_FOREST_PATH_72_MONSTER23", world);
     SpawnNPC(Wolf(), "NW_FOREST_PATH_76", world);
     SpawnNPC(Warg(), "NW_FOREST_PATH_66_MONSTER", world);
-    SpawnNPC(Wolf(), "NW_FOREST_PATH_04_5", world);
     SpawnNPC(Wolf(), "NW_FOREST_PATH_04_5", world);
     --Egill/Enim-FIX
     --SpawnNPC(Wolf(), "NW_CITY_TO_FARM2_05_MOV5", world);
@@ -453,9 +446,6 @@ function InitNewWorldNPC()
   SpawnNPC(Gobbo_Black(), "NW_TROLLAREA_PATH_56", world);
   ------- Der gro�e See -----
   SpawnNPC(Wolf(), "FP_ROAM_TROLLAREA_SEA_01", world);
-  SpawnNPC(Wolf(), "FP_ROAM_TROLLAREA_SEA_02", world);
-  SpawnNPC(Wolf(), "FP_ROAM_TROLLAREA_SEA_03", world);
-  SpawnNPC(Wolf(), "FP_ROAM_TROLLAREA_SEA_04", world);
   --RitualForest
   SpawnNPC(Minecrawler(), "FP_ROAM_RITUALFOREST_CAVE_05", world);
  -- SpawnNPC(MinecrawlerWarrior(), "FP_ROAM_RITUALFOREST_CAVE_07", world);

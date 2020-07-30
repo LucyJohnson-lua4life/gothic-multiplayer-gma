@@ -23,6 +23,7 @@ local function savePlayerPos(playerid)
     Player[playerid].tp_y = y
     Player[playerid].tp_z = z
     SendPlayerMessage(playerid,255,255,255,"Speichere Position: " .. x .. ", " .. y .. ", " .. z .. ".")
+    LogString ("item_pos.txt", x..", "..y..", "..z)
 end
 
 
