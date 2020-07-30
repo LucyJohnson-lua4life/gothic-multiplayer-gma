@@ -1,25 +1,14 @@
 require "serverscripts/player_globals"
 local recovery_module = {}
 
-local function getManaForRecovery(current_mana, max_mana)
-    local new_summed_mana = current_mana + math.floor(max_mana / 100 * 5)
+local function getRecoveryValue(current_val, max_val)
+    local new_summed_val = current_val + math.floor(max_val / 100 * 5)
 
-    if new_summed_mana > max_mana then
-       return max_mana   
+    if new_summed_val > max_val then
+       return max_val   
     end
 
-    return new_summed_mana
-end
-
-
-local function getHealthForRecovery(current_health, max_health)
-    local new_summed_health = current_health + math.floor(max_health / 100 * 5)
-
-    if new_summed_health > max_health then
-       return max_health   
-    end
-
-    return new_summed_health
+    return new_summed_val
 end
 
 local function recoverPlayer(playerid)
@@ -30,10 +19,10 @@ local function recoverPlayer(playerid)
         local max_mana = GetPlayerMaxMana(playerid)
 
         if current_health < max_health then
-            SetPlayerHealth(playerid, getHealthForRecovery(current_health, max_health))
+            SetPlayerHealth(playerid, getRecoveryValue(current_health, max_health))
         end
         if current_mana < max_mana then
-            SetPlayerMana(playerid, getManaForRecovery(current_mana, max_mana))
+            SetPlayerMana(playerid, getRecoveryValue(current_mana, max_mana))
         end
     end
 end

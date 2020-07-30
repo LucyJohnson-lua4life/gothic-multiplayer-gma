@@ -20,6 +20,7 @@ local npc_interaction_module = require "serverscripts/feature_modules/npc_intera
 local debug = require "filterscripts/debug"
 local maya_dungeon = require "serverscripts/feature_modules/dungeon_module/maya_dungeon"
 local world_vobs_module = require "serverscripts/feature_modules/world_vobs_module/world_vobs_module"
+local custom_items_module = require "serverscripts/feature_modules/custom_items_module/custom_items_module"
 
 
 
@@ -161,6 +162,7 @@ function OnPlayerUseItem(playerid, item_instance, amount, hand)
 	if(IsNPC(playerid) == 0) then
 		inventory_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
 		mining_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
+		custom_items_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
 	end
 end
 

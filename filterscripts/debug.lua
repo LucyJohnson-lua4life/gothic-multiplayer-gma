@@ -113,6 +113,10 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         SetPlayerPos(playerid, 57084,1906,-25900)
     end
 
+    if cmdtext == "/breadandbutter" then
+        GiveItem(playerid, "ItFo_Apple",10)
+    end
+
 
     if cmdtext == "/femr" then
         GiveItem(playerid, "ItGma_armor_start_fem",1)
