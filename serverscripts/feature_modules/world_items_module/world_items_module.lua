@@ -346,8 +346,7 @@ local empty_item_spots = {}
 
 local regular_plants = {"ItPl_Health_Herb_01", "ItPl_Mana_Herb_01"}
 
-local deep_forrest_plants = {"ItPl_Health_Herb_01", "ItPl_Mana_Herb_01", "ItPl_Health_Herb_01", 
-"ItPl_Mana_Herb_01", "ItPl_Forestberry", "ItPl_Blueplant", "Heilwurzel", "Feuerwurzel"}
+local deep_forrest_plants = {"ItPl_Health_Herb_01", "ItPl_Mana_Herb_01", "ItPl_Forestberry", "ItPl_Blueplant", "Heilwurzel", "Feuerwurzel"}
 
 local water_plants = {"ItPl_Health_Herb_01", "Blauflieder", "ItPl_SwampHerb"}
 
@@ -355,34 +354,40 @@ local magic_place_plants = {"Heilwurzel", "Feuerwurzel", "Kronstöckel"}
 
 local itemId_to_placeId = {}
 
+local NUM_REGULAR_PLANTS = table.getn(regular_plants)
+local NUM_DEEP_FORREST_PLANTS = table.getn(deep_forrest_plants)
+local NUM_WATER_PLANTS = table.getn(water_plants)
+local NUM_MAGIC_PLACE_PLANTS = table.getn(magic_place_plants)
 
 
 local function spawnPlantBasedOnLocation(index)
     local itemName = nil
     if index >= 28 and index <= 42 then
-        itemName = deep_forrest_plants[math.random(1,8)]
+        itemName = deep_forrest_plants[math.random(1,NUM_DEEP_FORREST_PLANTS)]
     elseif index >= 51 and index <= 96 then
-        itemName = deep_forrest_plants[math.random(1,8)]
+        itemName = deep_forrest_plants[math.random(1,NUM_DEEP_FORREST_PLANTS)]
     elseif index >= 211 and index <= 263 then
-        itemName = deep_forrest_plants[math.random(1,8)]
+        itemName = deep_forrest_plants[math.random(1,NUM_DEEP_FORREST_PLANTS)]
     elseif index >= 100 and index <= 137 then
-        itemName = deep_forrest_plants[math.random(1,8)]
+        itemName = deep_forrest_plants[math.random(1,NUM_DEEP_FORREST_PLANTS)]
     elseif index >= 139 and index <= 70 then
-        itemName = water_plants[math.random(1,3)]
+        itemName = water_plants[math.random(1,NUM_WATER_PLANTS)]
     elseif index >= 200 and index <= 210 then
-        itemName = water_plants[math.random(1,3)]
+        itemName = water_plants[math.random(1,NUM_WATER_PLANTS)]
     elseif index >= 278 and index <= 289 then
-        itemName = water_plants[math.random(1,3)]
+        itemName = water_plants[math.random(1,NUM_WATER_PLANTS)]
     elseif index >= 97 and index <= 99 then  
-        itemName = magic_place_plants[math.random(1,3)]
+        itemName = magic_place_plants[math.random(1,NUM_MAGIC_PLACE_PLANTS)]
     elseif index == 138 then
-        itemName = magic_place_plants[math.random(1,3)]
+        itemName = magic_place_plants[math.random(1,NUM_MAGIC_PLACE_PLANTS)]
     else
-        itemName = regular_plants[math.random(1,2)]
+        itemName = regular_plants[math.random(1,NUM_REGULAR_PLANTS)]
     end
 
-    local itemId = CreateItem(itemName, 1, item_spots[index][1], item_spots[index][2], item_spots[index][3], "NEWWORLD\\NEWWORLD.ZEN")
-    itemId_to_placeId[itemId] = index
+    if itemName ~= nil then
+        local itemId = CreateItem(itemName, 1, item_spots[index][1], item_spots[index][2], item_spots[index][3], "NEWWORLD\\NEWWORLD.ZEN")
+        itemId_to_placeId[itemId] = index
+    end
 end
 
 function RespawnPlants()
@@ -401,7 +406,7 @@ function world_items_module.OnGamemodeInit()
         do 
             spawnPlantBasedOnLocation(i)
     end
-    Plant_Respawn_Timer_Id = SetTimer("RespawnPlants", 10000, 1);
+    Plant_Respawn_Timer_Id = SetTimer("RespawnPlants", 3600000, 1);
 end
 
 function world_items_module.OnPlayerTakeItem(playerid, itemID, itemInstance, amount, x, y, z, worldName)
