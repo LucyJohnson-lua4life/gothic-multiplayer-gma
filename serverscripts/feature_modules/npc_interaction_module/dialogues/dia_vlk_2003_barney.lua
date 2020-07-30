@@ -24,13 +24,25 @@ local function handleBuddlertruppDia(playerid, text)
     end
 end
 
+local function handleTavernRest(playerid, text) 
+    if string.match(text, "ausruhen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Natuerlich. Schnapp dir einen Platz.")
+        SetPlayerHealth(playerid, GetPlayerMaxHealth(playerid))
+        return true
+    else 
+        return false
+    end
+end
+
 function dia_vlk_2003_barney.handleDialogue(playerid, text)
     
     if handleBuddlertruppDia(playerid, text) == true then
         return
+    elseif handleTavernRest(playerid,text) then
+        return
     else
         -- INIT DIALOGUE
-        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Hallo Fremder! Wie kann ich dir helfen?")
+        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Hallo Fremder! Wie kann ich dir helfen? Willst du dich <ausruhen> oder etwas bestellen?")
     end
 
 end

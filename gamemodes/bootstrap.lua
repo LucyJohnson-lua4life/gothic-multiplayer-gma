@@ -18,32 +18,11 @@ local player_gold_module = require "serverscripts/feature_modules/player_gold_mo
 local robbing_module = require "serverscripts/feature_modules/robbing_module/robbing_module"
 local npc_interaction_module = require "serverscripts/feature_modules/npc_interaction_module/npc_interaction_module"
 local debug = require "filterscripts/debug"
+local maya_dungeon = require "serverscripts/feature_modules/dungeon_module/maya_dungeon"
+local world_vobs_module = require "serverscripts/feature_modules/world_vobs_module/world_vobs_module"
 
 
-local function test(x, y)
-	local angle =  math.atan(math.abs(y) / math.abs(x)) * 180.0 / 3.14;
-	print("atan: ".. angle)
-	if(x < 0 and y > 0) then
-		angle = 180-angle
-	elseif (x<0 and y<0) then
-		angle = angle +180
-	elseif (x>0 and y<0) then
-		angle = 360 - angle
-	end
 
-	return tonumber(angle);
-end
-
-local function printPointsForAngle(angle)
-	local ang =  angle * 3.14 / 180
-
-	local pos_x = math.cos(ang)
-    local pos_y =  math.sin(ang)
-    print("angle: ".. angle)
-	print("x: " .. tostring(pos_x))
-    print("y: " .. tostring(pos_y))
-
-end
 
 function OnGamemodeInit()
 	WORLD_HANDLER = db_config.getHandler()
@@ -54,9 +33,8 @@ function OnGamemodeInit()
 	--EnableExitGame(0)
 	recovery_module.OnGamemodeInit()
 	npc_module.OnGamemodeInit()
-	print(printPointsForAngle(224))
-	print(test(0.682,-0.731))
-	print(getAngle(7837,1321,7837+(0.682),1321+(-0.731)))
+	world_vobs_module.OnGamemodeInit()
+	maya_dungeon.OnGamemodeInit()
 end
 
 function OnGamemodeExit()
@@ -114,6 +92,7 @@ end
 function OnPlayerSpawn(playerid, classid)
 	authentication_module.OnPlayerSpawn(playerid, classid)
 	help_module.OnPlayerSpawn(playerid, classid)
+	maya_dungeon.OnPlayerSpawn(playerid, classid)
 end
 
 function OnPlayerChangeHealth(playerid, currHealth, oldHealth)
@@ -124,6 +103,7 @@ function OnPlayerDeath(playerid, p_classid, killerid, k_classid)
 	spells_module.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
 	npc_module.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
 	npc_interaction_module.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
+	maya_dungeon.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
 end
 
 function OnPlayerHit(playerid, killerid)
@@ -157,6 +137,7 @@ function OnPlayerCommandText(playerid, cmdtext)
 	robbing_module.OnPlayerCommandText(playerid, cmdtext)
 	npc_interaction_module.OnPlayerCommandText(playerid, cmdtext)
 	debug.OnPlayerCommandText(playerid, cmdtext)
+	maya_dungeon.OnPlayerCommandText(playerid, cmdtext)
 end
 
 function OnPlayerDropItem(playerid, itemid, item_instance, amount, x, y, z)

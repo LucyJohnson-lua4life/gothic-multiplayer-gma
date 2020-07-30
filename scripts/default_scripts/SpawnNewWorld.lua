@@ -470,6 +470,7 @@ function InitNewWorldNPC()
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_04", world);
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_05", world);
 
+  --[[
   SpawnNPC(Swampshark(), "FP_MAYA_DUNGEON_06", world);
   SpawnNPC(Swampshark(), "FP_MAYA_DUNGEON_07", world);
   SpawnNPC(Swampshark(), "FP_MAYA_DUNGEON_08", world);
@@ -507,7 +508,7 @@ function InitNewWorldNPC()
   SpawnNPC(OrcWarrior(), "FP_MAYA_ORCS_05", world);
   SpawnNPC(OrcWarrior(), "FP_MAYA_ORCS_06", world);
   SpawnNPC(OrcWarrior(), "FP_MAYA_ORCS_07", world);
-  
+  ]]
   --in der Maya-H�hle
   --Gobbos in Eingangsh�hle
   SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_01", world);
@@ -650,6 +651,10 @@ function InitNewWorldNPC()
   SpawnNPC(Bandit(), "FP_BANDIT_ON_BRIDGE_04", world);
   SpawnNPC(Bandit(), "FP_BANDIT_ON_BRIDGE_05", world);
 
+  SpawnNPC(StrangeStatue("Seltsame Statue"), "FP_STRANGE_STATUE_01", world);
+  SpawnNPC(StrangeStatue("Seltsame Statue"), "FP_STRANGE_STATUE_02", world);
+  SpawnNPC(StrangeStatue("Seltsame Statue"), "FP_STRANGE_STATUE_03", world);
+
   --quest npcs
   SpawnNPC(VLK_1000_AmbientFemale(), "FP_CITY_TAVERN_01", world);
   SpawnNPC(VLK_1000_AmbientFemale(), "FP_CITY_TAVERN_02", world);
@@ -687,6 +692,7 @@ function InitNewWorldNPC()
   SpawnNPC(VLK_7003_Ryan(), "FP_STAND", world);
   SpawnNPC(VLK_7004_Lian(), "FP_ROAM_TAVERNE_TROLLAREA_02_04", world);
   SpawnNPC(VLK_7005_Bryan(), "FP_STAND_NW_TAVERNE_IN_RANGERMEETING_04", world);
+  
   --SpawnNPC(VLK_7006_Weapontrader(), "FP_STAND_NW_TAVERNE_IN_RANGERMEETING_05", world);
 
 

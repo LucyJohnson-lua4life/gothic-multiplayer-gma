@@ -94,7 +94,7 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
     
     if(cmdtext == "/tomaya") then
         
-        SetPlayerPos(playerid,86044,3842,23504);
+        SetPlayerPos(playerid,77860,4129,23121);
     end
 
     if cmdtext == "/tohunter" then
@@ -113,6 +113,11 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         SetPlayerPos(playerid, 57084,1906,-25900)
     end
 
+
+    if cmdtext == "/femr" then
+        GiveItem(playerid, "ItGma_armor_start_fem",1)
+        GiveItem(playerid, "ItGma_armor_start_fem2",1)
+    end
 
     if cmdtext == "/npc" then
         --38994, 3901, -2235

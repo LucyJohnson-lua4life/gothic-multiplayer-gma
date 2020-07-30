@@ -1,7 +1,6 @@
 require "serverscripts/utils/script_functions"
 require "serverscripts/player_globals"
 require "serverscripts/has_item_globals"
-require "serverscripts/price_table"
 
 local dia_vlk_2001_olga = {}
 local drunk_calmed_by = {}
@@ -36,14 +35,28 @@ local function handleBuddlertruppDia(playerid, text)
     end
 end
 
+local function handleTavernRest(playerid, text) 
+    if string.match(text, "ausruhen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Natuerlich. Schnapp dir einen Platz.")
+        SetPlayerHealth(playerid, GetPlayerMaxHealth(playerid))
+        return true
+    else 
+        return false
+    end
+end
+
+
+
 
 function dia_vlk_2001_olga.handleDialogue(playerid, text)
     
     if handleBuddlertruppDia(playerid, text) == true then
         return
+    elseif handleTavernRest(playerid, text) == true then
+        return
     else
         -- INIT DIALOGUE
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Hallo Fremder! Was kann ich fuer dich tun?")
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Hallo Fremder! Was kann ich fuer dich tun? Willst du dich <ausruhen> oder etwas bestellen?")
     end
 
 end

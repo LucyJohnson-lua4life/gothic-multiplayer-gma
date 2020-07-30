@@ -89,6 +89,8 @@ local function getNpcForName(name)
         return Zek_Dead();
     elseif (string.match(name, "^Betrunkener Schlaeger.*")) then
         return VLK_2005_BetrunkenerSchlaeger();
+    elseif (string.match(name, "^Seltsame Statue.*")) then
+        return StrangeStatue("Seltsame Statue");
     end
 end
 
