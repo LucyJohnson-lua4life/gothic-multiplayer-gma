@@ -75,6 +75,20 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         SetPlayerMagicLevel(playerid, 3)
     end
 
+    if cmd == "/tools" then
+        
+        
+        GiveItem(playerid, "ItMi_Saw",1)
+        GiveItem(playerid, "ItMi_Broom",1)
+        GiveItem(playerid, "ItMi_Hammer",1)
+        GiveItem(playerid, "ItMiSwordrawhot",1)
+        GiveItem(playerid, "ItMi_Stomper",1)
+        GiveItem(playerid, "ItMi_Scoop",1)
+        GiveItem(playerid, "ItMi_Pan",1)
+        
+        
+    end
+
     if cmd == "/turn" then
         local fid = GetFocus(playerid)
         SetPlayerAngle(fid,180)

@@ -22,6 +22,7 @@ local maya_dungeon = require "serverscripts/feature_modules/dungeon_module/maya_
 local world_vobs_module = require "serverscripts/feature_modules/world_vobs_module/world_vobs_module"
 local custom_items_module = require "serverscripts/feature_modules/custom_items_module/custom_items_module"
 local world_items_module = require "serverscripts/feature_modules/world_items_module/world_items_module"
+local alchemy_module = require "serverscripts/feature_modules/alchemy_module/alchemy_module"
 
 
 
@@ -136,22 +137,11 @@ function OnPlayerCommandText(playerid, cmdtext)
 	elseif cmdtext == "/suicide help" then
 		SendPlayerMessage(playerid, 230,230,230, "Gebe /suicide ein um deinen Charakter umzubringen. Dein Charakter wird dabei seine gesammelten Items verlieren.")
 	end
-
-	if cmdtext == "/item" then
-        local x, y, z = GetPlayerPos(playerid)
-        local itemid = CreateItem("ITAR_PAL_M", 1, x, y, z, "NEWWORLD\\NEWWORLD.ZEN")
-        if itemid >= 0 then
-            SendPlayerMessage(playerid, 0, 255, 0, "Paladin's armor was dropped.")
-        else
-            SendPlayerMessage(playerid, 255, 0, 0, "Can't create item.")
-        end
-    end
-
-
 	robbing_module.OnPlayerCommandText(playerid, cmdtext)
 	npc_interaction_module.OnPlayerCommandText(playerid, cmdtext)
 	debug.OnPlayerCommandText(playerid, cmdtext)
 	maya_dungeon.OnPlayerCommandText(playerid, cmdtext)
+	alchemy_module.OnPlayerCommandText(playerid, cmdtext)
 end
 
 function OnPlayerDropItem(playerid, itemid, item_instance, amount, x, y, z)
@@ -177,6 +167,7 @@ function OnPlayerUseItem(playerid, item_instance, amount, hand)
 		inventory_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
 		mining_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
 		custom_items_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
+		alchemy_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
 	end
 end
 
