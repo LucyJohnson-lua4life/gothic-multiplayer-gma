@@ -30,7 +30,7 @@ end
 local function brewFlaskContent(playerid)
 
     if matchesIngredients(playerid, "ITPL_HEALTH_HERB_01","ITPL_HEALTH_HERB_01","ITPL_HEALTH_HERB_01") then
-        SendPlayerMessage(playerid,230,230,230, "Heiltrank hergestellt!")
+        SendPlayerMessage(playerid,0,255,0, "Heiltrank hergestellt!")
     else
         SendPlayerMessage(playerid,230,230,230, "Schade... nichts brauchbares entstanden.")
     end
@@ -85,12 +85,10 @@ end
 
 
 function alchemy_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
-    print(item_instance)
-    print(checkid)
-    print(amount)
+
     if checkid == check_id and amount > 0 then
         table.insert(flaskContent[playerid], item_instance)
-        SendPlayerMessage(playerid,230,230,230, item_instance.. " hinzugefuegt.")
+        SendPlayerMessage(playerid,230,230,230, ITEM_NAME_MAP[item_instance].. " hinzugefuegt.")
         RemoveItem(playerid, item_instance, 1)
         inventory_dao.updateItemOrDeleteIfAmountIsZero(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid], item_instance, 1)
     elseif checkid == check_id then

@@ -17502,3 +17502,511 @@
 [19:00:29] [bot] [ID: 2003] [info] Scavenger (61) left from server
 [19:00:29] [bot] [ID: 2003] [join] Scavenger (62) has joined the server
 [19:00:33] Scavenger (62) kill himself
+[19:02:41] 
+[19:02:41] Gothic Multiplayer Dedicated Server
+[19:02:41] -----------------------------------
+[19:02:41] GMP 1.1.1
+[19:02:41] -----------------------------------
+[19:02:41] https://github.com/GothicMultiplayerAccrescere
+[19:02:41] https://discord.gg/JHuQvWB
+[19:02:41] 
+[19:02:41] Loading server configuration...
+[19:02:41] hostname:         GMP Server
+[19:02:41] max players:      200
+[19:02:41] max bots:         2000
+[19:02:41] max timers:       10000
+[19:02:41] max items:        10000
+[19:02:41] max sounds:       10000
+[19:02:41] max global draws: 10000
+[19:02:41] max textures:     10000
+[19:02:41] max input length: 256
+[19:02:41] stream distance:  3500 meters
+[19:02:41] stream rate:      1000 miliseconds
+[19:02:41] position rate:    100 miliseconds
+[19:02:41] key rate:         70 miliseconds
+[19:02:41] bot update rate:  500 miliseconds
+[19:02:41] game time rate:   4000 miliseconds
+[19:02:41] unsynch items:    false
+[19:02:41] Configuration successfull loaded.
+[19:02:41] 
+[19:02:41] Gamemode 'gamemodes//bootstrap.lua' has been loaded.
+[19:02:43] [bot] [ID: 2199] [join] Wolf has joined the server
+[19:02:43] [bot] [ID: 2198] [join] Wolf (1) has joined the server
+[19:02:43] [bot] [ID: 2197] [join] Scavenger has joined the server
+[19:02:43] [bot] [ID: 2196] [join] Scavenger (1) has joined the server
+[19:02:43] [bot] [ID: 2195] [join] Orc Elite has joined the server
+[19:02:43] [bot] [ID: 2194] [join] Wolf (2) has joined the server
+[19:02:43] [bot] [ID: 2193] [join] Snapper has joined the server
+[19:02:44] [bot] [ID: 2192] [join] Wolf (3) has joined the server
+[19:02:44] [bot] [ID: 2191] [join] Wolf (4) has joined the server
+[19:02:44] [bot] [ID: 2190] [join] Shadowbeast has joined the server
+[19:02:44] [bot] [ID: 2189] [join] Scavenger (2) has joined the server
+[19:02:44] [bot] [ID: 2188] [join] Snapper (1) has joined the server
+[19:02:44] [bot] [ID: 2187] [join] Snapper (2) has joined the server
+[19:02:44] [bot] [ID: 2186] [join] Snapper (3) has joined the server
+[19:02:44] [bot] [ID: 2185] [join] Orc Elite (1) has joined the server
+[19:02:44] [bot] [ID: 2184] [join] Orc Elite (2) has joined the server
+[19:02:44] [bot] [ID: 2183] [join] Orc Elite (3) has joined the server
+[19:02:44] [bot] [ID: 2182] [join] Orc Elite (4) has joined the server
+[19:02:44] [bot] [ID: 2181] [join] Scavenger (3) has joined the server
+[19:02:44] [bot] [ID: 2180] [join] Scavenger (4) has joined the server
+[19:02:44] [bot] [ID: 2179] [join] Scavenger (5) has joined the server
+[19:02:44] [bot] [ID: 2178] [join] Orc Warrior has joined the server
+[19:02:44] [bot] [ID: 2177] [join] Wolf (5) has joined the server
+[19:02:44] [bot] [ID: 2176] [join] Wolf (6) has joined the server
+[19:02:44] [bot] [ID: 2175] [join] Orc Elite (5) has joined the server
+[19:02:44] [bot] [ID: 2174] [join] Orc Warrior (1) has joined the server
+[19:02:44] [bot] [ID: 2173] [join] Orc Warrior (2) has joined the server
+[19:02:44] [bot] [ID: 2172] [join] Wolf (7) has joined the server
+[19:02:44] [bot] [ID: 2171] [join] Wolf (8) has joined the server
+[19:02:44] [bot] [ID: 2170] [join] Orc Elite (6) has joined the server
+[19:02:44] [bot] [ID: 2169] [join] Orc Warrior (3) has joined the server
+[19:02:44] [bot] [ID: 2168] [join] Scavenger (6) has joined the server
+[19:02:44] [bot] [ID: 2167] [join] Scavenger (7) has joined the server
+[19:02:44] [bot] [ID: 2166] [join] Scavenger (8) has joined the server
+[19:02:44] [bot] [ID: 2165] [join] Scavenger (9) has joined the server
+[19:02:44] [bot] [ID: 2164] [join] Scavenger (10) has joined the server
+[19:02:44] [bot] [ID: 2163] [join] Scavenger (11) has joined the server
+[19:02:44] [bot] [ID: 2162] [join] Scavenger (12) has joined the server
+[19:02:44] [bot] [ID: 2161] [join] Scavenger (13) has joined the server
+[19:02:44] [bot] [ID: 2160] [join] Wolf (9) has joined the server
+[19:02:44] [bot] [ID: 2159] [join] Wolf (10) has joined the server
+[19:02:44] [bot] [ID: 2158] [join] Wolf (11) has joined the server
+[19:02:44] [bot] [ID: 2157] [join] Wolf (12) has joined the server
+[19:02:44] [bot] [ID: 2156] [join] Wolf (13) has joined the server
+[19:02:44] [bot] [ID: 2155] [join] Wolf (14) has joined the server
+[19:02:44] [bot] [ID: 2154] [join] Wolf (15) has joined the server
+[19:02:44] [bot] [ID: 2153] [join] Lurker has joined the server
+[19:02:44] [bot] [ID: 2152] [join] Lurker (1) has joined the server
+[19:02:44] [bot] [ID: 2151] [join] Lurker (2) has joined the server
+[19:02:44] [bot] [ID: 2150] [join] Wolf (16) has joined the server
+[19:02:44] [bot] [ID: 2149] [join] Snapper (4) has joined the server
+[19:02:44] [bot] [ID: 2148] [join] Scavenger (14) has joined the server
+[19:02:44] [bot] [ID: 2147] [join] Zombie has joined the server
+[19:02:44] [bot] [ID: 2146] [join] Zombie (1) has joined the server
+[19:02:44] [bot] [ID: 2145] [join] Zombie (2) has joined the server
+[19:02:44] [bot] [ID: 2144] [join] Goblin Skeleton has joined the server
+[19:02:44] [bot] [ID: 2143] [join] Wolf (17) has joined the server
+[19:02:44] [bot] [ID: 2142] [join] Black Goblin has joined the server
+[19:02:44] [bot] [ID: 2141] [join] Wolf (18) has joined the server
+[19:02:44] [bot] [ID: 2140] [join] Lurker (3) has joined the server
+[19:02:44] [bot] [ID: 2139] [join] Wolf (19) has joined the server
+[19:02:44] [bot] [ID: 2138] [join] Lurker (4) has joined the server
+[19:02:44] [bot] [ID: 2137] [join] Orc Warrior (4) has joined the server
+[19:02:44] [bot] [ID: 2136] [join] Warg has joined the server
+[19:02:44] [bot] [ID: 2135] [join] Warg (1) has joined the server
+[19:02:44] [bot] [ID: 2134] [join] Orc Warrior (5) has joined the server
+[19:02:44] [bot] [ID: 2133] [join] Warg (2) has joined the server
+[19:02:44] [bot] [ID: 2132] [join] Warg (3) has joined the server
+[19:02:44] [bot] [ID: 2131] [join] Warg (4) has joined the server
+[19:02:44] [bot] [ID: 2130] [join] Shadowbeast (1) has joined the server
+[19:02:44] [bot] [ID: 2129] [join] Warg (5) has joined the server
+[19:02:44] [bot] [ID: 2128] [join] Warg (6) has joined the server
+[19:02:44] [bot] [ID: 2127] [join] Skeleton has joined the server
+[19:02:44] [bot] [ID: 2126] [join] Skeleton (1) has joined the server
+[19:02:44] [bot] [ID: 2125] [join] Skeleton (2) has joined the server
+[19:02:44] [bot] [ID: 2124] [join] Skeleton (3) has joined the server
+[19:02:44] [bot] [ID: 2123] [join] Skeleton (4) has joined the server
+[19:02:44] [bot] [ID: 2122] [join] Skeleton (5) has joined the server
+[19:02:44] [bot] [ID: 2121] [join] Skeleton Warrior has joined the server
+[19:02:44] [bot] [ID: 2120] [join] Skeleton Warrior (1) has joined the server
+[19:02:44] [bot] [ID: 2119] [join] Skeleton Warrior (2) has joined the server
+[19:02:44] [bot] [ID: 2118] [join] Troll has joined the server
+[19:02:44] [bot] [ID: 2117] [join] Troll (1) has joined the server
+[19:02:44] [bot] [ID: 2116] [join] Skeleton (6) has joined the server
+[19:02:44] [bot] [ID: 2115] [join] Skeleton (7) has joined the server
+[19:02:44] [bot] [ID: 2114] [join] Skeleton (8) has joined the server
+[19:02:44] [bot] [ID: 2113] [join] Skeleton (9) has joined the server
+[19:02:44] [bot] [ID: 2112] [join] Skeleton (10) has joined the server
+[19:02:44] [bot] [ID: 2111] [join] Skeleton (11) has joined the server
+[19:02:44] [bot] [ID: 2110] [join] Skeleton (12) has joined the server
+[19:02:44] [bot] [ID: 2109] [join] Skeleton Mage has joined the server
+[19:02:44] [bot] [ID: 2108] [join] Zombie (3) has joined the server
+[19:02:44] [bot] [ID: 2107] [join] Zombie (4) has joined the server
+[19:02:44] [bot] [ID: 2106] [join] Zombie (5) has joined the server
+[19:02:44] [bot] [ID: 2105] [join] Zombie (6) has joined the server
+[19:02:44] [bot] [ID: 2104] [join] Zombie (7) has joined the server
+[19:02:44] [bot] [ID: 2103] [join] Minecrawler has joined the server
+[19:02:44] [bot] [ID: 2102] [join] Minecrawler Warrior has joined the server
+[19:02:44] [bot] [ID: 2101] [join] Minecrawler (1) has joined the server
+[19:02:44] [bot] [ID: 2100] [join] Minecrawler Warrior (1) has joined the server
+[19:02:44] [bot] [ID: 2099] [join] Black Goblin (1) has joined the server
+[19:02:44] [bot] [ID: 2098] [join] Black Goblin (2) has joined the server
+[19:02:44] [bot] [ID: 2097] [join] Black Goblin (3) has joined the server
+[19:02:44] [bot] [ID: 2096] [join] Black Goblin (4) has joined the server
+[19:02:44] [bot] [ID: 2095] [join] Black Goblin (5) has joined the server
+[19:02:44] [bot] [ID: 2094] [join] Black Goblin (6) has joined the server
+[19:02:44] [bot] [ID: 2093] [join] Black Goblin (7) has joined the server
+[19:02:44] [bot] [ID: 2092] [join] Black Goblin (8) has joined the server
+[19:02:44] [bot] [ID: 2091] [join] Black Goblin (9) has joined the server
+[19:02:44] [bot] [ID: 2090] [join] Black Goblin (10) has joined the server
+[19:02:44] [bot] [ID: 2089] [join] Black Goblin (11) has joined the server
+[19:02:44] [bot] [ID: 2088] [join] Black Goblin (12) has joined the server
+[19:02:44] [bot] [ID: 2087] [join] Black Goblin (13) has joined the server
+[19:02:44] [bot] [ID: 2086] [join] Black Goblin (14) has joined the server
+[19:02:44] [bot] [ID: 2085] [join] Black Goblin (15) has joined the server
+[19:02:44] [bot] [ID: 2084] [join] Black Goblin (16) has joined the server
+[19:02:44] [bot] [ID: 2083] [join] Black Goblin (17) has joined the server
+[19:02:44] [bot] [ID: 2082] [join] Black Goblin (18) has joined the server
+[19:02:44] [bot] [ID: 2081] [join] Black Goblin (19) has joined the server
+[19:02:44] [bot] [ID: 2080] [join] Black Goblin (20) has joined the server
+[19:02:44] [bot] [ID: 2079] [join] Wolf (20) has joined the server
+[19:02:44] [bot] [ID: 2078] [join] Wolf (21) has joined the server
+[19:02:44] [bot] [ID: 2077] [join] Wolf (22) has joined the server
+[19:02:44] [bot] [ID: 2076] [join] Wolf (23) has joined the server
+[19:02:44] [bot] [ID: 2075] [join] Wolf (24) has joined the server
+[19:02:44] [bot] [ID: 2074] [join] Wolf (25) has joined the server
+[19:02:44] [bot] [ID: 2073] [join] Wolf (26) has joined the server
+[19:02:44] [bot] [ID: 2072] [join] Wolf (27) has joined the server
+[19:02:44] [bot] [ID: 2071] [join] Wolf (28) has joined the server
+[19:02:44] [bot] [ID: 2070] [join] Wolf (29) has joined the server
+[19:02:44] [bot] [ID: 2069] [join] Wolf (30) has joined the server
+[19:02:44] [bot] [ID: 2068] [join] Goblin Skeleton (1) has joined the server
+[19:02:44] [bot] [ID: 2067] [join] Wolf (31) has joined the server
+[19:02:44] [bot] [ID: 2066] [join] Wolf (32) has joined the server
+[19:02:44] [bot] [ID: 2065] [join] Wolf (33) has joined the server
+[19:02:44] [bot] [ID: 2064] [join] Wolf (34) has joined the server
+[19:02:44] [bot] [ID: 2063] [join] Goblin Skeleton (2) has joined the server
+[19:02:44] [bot] [ID: 2062] [join] Goblin Skeleton (3) has joined the server
+[19:02:44] [bot] [ID: 2061] [join] Lesser Skeleton has joined the server
+[19:02:44] [bot] [ID: 2060] [join] Lesser Skeleton (1) has joined the server
+[19:02:44] [bot] [ID: 2059] [join] Keiler has joined the server
+[19:02:44] [bot] [ID: 2058] [join] Keiler (1) has joined the server
+[19:02:44] [bot] [ID: 2057] [join] Wolf (35) has joined the server
+[19:02:44] [bot] [ID: 2056] [join] Wolf (36) has joined the server
+[19:02:44] [bot] [ID: 2055] [join] Wolf (37) has joined the server
+[19:02:44] [bot] [ID: 2054] [join] Wolf (38) has joined the server
+[19:02:44] [bot] [ID: 2053] [join] Scavenger (15) has joined the server
+[19:02:44] [bot] [ID: 2052] [join] Scavenger (16) has joined the server
+[19:02:44] [bot] [ID: 2051] [join] Scavenger (17) has joined the server
+[19:02:44] [bot] [ID: 2050] [join] Keiler (2) has joined the server
+[19:02:44] [bot] [ID: 2049] [join] Lurker (5) has joined the server
+[19:02:44] [bot] [ID: 2048] [join] Lurker (6) has joined the server
+[19:02:44] [bot] [ID: 2047] [join] Lurker (7) has joined the server
+[19:02:44] [bot] [ID: 2046] [join] Scavenger (18) has joined the server
+[19:02:44] [bot] [ID: 2045] [join] Scavenger (19) has joined the server
+[19:02:44] [bot] [ID: 2044] [join] Lurker (8) has joined the server
+[19:02:44] [bot] [ID: 2043] [join] Lurker (9) has joined the server
+[19:02:44] [bot] [ID: 2042] [join] Wolf (39) has joined the server
+[19:02:44] [bot] [ID: 2041] [join] Lurker (10) has joined the server
+[19:02:44] [bot] [ID: 2040] [join] Lurker (11) has joined the server
+[19:02:44] [bot] [ID: 2039] [join] Keiler (3) has joined the server
+[19:02:44] [bot] [ID: 2038] [join] Keiler (4) has joined the server
+[19:02:44] [bot] [ID: 2037] [join] Lurker (12) has joined the server
+[19:02:44] [bot] [ID: 2036] [join] Lurker (13) has joined the server
+[19:02:44] [bot] [ID: 2035] [join] Keiler (5) has joined the server
+[19:02:44] [bot] [ID: 2034] [join] Wolf (40) has joined the server
+[19:02:44] [bot] [ID: 2033] [join] Goblin Skeleton (4) has joined the server
+[19:02:44] [bot] [ID: 2032] [join] Wolf (41) has joined the server
+[19:02:44] [bot] [ID: 2031] [join] Wolf (42) has joined the server
+[19:02:44] [bot] [ID: 2030] [join] Wolf (43) has joined the server
+[19:02:44] [bot] [ID: 2029] [join] Wolf (44) has joined the server
+[19:02:44] [bot] [ID: 2028] [join] Wolf (45) has joined the server
+[19:02:44] [bot] [ID: 2027] [join] Scavenger (20) has joined the server
+[19:02:44] [bot] [ID: 2026] [join] Scavenger (21) has joined the server
+[19:02:44] [bot] [ID: 2025] [join] Scavenger (22) has joined the server
+[19:02:44] [bot] [ID: 2024] [join] Scavenger (23) has joined the server
+[19:02:44] [bot] [ID: 2023] [join] Black Goblin (21) has joined the server
+[19:02:44] [bot] [ID: 2022] [join] Black Goblin (22) has joined the server
+[19:02:44] [bot] [ID: 2021] [join] Black Goblin (23) has joined the server
+[19:02:44] [bot] [ID: 2020] [join] Orc Shaman has joined the server
+[19:02:44] [bot] [ID: 2019] [join] Orc Shaman (1) has joined the server
+[19:02:44] [bot] [ID: 2018] [join] Orc Shaman (2) has joined the server
+[19:02:44] [bot] [ID: 2017] [join] Orc Elite (7) has joined the server
+[19:02:44] [bot] [ID: 2016] [join] Orc Warrior (6) has joined the server
+[19:02:44] [bot] [ID: 2015] [join] Orc Warrior (7) has joined the server
+[19:02:44] [bot] [ID: 2014] [join] Orc Warrior (8) has joined the server
+[19:02:44] [bot] [ID: 2013] [join] Orc Elite (8) has joined the server
+[19:02:44] [bot] [ID: 2012] [join] Orc Warrior (9) has joined the server
+[19:02:44] [bot] [ID: 2011] [join] Orc Elite (9) has joined the server
+[19:02:44] [bot] [ID: 2010] [join] Orc Warrior (10) has joined the server
+[19:02:44] [bot] [ID: 2009] [join] Orc Warrior (11) has joined the server
+[19:02:44] [bot] [ID: 2008] [join] Orc Elite (10) has joined the server
+[19:02:44] [bot] [ID: 2007] [join] Orc Warrior (12) has joined the server
+[19:02:44] [bot] [ID: 2006] [join] Scavenger (24) has joined the server
+[19:02:44] [bot] [ID: 2005] [join] Scavenger (25) has joined the server
+[19:02:44] [bot] [ID: 2004] [join] Scavenger (26) has joined the server
+[19:02:44] [bot] [ID: 2003] [join] Scavenger (27) has joined the server
+[19:02:44] [bot] [ID: 2002] [join] Scavenger (28) has joined the server
+[19:02:44] [bot] [ID: 2001] [join] Scavenger (29) has joined the server
+[19:02:44] [bot] [ID: 2000] [join] Scavenger (30) has joined the server
+[19:02:44] [bot] [ID: 1999] [join] Scavenger (31) has joined the server
+[19:02:45] [bot] [ID: 1998] [join] Skeleton (13) has joined the server
+[19:02:45] [bot] [ID: 1997] [join] Skeleton (14) has joined the server
+[19:02:45] [bot] [ID: 1996] [join] Zombie (8) has joined the server
+[19:02:45] [bot] [ID: 1995] [join] Zombie (9) has joined the server
+[19:02:45] [bot] [ID: 1994] [join] Zombie (10) has joined the server
+[19:02:45] [bot] [ID: 1993] [join] Warg (7) has joined the server
+[19:02:45] [bot] [ID: 1992] [join] Warg (8) has joined the server
+[19:02:45] [bot] [ID: 1991] [join] Warg (9) has joined the server
+[19:02:45] [bot] [ID: 1990] [join] Wolf (46) has joined the server
+[19:02:45] [bot] [ID: 1989] [join] Wolf (47) has joined the server
+[19:02:45] [bot] [ID: 1988] [join] Keiler (6) has joined the server
+[19:02:45] [bot] [ID: 1987] [join] Warg (10) has joined the server
+[19:02:45] [bot] [ID: 1986] [join] Warg (11) has joined the server
+[19:02:45] [bot] [ID: 1985] [join] Warg (12) has joined the server
+[19:02:45] [bot] [ID: 1984] [join] Shadowbeast (2) has joined the server
+[19:02:45] [bot] [ID: 1983] [join] Scavenger (32) has joined the server
+[19:02:45] [bot] [ID: 1982] [join] Scavenger (33) has joined the server
+[19:02:45] [bot] [ID: 1981] [join] Wolf (48) has joined the server
+[19:02:45] [bot] [ID: 1980] [join] Waran has joined the server
+[19:02:45] [bot] [ID: 1979] [join] Waran (1) has joined the server
+[19:02:45] [bot] [ID: 1978] [join] Orc Warrior (13) has joined the server
+[19:02:45] [bot] [ID: 1977] [join] Wolf (49) has joined the server
+[19:02:45] [bot] [ID: 1976] [join] Wolf (50) has joined the server
+[19:02:45] [bot] [ID: 1975] [join] Scavenger (34) has joined the server
+[19:02:45] [bot] [ID: 1974] [join] Scavenger (35) has joined the server
+[19:02:45] [bot] [ID: 1973] [join] Wolf (51) has joined the server
+[19:02:45] [bot] [ID: 1972] [join] Wolf (52) has joined the server
+[19:02:45] [bot] [ID: 1971] [join] Scavenger (36) has joined the server
+[19:02:45] [bot] [ID: 1970] [join] Scavenger (37) has joined the server
+[19:02:45] [bot] [ID: 1969] [join] Scavenger (38) has joined the server
+[19:02:45] [bot] [ID: 1968] [join] Scavenger (39) has joined the server
+[19:02:45] [bot] [ID: 1967] [join] Scavenger (40) has joined the server
+[19:02:45] [bot] [ID: 1966] [join] Wolf (53) has joined the server
+[19:02:45] [bot] [ID: 1965] [join] Wolf (54) has joined the server
+[19:02:45] [bot] [ID: 1964] [join] Wolf (55) has joined the server
+[19:02:45] [bot] [ID: 1963] [join] Wolf (56) has joined the server
+[19:02:45] [bot] [ID: 1962] [join] Wolf (57) has joined the server
+[19:02:45] [bot] [ID: 1961] [join] Wolf (58) has joined the server
+[19:02:45] [bot] [ID: 1960] [join] Warg (13) has joined the server
+[19:02:45] [bot] [ID: 1959] [join] Warg (14) has joined the server
+[19:02:45] [bot] [ID: 1958] [join] Warg (15) has joined the server
+[19:02:45] [bot] [ID: 1957] [join] Shadowbeast (3) has joined the server
+[19:02:45] [bot] [ID: 1956] [join] Black Goblin (24) has joined the server
+[19:02:45] [bot] [ID: 1955] [join] Black Goblin (25) has joined the server
+[19:02:45] [bot] [ID: 1954] [join] Black Goblin (26) has joined the server
+[19:02:45] [bot] [ID: 1953] [join] Warg (16) has joined the server
+[19:02:45] [bot] [ID: 1952] [join] Warg (17) has joined the server
+[19:02:45] [bot] [ID: 1951] [join] Warg (18) has joined the server
+[19:02:45] [bot] [ID: 1950] [join] Warg (19) has joined the server
+[19:02:45] [bot] [ID: 1949] [join] Warg (20) has joined the server
+[19:02:45] [bot] [ID: 1948] [join] Warg (21) has joined the server
+[19:02:45] [bot] [ID: 1947] [join] Scavenger (41) has joined the server
+[19:02:45] [bot] [ID: 1946] [join] Scavenger (42) has joined the server
+[19:02:45] [bot] [ID: 1945] [join] Scavenger (43) has joined the server
+[19:02:45] [bot] [ID: 1944] [join] Shadowbeast (4) has joined the server
+[19:02:45] [bot] [ID: 1943] [join] Orc Warrior (14) has joined the server
+[19:02:45] [bot] [ID: 1942] [join] Wolf (59) has joined the server
+[19:02:45] [bot] [ID: 1941] [join] Wolf (60) has joined the server
+[19:02:45] [bot] [ID: 1940] [join] Black Goblin (27) has joined the server
+[19:02:45] [bot] [ID: 1939] [join] Black Goblin (28) has joined the server
+[19:02:45] [bot] [ID: 1938] [join] Scavenger (44) has joined the server
+[19:02:45] [bot] [ID: 1937] [join] Wolf (61) has joined the server
+[19:02:45] [bot] [ID: 1936] [join] Shadowbeast (5) has joined the server
+[19:02:45] [bot] [ID: 1935] [join] Scavenger (45) has joined the server
+[19:02:45] [bot] [ID: 1934] [join] Scavenger (46) has joined the server
+[19:02:45] [bot] [ID: 1933] [join] Keiler (7) has joined the server
+[19:02:45] [bot] [ID: 1932] [join] Wolf (62) has joined the server
+[19:02:45] [bot] [ID: 1931] [join] Warg (22) has joined the server
+[19:02:45] [bot] [ID: 1930] [join] Wolf (63) has joined the server
+[19:02:45] [bot] [ID: 1929] [join] Wolf (64) has joined the server
+[19:02:45] [bot] [ID: 1928] [join] Wolf (65) has joined the server
+[19:02:45] [bot] [ID: 1927] [join] Wolf (66) has joined the server
+[19:02:45] [bot] [ID: 1926] [join] Wolf (67) has joined the server
+[19:02:45] [bot] [ID: 1925] [join] Wolf (68) has joined the server
+[19:02:45] [bot] [ID: 1924] [join] Wolf (69) has joined the server
+[19:02:45] [bot] [ID: 1923] [join] Wolf (70) has joined the server
+[19:02:45] [bot] [ID: 1922] [join] Keiler (8) has joined the server
+[19:02:45] [bot] [ID: 1921] [join] Keiler (9) has joined the server
+[19:02:45] [bot] [ID: 1920] [join] Warg (23) has joined the server
+[19:02:45] [bot] [ID: 1919] [join] Warg (24) has joined the server
+[19:02:45] [bot] [ID: 1918] [join] Wolf (71) has joined the server
+[19:02:45] [bot] [ID: 1917] [join] Goblin Skeleton (5) has joined the server
+[19:02:45] [bot] [ID: 1916] [join] Wolf (72) has joined the server
+[19:02:45] [bot] [ID: 1915] [join] Wolf (73) has joined the server
+[19:02:45] [bot] [ID: 1914] [join] Wolf (74) has joined the server
+[19:02:45] [bot] [ID: 1913] [join] Wolf (75) has joined the server
+[19:02:45] [bot] [ID: 1912] [join] Wolf (76) has joined the server
+[19:02:45] [bot] [ID: 1911] [join] Wolf (77) has joined the server
+[19:02:45] [bot] [ID: 1910] [join] Scavenger (47) has joined the server
+[19:02:45] [bot] [ID: 1909] [join] Snapper (5) has joined the server
+[19:02:45] [bot] [ID: 1908] [join] Snapper (6) has joined the server
+[19:02:45] [bot] [ID: 1907] [join] Snapper (7) has joined the server
+[19:02:45] [bot] [ID: 1906] [join] Warg (25) has joined the server
+[19:02:45] [bot] [ID: 1905] [join] Snapper (8) has joined the server
+[19:02:45] [bot] [ID: 1904] [join] Warg (26) has joined the server
+[19:02:45] [bot] [ID: 1903] [join] Warg (27) has joined the server
+[19:02:45] [bot] [ID: 1902] [join] Wolf (78) has joined the server
+[19:02:45] [bot] [ID: 1901] [join] Wolf (79) has joined the server
+[19:02:45] [bot] [ID: 1900] [join] Wolf (80) has joined the server
+[19:02:45] [bot] [ID: 1899] [join] Warg (28) has joined the server
+[19:02:45] [bot] [ID: 1898] [join] Wolf (81) has joined the server
+[19:02:45] [bot] [ID: 1897] [join] Wolf (82) has joined the server
+[19:02:45] [bot] [ID: 1896] [join] Wolf (83) has joined the server
+[19:02:45] [bot] [ID: 1895] [join] Warg (29) has joined the server
+[19:02:45] [bot] [ID: 1894] [join] Scavenger (48) has joined the server
+[19:02:45] [bot] [ID: 1893] [join] Wolf (84) has joined the server
+[19:02:45] [bot] [ID: 1892] [join] Keiler (10) has joined the server
+[19:02:45] [bot] [ID: 1891] [join] Warg (30) has joined the server
+[19:02:45] [bot] [ID: 1890] [join] Warg (31) has joined the server
+[19:02:45] [bot] [ID: 1889] [join] Wolf (85) has joined the server
+[19:02:45] [bot] [ID: 1888] [join] Warg (32) has joined the server
+[19:02:45] [bot] [ID: 1887] [join] Wolf (86) has joined the server
+[19:02:45] [bot] [ID: 1886] [join] Keiler (11) has joined the server
+[19:02:45] [bot] [ID: 1885] [join] Wolf (87) has joined the server
+[19:02:45] [bot] [ID: 1884] [join] Wolf (88) has joined the server
+[19:02:45] [bot] [ID: 1883] [join] Minecrawler (2) has joined the server
+[19:02:45] [bot] [ID: 1882] [join] Minecrawler (3) has joined the server
+[19:02:45] [bot] [ID: 1881] [join] Minecrawler Warrior (2) has joined the server
+[19:02:45] [bot] [ID: 1880] [join] Minecrawler Warrior (3) has joined the server
+[19:02:45] [bot] [ID: 1879] [join] Black Troll has joined the server
+[19:02:45] [bot] [ID: 1878] [join] Dragon Snapper has joined the server
+[19:02:45] [bot] [ID: 1877] [join] Dragon Snapper (1) has joined the server
+[19:02:45] [bot] [ID: 1876] [join] Dragon Snapper (2) has joined the server
+[19:02:45] [bot] [ID: 1875] [join] Razor has joined the server
+[19:02:45] [bot] [ID: 1874] [join] Razor (1) has joined the server
+[19:02:45] [bot] [ID: 1873] [join] Razor (2) has joined the server
+[19:02:45] [bot] [ID: 1872] [join] Dragon Snapper (3) has joined the server
+[19:02:45] [bot] [ID: 1871] [join] Dragon Snapper (4) has joined the server
+[19:02:45] [bot] [ID: 1870] [join] Black Goblin (29) has joined the server
+[19:02:45] [bot] [ID: 1869] [join] Wolf (89) has joined the server
+[19:02:45] [bot] [ID: 1868] [join] Minecrawler (4) has joined the server
+[19:02:45] [bot] [ID: 1867] [join] Earth Titan has joined the server
+[19:02:45] [bot] [ID: 1866] [join] Stoneguardian has joined the server
+[19:02:45] [bot] [ID: 1865] [join] Stoneguardian (1) has joined the server
+[19:02:45] [bot] [ID: 1864] [join] Stoneguardian (2) has joined the server
+[19:02:45] [bot] [ID: 1863] [join] Stoneguardian (3) has joined the server
+[19:02:45] [bot] [ID: 1862] [join] Black Goblin (30) has joined the server
+[19:02:45] [bot] [ID: 1861] [join] Black Goblin (31) has joined the server
+[19:02:45] [bot] [ID: 1860] [join] Black Goblin (32) has joined the server
+[19:02:45] [bot] [ID: 1859] [join] Black Goblin (33) has joined the server
+[19:02:45] [bot] [ID: 1858] [join] Black Goblin (34) has joined the server
+[19:02:45] [bot] [ID: 1857] [join] Black Goblin (35) has joined the server
+[19:02:45] [bot] [ID: 1856] [join] Black Goblin (36) has joined the server
+[19:02:45] [bot] [ID: 1855] [join] Black Goblin (37) has joined the server
+[19:02:45] [bot] [ID: 1854] [join] Black Goblin (38) has joined the server
+[19:02:45] [bot] [ID: 1853] [join] Black Goblin (39) has joined the server
+[19:02:45] [bot] [ID: 1852] [join] Black Goblin (40) has joined the server
+[19:02:45] [bot] [ID: 1851] [join] Minecrawler (5) has joined the server
+[19:02:45] [bot] [ID: 1850] [join] Minecrawler (6) has joined the server
+[19:02:45] [bot] [ID: 1849] [join] Minecrawler (7) has joined the server
+[19:02:45] [bot] [ID: 1848] [join] Minecrawler Warrior (4) has joined the server
+[19:02:45] [bot] [ID: 1847] [join] Minecrawler Warrior (5) has joined the server
+[19:02:45] [bot] [ID: 1846] [join] Blattcrawler has joined the server
+[19:02:45] [bot] [ID: 1845] [join] Blattcrawler (1) has joined the server
+[19:02:45] [bot] [ID: 1844] [join] Blattcrawler (2) has joined the server
+[19:02:45] [bot] [ID: 1843] [join] Wolf (90) has joined the server
+[19:02:45] [bot] [ID: 1842] [join] Scavenger (49) has joined the server
+[19:02:45] [bot] [ID: 1841] [join] Wolf (91) has joined the server
+[19:02:45] [bot] [ID: 1840] [join] Wolf (92) has joined the server
+[19:02:45] [bot] [ID: 1839] [join] Scavenger (50) has joined the server
+[19:02:45] [bot] [ID: 1838] [join] Scavenger (51) has joined the server
+[19:02:45] [bot] [ID: 1837] [join] Black Goblin (41) has joined the server
+[19:02:45] [bot] [ID: 1836] [join] Waran (2) has joined the server
+[19:02:45] [bot] [ID: 1835] [join] Lurker (14) has joined the server
+[19:02:45] [bot] [ID: 1834] [join] Scavenger (52) has joined the server
+[19:02:45] [bot] [ID: 1833] [join] Scavenger (53) has joined the server
+[19:02:45] [bot] [ID: 1832] [join] Wolf (93) has joined the server
+[19:02:45] [bot] [ID: 1831] [join] Scavenger (54) has joined the server
+[19:02:45] [bot] [ID: 1830] [join] Goblin Skeleton (6) has joined the server
+[19:02:45] [bot] [ID: 1829] [join] Wolf (94) has joined the server
+[19:02:45] [bot] [ID: 1828] [join] Scavenger (55) has joined the server
+[19:02:45] [bot] [ID: 1827] [join] Wolf (95) has joined the server
+[19:02:45] [bot] [ID: 1826] [join] Lurker (15) has joined the server
+[19:02:46] [bot] [ID: 1825] [join] Scavenger (56) has joined the server
+[19:02:46] [bot] [ID: 1824] [join] Skeleton (15) has joined the server
+[19:02:46] [bot] [ID: 1823] [join] Skeleton (16) has joined the server
+[19:02:46] [bot] [ID: 1822] [join] Skeleton Warrior (3) has joined the server
+[19:02:46] [bot] [ID: 1821] [join] Skeleton Warrior (4) has joined the server
+[19:02:46] [bot] [ID: 1820] [join] Scavenger (57) has joined the server
+[19:02:46] [bot] [ID: 1819] [join] Black Goblin (42) has joined the server
+[19:02:46] [bot] [ID: 1818] [join] Black Goblin (43) has joined the server
+[19:02:46] [bot] [ID: 1817] [join] Shadowbeast (6) has joined the server
+[19:02:46] [bot] [ID: 1816] [join] Shadowbeast (7) has joined the server
+[19:02:46] [bot] [ID: 1815] [join] Orc Warrior (15) has joined the server
+[19:02:46] [bot] [ID: 1814] [join] Orc Warrior (16) has joined the server
+[19:02:46] [bot] [ID: 1813] [join] Orc Warrior (17) has joined the server
+[19:02:46] [bot] [ID: 1812] [join] Orc Shaman (3) has joined the server
+[19:02:46] [bot] [ID: 1811] [join] Orc Warrior (18) has joined the server
+[19:02:46] [bot] [ID: 1810] [join] Orc Warrior (19) has joined the server
+[19:02:46] [bot] [ID: 1809] [join] Orc Warrior (20) has joined the server
+[19:02:46] [bot] [ID: 1808] [join] Orc Warrior (21) has joined the server
+[19:02:46] [bot] [ID: 1807] [join] Orc Warrior (22) has joined the server
+[19:02:46] [bot] [ID: 1806] [join] Orc Warrior (23) has joined the server
+[19:02:46] [bot] [ID: 1805] [join] Orc Warrior (24) has joined the server
+[19:02:46] [bot] [ID: 1804] [join] Orc Shaman (4) has joined the server
+[19:02:46] [bot] [ID: 1803] [join] Orc Elite (11) has joined the server
+[19:02:46] [bot] [ID: 1802] [join] Orc Elite (12) has joined the server
+[19:02:46] [bot] [ID: 1801] [join] Orc Elite (13) has joined the server
+[19:02:46] [bot] [ID: 1800] [join] Orc Elite (14) has joined the server
+[19:02:46] [bot] [ID: 1799] [join] Orc Elite (15) has joined the server
+[19:02:46] [bot] [ID: 1798] [join] Orc Warrior (25) has joined the server
+[19:02:46] [bot] [ID: 1797] [join] Orc Warrior (26) has joined the server
+[19:02:46] [bot] [ID: 1796] [join] Orc Warrior (27) has joined the server
+[19:02:46] [bot] [ID: 1795] [join] Orc Warrior (28) has joined the server
+[19:02:46] [bot] [ID: 1794] [join] Orc Warrior (29) has joined the server
+[19:02:46] [bot] [ID: 1793] [join] Warg (33) has joined the server
+[19:02:46] [bot] [ID: 1792] [join] Warg (34) has joined the server
+[19:02:46] [bot] [ID: 1791] [join] Warg (35) has joined the server
+[19:02:46] [bot] [ID: 1790] [join] Warg (36) has joined the server
+[19:02:46] [bot] [ID: 1789] [join] Warg (37) has joined the server
+[19:02:46] [bot] [ID: 1788] [join] Strong Bandit has joined the server
+[19:02:46] [bot] [ID: 1787] [join] Bandit has joined the server
+[19:02:46] [bot] [ID: 1786] [join] Bandit (1) has joined the server
+[19:02:46] [bot] [ID: 1785] [join] Bandit (2) has joined the server
+[19:02:46] [bot] [ID: 1784] [join] Strong Bandit (1) has joined the server
+[19:02:46] [bot] [ID: 1783] [join] Strong Bandit (2) has joined the server
+[19:02:46] [bot] [ID: 1782] [join] Strong Bandit (3) has joined the server
+[19:02:46] [bot] [ID: 1781] [join] Bandit (3) has joined the server
+[19:02:46] [bot] [ID: 1780] [join] Bandit (4) has joined the server
+[19:02:46] [bot] [ID: 1779] [join] Bandit (5) has joined the server
+[19:02:46] [bot] [ID: 1778] [join] Bandit (6) has joined the server
+[19:02:46] [bot] [ID: 1777] [join] Bandit (7) has joined the server
+[19:02:46] [bot] [ID: 1776] [join] Bandit (8) has joined the server
+[19:02:46] [bot] [ID: 1775] [join] Strong Bandit (4) has joined the server
+[19:02:46] [bot] [ID: 1774] [join] Bandit (9) has joined the server
+[19:02:46] [bot] [ID: 1773] [join] Bandit (10) has joined the server
+[19:02:46] [bot] [ID: 1772] [join] Strong Bandit (5) has joined the server
+[19:02:46] [bot] [ID: 1771] [join] Strong Bandit (6) has joined the server
+[19:02:46] [bot] [ID: 1770] [join] Strong Bandit (7) has joined the server
+[19:02:46] [bot] [ID: 1769] [join] Bandit (11) has joined the server
+[19:02:46] [bot] [ID: 1768] [join] Bandit (12) has joined the server
+[19:02:46] [bot] [ID: 1767] [join] Bandit (13) has joined the server
+[19:02:46] [bot] [ID: 1766] [join] Seltsame Statue has joined the server
+[19:02:46] [bot] [ID: 1765] [join] Seltsame Statue (1) has joined the server
+[19:02:46] [bot] [ID: 1764] [join] Seltsame Statue (2) has joined the server
+[19:02:46] [bot] [ID: 1763] [join] Buergerin has joined the server
+[19:02:46] [bot] [ID: 1762] [join] Buergerin (1) has joined the server
+[19:02:46] [bot] [ID: 1761] [join] Buergerin (2) has joined the server
+[19:02:46] [bot] [ID: 1760] [join] Buerger has joined the server
+[19:02:46] [bot] [ID: 1759] [join] Buerger (1) has joined the server
+[19:02:46] [bot] [ID: 1758] [join] Buerger (2) has joined the server
+[19:02:46] [bot] [ID: 1757] [join] Buerger (3) has joined the server
+[19:02:46] [bot] [ID: 1756] [join] Buerger (4) has joined the server
+[19:02:46] [bot] [ID: 1755] [join] Buergerin (3) has joined the server
+[19:02:46] [bot] [ID: 1754] [join] Buergerin (4) has joined the server
+[19:02:46] [bot] [ID: 1753] [join] Vivi has joined the server
+[19:02:46] [bot] [ID: 1752] [join] Militia Guard has joined the server
+[19:02:46] [bot] [ID: 1751] [join] Militia Guard (1) has joined the server
+[19:02:46] [bot] [ID: 1750] [join] Militia Guard (2) has joined the server
+[19:02:46] [bot] [ID: 1749] [join] Zek has joined the server
+[19:02:46] [bot] [ID: 1748] [join] Rose has joined the server
+[19:02:46] [bot] [ID: 1747] [join] Olga has joined the server
+[19:02:46] [bot] [ID: 1746] [join] Jock has joined the server
+[19:02:46] [bot] [ID: 1745] [join] Barney has joined the server
+[19:02:46] [bot] [ID: 1744] [join] Olivia has joined the server
+[19:02:46] [bot] [ID: 1743] [join] Betrunkener Schlaeger has joined the server
+[19:02:46] [bot] [ID: 1742] [join] Redford has joined the server
+[19:02:46] [bot] [ID: 1741] [join] Hugo has joined the server
+[19:02:46] [bot] [ID: 1740] [join] Goffrey has joined the server
+[19:02:46] [bot] [ID: 1739] [join] Phillipe has joined the server
+[19:02:46] [bot] [ID: 1738] [join] Brad has joined the server
+[19:02:46] [bot] [ID: 1737] [join] Ryan has joined the server
+[19:02:46] [bot] [ID: 1736] [join] Lian has joined the server
+[19:02:46] [bot] [ID: 1735] [join] Bryan has joined the server
+[19:02:46] Filterscript 'filterscripts//debug.lua' has been loaded.
+[19:02:46] Awaiting for connections on 192.168.56.1:28654...
+[19:02:46] Awaiting for connections on 192.168.0.15:28654...
+[19:02:49] Scavenger (27) kill himself
+[19:02:54] Incoming connection: 127.0.0.1|61340
+[19:02:54] [join] Nickname has joined the server 127.0.0.1|61340
+[19:03:12] Scavenger (30) kill himself
+[19:03:51] [bot] [ID: 2003] [info] Scavenger (27) left from server
+[19:03:51] [bot] [ID: 2003] [join] Scavenger (58) has joined the server
+[19:04:00] Stan kill Scavenger (13)
+[19:04:16] [bot] [ID: 2000] [info] Scavenger (30) left from server
+[19:04:16] [bot] [ID: 2000] [join] Scavenger (59) has joined the server
+[19:04:16] [info] Stan disconnected from server 127.0.0.1|61340
+[19:05:01] [bot] [ID: 2161] [info] Scavenger (13) left from server
+[19:05:01] [bot] [ID: 2161] [join] Scavenger (60) has joined the server
