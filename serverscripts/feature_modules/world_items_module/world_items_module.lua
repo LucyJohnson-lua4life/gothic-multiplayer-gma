@@ -343,14 +343,13 @@ item_spots[302] = {29482.578125, -1777.6850585938, -1148.1572265625}
 
 local empty_item_spots = {}
 
+local regular_plants = {"ITPL_HEALTH_HERB_01", "ITPL_MANA_HERB_01"}
 
-local regular_plants = {"ItPl_Health_Herb_01", "ItPl_Mana_Herb_01"}
+local deep_forrest_plants = {"ITPL_HEALTH_HERB_01", "ITPL_MANA_HERB_01", "ITPL_FORESTBERRY", "ITPL_BLUEPLANT", "HEILWURZEL", "FEUERWURZEL"}
 
-local deep_forrest_plants = {"ItPl_Health_Herb_01", "ItPl_Mana_Herb_01", "ItPl_Forestberry", "ItPl_Blueplant", "Heilwurzel", "Feuerwurzel"}
+local water_plants = {"ITPL_HEALTH_HERB_01", "BLAUFLIEDER", "ITPL_SWAMPHERB"}
 
-local water_plants = {"ItPl_Health_Herb_01", "Blauflieder", "ItPl_SwampHerb"}
-
-local magic_place_plants = {"Heilwurzel", "Feuerwurzel", "Kronstöckel"}
+local magic_place_plants = {"HEILWURZEL", "FEUERWURZEL", "KRONSTÖCKEL"}
 
 local itemId_to_placeId = {}
 

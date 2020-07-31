@@ -17,34 +17,34 @@ trader_npc["Lian the Hunter"] = {}
 trader_npc["Bryan (Armors)"] = {}
 trader_npc["Gerald (2H Weapons)"] = {}
 
-trader_npc["Goffrey (1H Weapons)"]["ItNm_LangschwertEdel"] = true
-trader_npc["Goffrey (1H Weapons)"]["ItNm_Kriegsschwert"] = true
-trader_npc["Goffrey (1H Weapons)"]["ItNm_Priestklinge"] = true
-trader_npc["Goffrey (1H Weapons)"]["ItNm_Berserkerwort"] = true
-trader_npc["Goffrey (1H Weapons)"]["ItNm_Jaegeraxt"] = true
-trader_npc["Goffrey (1H Weapons)"]["ItNm_Raeuberaxt"] = true
-trader_npc["Goffrey (1H Weapons)"]["ItNm_Streitkolben"] = true
+trader_npc["Goffrey (1H Weapons)"]["ITNM_LANGSCHWERTEDEL"] = true
+trader_npc["Goffrey (1H Weapons)"]["ITNM_KRIEGSSCHWERT"] = true
+trader_npc["Goffrey (1H Weapons)"]["ITNM_PRIESTKLINGE"] = true
+trader_npc["Goffrey (1H Weapons)"]["ITNM_BERSERKERWORT"] = true
+trader_npc["Goffrey (1H Weapons)"]["ITNM_JAEGERAXT"] = true
+trader_npc["Goffrey (1H Weapons)"]["ITNM_RAEUBERAXT"] = true
+trader_npc["Goffrey (1H Weapons)"]["ITNM_STREITKOLBEN"] = true
 
-trader_npc["Phillipe (Armors)"]["ItNm_Panzermantel1"] = true
-trader_npc["Phillipe (Armors)"]["ItNm_Panzermantel2"] = true
-trader_npc["Phillipe (Armors)"]["ItNm_Koenigsruestung"] = true
-trader_npc["Phillipe (Armors)"]["ItNm_Goldruestung"] = true
+trader_npc["Phillipe (Armors)"]["ITNM_PANZERMANTEL1"] = true
+trader_npc["Phillipe (Armors)"]["ITNM_PANZERMANTEL2"] = true
+trader_npc["Phillipe (Armors)"]["ITNM_KOENIGSRUESTUNG"] = true
+trader_npc["Phillipe (Armors)"]["ITNM_GOLDRUESTUNG"] = true
 
-trader_npc["Brad the Hunter"]["ItRw_Arrow"] = true
-trader_npc["Brad the Hunter"]["ItMw_2H_Axe_L_01"] = true
-trader_npc["Ryan the Hunter"]["ItRw_Arrow"] = true
-trader_npc["Ryan the Hunter"]["ItMw_2H_Axe_L_01"] = true
-trader_npc["Lian the Hunter"]["ItRw_Arrow"] = true
-trader_npc["Lian the Hunter"]["ItMw_2H_Axe_L_01"] = true
+trader_npc["Brad the Hunter"]["ITRW_ARROW"] = true
+trader_npc["Brad the Hunter"]["ITMW_2H_AXE_L_01"] = true
+trader_npc["Ryan the Hunter"]["ITRW_ARROW"] = true
+trader_npc["Ryan the Hunter"]["ITMW_2H_AXE_L_01"] = true
+trader_npc["Lian the Hunter"]["ITRW_ARROW"] = true
+trader_npc["Lian the Hunter"]["ITMW_2H_AXE_L_01"] = true
 
-trader_npc["Bryan (Armors)"]["ItNm_Landsknechtruestung"] = true
-trader_npc["Bryan (Armors)"]["ItNm_Kriegerinruestung"] = true
-trader_npc["Bryan (Armors)"]["ItNm_Rotetunika"] = true
-trader_npc["Bryan (Armors)"]["ItNm_Kopfgeldjaegerruestung"] = true
+trader_npc["Bryan (Armors)"]["ITNM_LANDSKNECHTRUESTUNG"] = true
+trader_npc["Bryan (Armors)"]["ITNM_KRIEGERINRUESTUNG"] = true
+trader_npc["Bryan (Armors)"]["ITNM_ROTETUNIKA"] = true
+trader_npc["Bryan (Armors)"]["ITNM_KOPFGELDJAEGERRUESTUNG"] = true
 
-trader_npc["Gerald (2H Weapons)"]["ItMw_2H_Axe_L_01"] = true
-trader_npc["Gerald (2H Weapons)"]["ItNm_Berserkeraxt"] = true
-trader_npc["Gerald (2H Weapons)"]["ItNm_Berserkerschwert"] = true
+trader_npc["Gerald (2H Weapons)"]["ITMW_2H_AXE_L_01"] = true
+trader_npc["Gerald (2H Weapons)"]["ITNM_BERSERKERAXT"] = true
+trader_npc["Gerald (2H Weapons)"]["ITNM_BERSERKERSCHWERT"] = true
 
 
 local TRADE_FOR_GOLD_FURS = {"ITAT_WARGFUR", "ITAT_SHADOWFUR", "ITAT_TROLLFUR", "ITAT_WOLFFUR", "ITAT_ADDON_KEILERFUR"}

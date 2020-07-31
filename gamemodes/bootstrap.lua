@@ -193,9 +193,11 @@ function OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 	if(IsNPC(playerid) == 0) then
 		spells_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 		item_exchange_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
+		alchemy_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 	end
 	npc_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 	npc_interaction_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
+
 end
 
 function OnPlayerUnconscious(playerid, p_classid, killerid, k_classid)

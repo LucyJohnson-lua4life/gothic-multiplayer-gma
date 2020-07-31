@@ -53,6 +53,9 @@ function inventory_dao.deleteItemByPlayerName(handler, name)
     end
 end
 
+--[[ 
+    decreases the amount of the given item, by the given amount. if its zero, the element will be removed from the db
+]]
 function inventory_dao.updateItemOrDeleteIfAmountIsZero(handler, name, item_instance, amount)
     local result = inventory_dao.getItemAndAmountByInstance(handler, name, item_instance)
     local row = mysql_fetch_assoc(result)
@@ -67,6 +70,9 @@ function inventory_dao.updateItemOrDeleteIfAmountIsZero(handler, name, item_inst
     end
 end
 
+--[[ 
+    increases the amount of the given item, by the given amount. if it doesnt exist yet, the item will be inserted
+]]
 function inventory_dao.updateItemOrInsertIfNotExist(handler, name, item_instance, amount)
     local result = inventory_dao.getItemAndAmountByInstance(handler, name, item_instance)
     local row = mysql_fetch_assoc(result)

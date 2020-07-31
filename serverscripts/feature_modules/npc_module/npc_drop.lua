@@ -6,15 +6,15 @@ local DROP_LIBRARY_DEMON = {"ITMI_DARKPEARL"}
 local DROP_XARDAS_DEMON = {"ITMI_SILVERRING", "ITMI_AQUAMARINE"}
 local DROP_BLACK_TROLL = {"ITMI_GOLDRING", "ITAT_SKELETONBONE"}
 
-local DROP_ORC_ELITE = {"ItFo_Milk", "ItFo_Wine", "ItFo_Booze","ItFo_Stew", "ItFo_Apple"}
-local DROP_ORC_WARRIOR = {"ItFo_Milk", "ItFo_Wine", "ItFo_Booze", "ItFo_Beer", "ItFo_Honey", "ItFo_Sausage", "ItFo_FishSoup", "ItFo_Bread"
-, "ItFo_Stew", "ItFo_Apple", "ItFo_Cheese", "ItFo_Bacon"}
-local DROP_TROLL = { "ItFo_Wine", "ItFo_Booze", "ItFo_Honey", "ItFo_Bread", "ItMw_2H_Axe_L_01", "ItMi_Rake"}
-local DROP_CRAWLER_WARRIOR = {"ItFo_Beer", "ItFo_Bread", "ItFo_Stew", "ItFo_Apple"}
+local DROP_ORC_ELITE = {"ITFO_MILK", "ITFO_WINE", "ITFO_BOOZE","ITFO_STEW", "ITFO_APPLE"}
+local DROP_ORC_WARRIOR = {"ITFO_MILK", "ITFO_WINE", "ITFO_BOOZE", "ITFO_BEER", "ITFO_HONEY", "ITFO_SAUSAGE", "ITFO_FISHSOUP", "ITFO_BREAD"
+, "ITFO_STEW", "ITFO_APPLE", "ITFO_CHEESE", "ITFO_BACON"}
+local DROP_TROLL = { "ITFO_WINE", "ITFO_BOOZE", "ITFO_HONEY", "ITFO_BREAD", "ITMW_2H_AXE_L_01", "ITMI_RAKE"}
+local DROP_CRAWLER_WARRIOR = {"ITFO_BEER", "ITFO_BREAD", "ITFO_STEW", "ITFO_APPLE"}
 local DROP_SHADOW_BEAST = {"ItAt_ShadowHorn"}
 
-local DROP_GOBBO = {"ItMi_Lute", "ItMi_Brush", "ItMi_Broom", "ItMi_Saw", "ItMi_Scoop", "ItMw_2H_Axe_L_01", "ItMi_Rake"}
-local DROP_SKELETON_LORD = {"ItAm_Prot_Fire_01", "ItSc_BreathOfDeath", "ItSc_TrfSheep", "ItSc_TrfScavenger", "ItSc_TrfShadowbeast", "ItSc_TrfDragonSnapper", "ItSc_Whirlwind"}
+local DROP_GOBBO = {"ITMI_LUTE", "ITMI_BRUSH", "ITMI_BROOM", "ITMI_SAW", "ITMI_SCOOP", "ITMW_2H_AXE_L_01", "ITMI_RAKE"}
+local DROP_SKELETON_LORD = {"ITAM_PROT_FIRE_01", "ITSC_BREATHOFDEATH", "ITSC_TRFSHEEP", "ITSC_TRFSCAVENGER", "ITSC_TRFSHADOWBEAST", "ITSC_TRFDRAGONSNAPPER", "ITSC_WHIRLWIND"}
 
 
 local function getRandomDrop(drop_collection)
@@ -27,53 +27,53 @@ local function getDropForName(name)
     if (string.match(name, "^Minecrawler Warrior.*")) then
         return {getRandomDrop(DROP_CRAWLER_WARRIOR)}
     elseif (string.match(name, "^Molerat.*")) then
-        return {"ItFoMutton", "ItFo_Water"}
+        return {"ITFOMUTTON", "ITFOMUTTON"}
     elseif (string.match(name, "^Dragon Snapper.*")) then
-        return { "ItRw_Arrow"}
+        return { "ITRW_ARROW"}
     elseif (string.match(name, "^Warg.*")) then
-        return {"ItFoMutton", "ItRw_Arrow", "ItAt_WargFur"}
+        return {"ITFOMUTTON", "ITRW_ARROW", "ITAT_WARGFUR"}
     elseif (string.match(name, "^Orc Elite.*")) then
-        return {"ItFo_Booze", "ItFo_Stew", getRandomDrop(DROP_ORC_ELITE)}
+        return {"ITFO_BOOZE", "ITFO_STEW", getRandomDrop(DROP_ORC_ELITE)}
     elseif (string.match(name, "^Orc Scout.*")) then
-        return {"ItFoMutton", "ItFo_Water"}
+        return {"ITFOMUTTON", "ITFO_WATER"}
     elseif (string.match(name, "^Orc Shaman.*")) then
         return {getRandomDrop(DROP_ORC_WARRIOR)}
     elseif (string.match(name, "^Orc Warrior.*")) then
-        return {"ItFo_Beer", "ItFo_Bacon", getRandomDrop(DROP_ORC_WARRIOR)}
+        return {"ITFO_BEER", "ITFO_BACON", getRandomDrop(DROP_ORC_WARRIOR)}
     elseif (string.match(name, "^Razor.*")) then
-        return {"ItRw_Arrow"}
+        return {"ITRW_ARROW"}
     elseif (string.match(name, "^Scavenger.*")) then
-        return {"ItFoMutton", "ItFo_Water"}
+        return {"ITFOMUTTON", "ITFO_WATER"}
     elseif (string.match(name, "^Shadowbeast.*")) then
-        return {"ItAt_ShadowFur", "ItRw_Arrow"}
+        return {"ITAT_SHADOWFUR", "ITRW_ARROW"}
     elseif (string.match(name, "^Sheep.*")) then
-        return {"ItFoMutton", "ItFo_Water"}
+        return {"ITFOMUTTON", "ITFO_WATER"}
     elseif (string.match(name, "^Skeleton Lord.*")) then
         return {getRandomDrop(DROP_SKELETON_LORD)}
     elseif (string.match(name, "^Skeleton.*")) then
-        return {"ItFo_Milk"}
+        return {"ITFO_MILK"}
     elseif (string.match(name, "^Snapper.*")) then
-        return {"ItRw_Arrow", "ItFo_Booze", "ItRw_Arrow"}
+        return {"ITRW_ARROW", "ITFO_BOOZE", "ITRW_ARROW"}
     elseif (string.match(name, "^Swamp Rat.*")) then
-        return {"ItFoMutton", "ItFo_Water"}
+        return {"ITFOMUTTON", "ITFO_WATER"}
     elseif (string.match(name, "^Swamp Shark.*")) then
-        return {"ItFo_Fish"}
+        return {"ITFO_FISH"}
     elseif (string.match(name, "^Troll.*")) then
-        return {"ItFo_Stew", "ItAt_TrollFur", "ItRw_Arrow", getRandomDrop(DROP_TROLL)}
+        return {"ITFO_STEW", "ITAT_TROLLFUR", "ITRW_ARROW", getRandomDrop(DROP_TROLL)}
     elseif (string.match(name, "^Waran.*")) then
-        return {"ItFo_Fish"}
+        return {"ITFO_FISH"}
     elseif (string.match(name, "^Wolf.*")) then
-        return {"ItFoMutton", "ItFo_Water", "ItAt_WolfFur"}
+        return {"ITFOMUTTON", "ITFO_WATER", "ITAT_WOLFFUR"}
     elseif (string.match(name, "^Keiler.*")) then
-        return {"ItFo_Sausage", "ItRw_Arrow", "ItAt_Addon_KeilerFur"}
+        return {"ITFO_SAUSAGE", "ITRW_ARROW", "ITAT_ADDON_KEILERFUR"}
     elseif (string.match(name, "^Lurker.*")) then
-        return {"ItFo_Fish", "ItFo_FishSoup"}
+        return {"ITFO_FISH", "ITFO_FISHSOUP"}
     elseif (string.match(name, "^Strong Bandit.*")) then
         return {"ITMI_ADDON_BLOODWYN_KOPF"}
     elseif (string.match(name, "^Bandit.*")) then
         return {"ITMI_ADDON_BLOODWYN_KOPF"}
     elseif (string.match(name, "^Black Goblin.*")) then
-        return {"ItFo_Beer","ItFo_Cheese", getRandomDrop(DROP_GOBBO)}
+        return {"ITFO_BEER","ITFO_CHEESE", getRandomDrop(DROP_GOBBO)}
     elseif (string.match(name, "^Demon Lord.*")) then
         return {getRandomDrop(DROP_LIBRARY_DEMON)}
     elseif (string.match(name, "^Black Troll.*")) then
@@ -85,16 +85,16 @@ local function getDropForName(name)
     elseif (string.match(name, "^Demon.*")) then
         return {getRandomDrop(DROP_XARDAS_DEMON)}
     elseif (string.match(name, "^Keymaster.*")) then
-        return {"ItKe_MonastarySecretLibrary_Mis"}
+        return {"ITKE_MONASTARYSECRETLIBRARY_MIS"}
     elseif (string.match(name, "^Zek.*")) then
-        return {"StandardBrief"}
+        return {"STANDARDBRIEF"}
     else
-        return {"ItFoMutton", "ItFo_Water"}
+        return {"ITFOMUTTON", "ITFOMUTTON"}
     end
 end
 
 local function giveItemForInstance(playerid, instance)
-    if instance == "ItRw_Arrow" then
+    if instance == "ITRW_ARROW" then
         GiveItem(playerid, instance, 10)
     else
         GiveItem(playerid, instance, 1)

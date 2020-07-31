@@ -78,15 +78,19 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
     if cmd == "/tools" then
         
         
-        GiveItem(playerid, "ItMi_Saw",1)
-        GiveItem(playerid, "ItMi_Broom",1)
-        GiveItem(playerid, "ItMi_Hammer",1)
-        GiveItem(playerid, "ItMiSwordrawhot",1)
-        GiveItem(playerid, "ItMi_Stomper",1)
-        GiveItem(playerid, "ItMi_Scoop",1)
-        GiveItem(playerid, "ItMi_Pan",1)
+        GiveItem(playerid, "ITMI_SAW",1)
+        GiveItem(playerid, "ITMI_BROOM",1)
+        GiveItem(playerid, "ITMI_HAMMER",1)
+        GiveItem(playerid, "ITMISWORDRAWHOT",1)
+        GiveItem(playerid, "ITMI_STOMPER",1)
+        GiveItem(playerid, "ITMI_SCOOP",1)
+        GiveItem(playerid, "ITMI_PAN",1)
         
         
+    end
+
+    if cmd == "/weedallday" then
+        GiveItem(playerid, "ITPL_HEALTH_HERB_01",10)
     end
 
     if cmd == "/turn" then
@@ -99,11 +103,11 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
     end
 
     if cmd == "/furryball" then
-        GiveItem(playerid, "ItAt_WargFur",10)
-        GiveItem(playerid, "ItAt_WolfFur",10)
+        GiveItem(playerid, "ITAT_WARGFUR",10)
+        GiveItem(playerid, "ITAT_WOLFFUR",10)
         GiveItem(playerid, "ITAT_SHADOWFUR",10)
-        GiveItem(playerid, "ItAt_TrollFur",10)
-        GiveItem(playerid, "ItAt_Addon_Keilerfur",10)
+        GiveItem(playerid, "ITAT_TROLLFUR",10)
+        GiveItem(playerid, "ITAT_ADDON_KEILERFUR",10)
     end
     
     if(cmdtext == "/tomaya") then
@@ -128,17 +132,17 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
     end
 
     if cmdtext == "/oneappleaday" then
-        GiveItem(playerid, "ItFo_Apple",10)
+        GiveItem(playerid, "ITFO_APPLE",10)
     end
 
     if cmdtext == "/madscientist" then
-        GiveItem(playerid, "ItMi_Flask",10)
+        GiveItem(playerid, "ITMI_FLASK",10)
     end
 
 
     if cmdtext == "/femr" then
-        GiveItem(playerid, "ItGma_armor_start_fem",1)
-        GiveItem(playerid, "ItGma_armor_start_fem2",1)
+        GiveItem(playerid, "ITGMA_ARMOR_START_FEM",1)
+        GiveItem(playerid, "ITGMA_ARMOR_START_FEM2",1)
     end
 
     if cmdtext == "/npc" then

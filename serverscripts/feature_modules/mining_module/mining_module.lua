@@ -17,7 +17,7 @@ function CheckMining()
             local number_nuggets = math.random(5)
             SendPlayerMessage(k, 238, 221, 125, "Du hast ".. tostring(number_nuggets) .. " Goldbrocken bekommen!" )
             SendPlayerMessage(k, 238, 221, 125, "Setze die Spitzhacke neu an, um weiter Gold zu schuerfen." )
-            GiveItem(k, "ItMi_GoldNugget_Addon", number_nuggets)
+            GiveItem(k, "ITMI_GOLDNUGGET_ADDON", number_nuggets)
         end
     end
 end
