@@ -22,6 +22,8 @@ local function handleLoverquestDia(playerid, text)
     elseif string.match(text, "Sache") then
         SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Seit einigen Wochen ruinieren <Banditen> meine Handelswege. Ich kann meine Boten nicht mehr ohne Soeldner rausschicken.")
         return true
+
+        -- since Banditenkoepfe contains the word 'Banditen', it has to be processed first, otherwise the 'Banditenkoepfe' branch is not reachable.... should think about a solution to fix it
     elseif string.match(text, "Banditenkoepfe") then
         HasItem(playerid, "ITMI_ADDON_BLOODWYN_KOPF", check_id)
         return true

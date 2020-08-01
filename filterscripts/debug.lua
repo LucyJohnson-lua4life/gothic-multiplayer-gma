@@ -29,6 +29,10 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         GiveItem(playerid, "ITMI_DARKPEARL", 1)
     end
 
+    if cmd == "/day" then
+        SetTime (8,0)
+    end
+
     if cmd == "/dia1" then
         PlayAnimation(playerid,"T_DIALOGGESTURE_01_2_DIALOGGESTURE_02_2_DIALOGGESTURE_03_2_DIALOGGESTURE_04")
     end
