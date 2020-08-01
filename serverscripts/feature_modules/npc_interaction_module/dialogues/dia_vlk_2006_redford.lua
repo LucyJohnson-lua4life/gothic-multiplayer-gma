@@ -8,7 +8,7 @@ local function handleBuddlertruppDia(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Redford sagt: Vor ein paar Tagen sind diese verdammten Buddler hier aufgekreuzt und meinten es gaebe hier eine geheime magische Erzader. Allerdings braeuchten sie <Schutz vor den Minecrawlern> und haben uns angebettelt sie zu begleiten.")
         return true
     elseif string.match(text, "Schutz vor den Minecrawlern") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Redford sagt: Gegen Anteil an der Beute haben wir ein paar unserer Jungs mitgeschickt, doch als wir die <Minen> aufgesucht haben, war niemand da.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Redford sagt: Gegen Anteil an der Beute haben wir ein paar unserer Jungs mitgeschickt. Doch als wir die <Minen> aufgesucht haben war niemand da.")
         return true
     elseif string.match(text, "Minen") then
         SendPlayerMessage(playerid, 255, 255, 255, "Redford sagt: Anscheinend soll es in der Naehe der Goldmine auf dem Bergturm hier irgendwo einen Zugang zur Erzmine geben. Wenn du aber genaueres wissen willst Frag Hugo in unserer Kneipe.")

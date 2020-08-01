@@ -10,25 +10,25 @@ local function handleBuddlertruppDia(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Ich wuerde dir gerne helfen, aber ich befuerchte der Betrunkene da drueben macht gleich Aerger. Wenn du dich um ihn kuemmerst erzahl ich dir uber den 'Buddlertrupp'.")
         return true
     elseif string.match(text, "Buddlertrupp") and drunk_calmed_by[playerid] == true then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Danke erstmal fuer die Hilfe! Also ja der Buddlertruppe hat vor ein paar Tagen hier <Rast> gemacht.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Danke fuer die Hilfe! Also ja der Buddlertruppe hat vor ein paar Tagen hier <Rast> gemacht.")
         return true
     elseif string.match(text, "Rast") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Sie haben nicht erzaehlt wo sie hinwollen. Alle waren sehr ruhig. Insgesamt wirkten sie schon sehr <verdaechtig>.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Sie haben nicht erzaehlt wo sie hin wollen. Alle waren sehr ruhig. Insgesamt wirkten sie schon sehr <verdaechtig>.")
         return true
     elseif string.match(text, "verdaechtig") then
         SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Einer von den Typen hat sich staendig mit einem <vermummten Mann> draussen unterhalten. Der vermummte Mann selbst ist aber nie in die Taverne gekommen.")
         return true
     elseif string.match(text, "vermummten Mann") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Genaueres kann ich dir nicht erzaehlen, weil der Kerl halt nie reingekommen ist. Was den <Rest> betrifft...")
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Genaueres kann ich dir nicht erzaehlen. Der Kerl ist ja nie reingekommen. Was den <Rest> betrifft...")
         return true
     elseif string.match(text, "Rest") then
         SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Waren ganz normale Jungs schaetze ich. <Einer von denen> ist aber den Abend besonders betrunken geworden. (lacht)");
         return true
     elseif string.match(text, "Einer von denen") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Er erzaehlte davon, dass er vorhat aus dem Geld dass er machen wird, seiner Freundin etwas ganz besonderes zu <schenken>.");
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Er erzaehlte davon, dass er vorhat aus dem Geld dass er machen wird seiner Freundin etwas ganz besonderes zu <schenken>.");
         return true
     elseif string.match(text, "schenken") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Genaueres hat er nicht erzaehlt. Er ist irgendwann wie ein kleiner Junge eingeschlafen und am naechsten Morgen mit den Anderen Richtung Grossbauer verschwunden.");
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Mehr hat er nicht erzaehlt. Er ist irgendwann wie ein kleiner Junge eingeschlafen und am naechsten Morgen mit den Anderen Richtung Grossbauer verschwunden.");
         return true
     else
         return false

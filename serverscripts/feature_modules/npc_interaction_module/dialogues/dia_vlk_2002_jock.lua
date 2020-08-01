@@ -11,16 +11,13 @@ local function handleBuddlertruppDia(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Er erzaehlte mir, dass Rose die letzten Tage sehr abweisend ihm gegenueber war. Das letzte mal als sie Intim waren sei einige <Wochen> her gewesen.")
         return true
     elseif string.match(text, "Wochen") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Keine Ahnung was sich in Ihrer Beziehung veraendert hat. Eigentlich war alles genau so wie immer. Es ist gut moeglich, dass die <Routine> Sie einfach getroffen hat.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Keine Ahnung was sich in Ihrer Beziehung veraendert hat. Eigentlich war alles genau so wie immer. Gut moeglich, dass die <Routine> sie einfach getroffen hat.")
         return true
     elseif string.match(text, "Routine") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Wenn junge <Paare> das erste mal zusammenkommen, dann kommt es oft vor dass sie zu hohe Erwartungen an die Beziehung setzen. Viele romantische Abende, jeden Tag Schmetterlinge im Bauch...")
+        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Ach du weisst doch wie das laeuft. Am Anfang ist alles schoen und <rosig>. Doch nach einiger Zeit kannst du einfach nicht mehr den Furz des Anderen riechen.")
         return true
-    elseif string.match(text, "Paare") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Mit der Zeit erfahren sie, dass sie nicht jeden Tag so leben koennen. Ich kann mir gut vorstellen, dass Jock und seine Freundin sich gerade in einem solchen <Tief> befinden.")
-        return true
-    elseif string.match(text, "Tief") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Aber so ein Tief ist nur etwas temporaeres. Ich bin mir sicher, dass Sie bemerken werden, dass Sie einander vermissen nach etwas <Abstand>.")
+    elseif string.match(text, "rosig") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Bestimmt ist das nur eine Phase. Nach etwas <Abstand> werden sich die Beiden bestimmt wieder vermissen.")
         return true
     elseif string.match(text, "Abstand") then
         SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Bezuglich des Buddlertrupps wuerde ich vorschlagen fragst du mal in der Hafenkneipe nach. Dort waren die Typen auch.")
