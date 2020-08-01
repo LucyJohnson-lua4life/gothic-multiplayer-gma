@@ -93,6 +93,10 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         GiveItem(playerid, "ITPL_HEALTH_HERB_01",10)
     end
 
+    if cmd == "/specialweed" then
+        GiveItem(playerid, "ITPL_HEALTH_HERB_03",1)
+    end
+
     if cmd == "/turn" then
         local fid = GetFocus(playerid)
         SetPlayerAngle(fid,180)

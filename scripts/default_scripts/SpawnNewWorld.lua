@@ -674,6 +674,9 @@ function InitNewWorldNPC()
   SpawnNPC(VLK_2005_BetrunkenerSchlaeger(), "FP_TAVERN_DRUNK", world);
   SpawnNPC(VLK_2006_Redford(), "FP_BIGFARM_PREGUARD", world);
   SpawnNPC(VLK_2007_Hugo(), "FP_BIGFARM_TAVERN_BARKEEPER", world);
+  SpawnNPC(VLK_2009_Astren(), "FP_CITY_HUNTER_SHOP", world);
+  SpawnNPC(VLK_2010_Jack(), "FP_HAFEN_TAVERN_05", world);
+  
   
 
   SpawnNPC(VLK_7000_Goffrey(), "FP_STAND_SARAH", world);
