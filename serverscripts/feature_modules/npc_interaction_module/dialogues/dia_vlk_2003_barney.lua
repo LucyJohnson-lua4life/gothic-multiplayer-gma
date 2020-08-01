@@ -19,6 +19,9 @@ local function handleBuddlertruppDia(playerid, text)
     elseif string.match(text, "Zustimmung") then
         SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Offiziell gehoert erstmal alles Land in Khorinis der Stadtverwaltung. Mit genug Kohle kannst du dir dann Land erkaufen. Viel Spass aber die Kohle dafuer zusammen zu bekommen.")
         return true
+    elseif string.match(text, "vermummten Mann") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Ja... so ein Typ war dabei. Ein gruseliger Mistkerl. Du solltest mal Jack den Piraten fragen. Der hat ein paar Worte mit ihm ausgetauscht.")
+        return true
     else
         return false
     end

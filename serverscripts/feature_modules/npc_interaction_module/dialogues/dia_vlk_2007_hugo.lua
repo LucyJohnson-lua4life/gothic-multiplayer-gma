@@ -22,6 +22,9 @@ local function handleBuddlertruppDia(playerid, text)
     elseif string.match(text, "verdaechtig gekleidet") then
         SendPlayerMessage(playerid, 255, 255, 255, "Hugo sagt: Ja er war vermummt. Wenn das nicht der Beweis ist! Das war bestimmt ein bekannter Bandit der sich nicht zu erkennen geben wollte.")
         return true
+    elseif string.match(text, "vermummten Mann") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Hugo sagt: Ja der war hier! Wenn du mich fragst, war das ein Verbrecher der sein Gesicht nicht zeigen wollte. Da der Trupp durch die ganze Stadt zog bin ich mir sicher, dass Andere ihn auch gesehen haben!")
+        return true
     else
         return false
     end

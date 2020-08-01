@@ -16,9 +16,9 @@ local function handleBuddlertruppDia(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Sie haben nicht erzaehlt wo sie hin wollen. Alle waren sehr ruhig. Insgesamt wirkten sie schon sehr <verdaechtig>.")
         return true
     elseif string.match(text, "verdaechtig") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Einer von den Typen hat sich staendig mit einem <vermummten Mann> draussen unterhalten. Der vermummte Mann selbst ist aber nie in die Taverne gekommen.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Einer von den Typen hat sich staendig mit einem 'vermummten Mann' draussen unterhalten. Der <vermummte Mann> selbst ist aber nie in die Taverne gekommen.")
         return true
-    elseif string.match(text, "vermummten Mann") then
+    elseif string.match(text, "vermummte Mann") then
         SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Genaueres kann ich dir nicht erzaehlen. Der Kerl ist ja nie reingekommen. Was den <Rest> betrifft...")
         return true
     elseif string.match(text, "Rest") then
