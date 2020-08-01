@@ -22,7 +22,7 @@ local maya_dungeon = require "serverscripts/feature_modules/dungeon_module/maya_
 local world_vobs_module = require "serverscripts/feature_modules/world_vobs_module/world_vobs_module"
 local custom_items_module = require "serverscripts/feature_modules/custom_items_module/custom_items_module"
 local world_items_module = require "serverscripts/feature_modules/world_items_module/world_items_module"
-local alchemy_module = require "serverscripts/feature_modules/alchemy_module/alchemy_module"
+local crafting_module = require "serverscripts/feature_modules/crafting_module/crafting_module"
 
 
 
@@ -141,7 +141,7 @@ function OnPlayerCommandText(playerid, cmdtext)
 	npc_interaction_module.OnPlayerCommandText(playerid, cmdtext)
 	debug.OnPlayerCommandText(playerid, cmdtext)
 	maya_dungeon.OnPlayerCommandText(playerid, cmdtext)
-	alchemy_module.OnPlayerCommandText(playerid, cmdtext)
+	crafting_module.OnPlayerCommandText(playerid, cmdtext)
 end
 
 function OnPlayerDropItem(playerid, itemid, item_instance, amount, x, y, z)
@@ -167,7 +167,7 @@ function OnPlayerUseItem(playerid, item_instance, amount, hand)
 		inventory_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
 		mining_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
 		custom_items_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
-		alchemy_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
+		crafting_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
 	end
 end
 
@@ -193,7 +193,7 @@ function OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 	if(IsNPC(playerid) == 0) then
 		spells_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 		item_exchange_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
-		alchemy_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
+		crafting_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 	end
 	npc_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 	npc_interaction_module.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)

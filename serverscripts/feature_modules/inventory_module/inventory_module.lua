@@ -9,8 +9,10 @@ local player_dao = require "serverscripts/daos/player_dao"
 
 local inventory_module = {}
 
+-- items that not get deleted by usage
 local NON_CONSUMABLE_ITEMS = {}
 NON_CONSUMABLE_ITEMS["ITMW_2H_AXE_L_01"] = true;
+NON_CONSUMABLE_ITEMS["ITMI_SCOOP"] = true
 
 
 function inventory_module.OnPlayerUseItem(playerid, item_instance, amount, hand)
