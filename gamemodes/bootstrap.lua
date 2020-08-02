@@ -28,6 +28,7 @@ local crafting_module = require "serverscripts/feature_modules/crafting_module/c
 
 
 function OnGamemodeInit()
+	math.randomseed(os.time())
 	WORLD_HANDLER = db_config.getHandler()
 	print("--------------------");
 	print("Description gamemode");

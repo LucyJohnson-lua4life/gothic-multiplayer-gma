@@ -33,18 +33,6 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         SetTime (8,0)
     end
 
-    if cmd == "/dia1" then
-        PlayAnimation(playerid,"T_DIALOGGESTURE_01_2_DIALOGGESTURE_02_2_DIALOGGESTURE_03_2_DIALOGGESTURE_04")
-    end
-    if cmd == "/dia2" then
-        PlayAnimation(playerid,"T_DIALOGGESTURE_02")
-    end
-    if cmd == "/dia3" then
-        PlayAnimation(playerid,"T_DIALOGGESTURE_03")
-    end
-    if cmd == "/dia4" then
-        PlayAnimation(playerid,"T_DIALOGGESTURE_04")
-    end
 
     if (cmd == "/goto") then
         local spl = params:split(" ");
@@ -64,10 +52,6 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         SetPlayerAngle(GetFocus(playerid), tonumber(params))
     end
 
-    if cmd == "/bench" then
-        PlayAnimation(playerid,"S_BENCH_S1")
-    end
-
     if cmd == "/weak" then
         SetPlayerHealth(playerid, 1000);
         SetPlayerMaxHealth(playerid, 1000);
@@ -80,8 +64,6 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
     end
 
     if cmd == "/tools" then
-        
-        
         GiveItem(playerid, "ITMI_SAW",1)
         GiveItem(playerid, "ITMI_BROOM",1)
         GiveItem(playerid, "ITMI_HAMMER",1)
@@ -89,8 +71,6 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         GiveItem(playerid, "ITMI_STOMPER",1)
         GiveItem(playerid, "ITMI_SCOOP",1)
         GiveItem(playerid, "ITMI_PAN",1)
-        
-        
     end
 
     if cmd == "/weedallday" then
@@ -137,6 +117,30 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
 
     if cmdtext == "/tobandits" then
         SetPlayerPos(playerid, 57084,1906,-25900)
+    end
+    
+    if cmdtext == "/tofb1" then
+        SetPlayerPos(playerid, 15684.7949,4138.38037,11197.3047)
+    end
+    
+    if cmdtext == "/tofb2" then
+        SetPlayerPos(playerid, 43922.9805,2939.29736,-27510.2598)
+    end
+    
+    if cmdtext == "/tofb3" then
+        SetPlayerPos(playerid, 63704.4727,4980.4834,10376.542)
+    end
+    
+    if cmdtext == "/todb1" then
+        SetPlayerPos(playerid, 53775.7148,1612.91565,2181.99805)
+    end
+    
+    if cmdtext == "/todb2" then
+        SetPlayerPos(playerid, 23013.9199,2661.21729,19482.3008)
+    end
+    
+    if cmdtext == "/todb3" then
+        SetPlayerPos(playerid, 25970.9395,974.527832,-9300.7959)
     end
 
     if cmdtext == "/oneappleaday" then

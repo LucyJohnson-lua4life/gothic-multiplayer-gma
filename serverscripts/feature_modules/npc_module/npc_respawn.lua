@@ -4,6 +4,11 @@ local npc_respawn = {}
 local time_npc_is_dead = {}
 local respawn_time_npc = {}
 
+
+local todesteufel_wp = {"FP_ROAM_NW_FARM4_WOOD_MONSTER_MORE_07", "FP_ROAM_NW_FOREST_PATH_56_MONSTER_03", "FP_ROAM_XARDASCAVE_DJG_03"}
+
+local feuerteufel_wp = {"FP_ROAM_MEDIUMFOREST_KAP2_29", "FP_ROAM_NW_FARM3_MOUNTAINLAKE_MONSTER_01", "FP_MAGICGOLEM"}
+
 local function getNpcForName(name)
     if (string.match(name, "^Blattcrawler.*")) then
         return Blattcrawler();
@@ -83,6 +88,10 @@ local function getNpcForName(name)
         return DemonLord();
     elseif (string.match(name, "^Demon.*")) then
         return XardasDemon();
+    elseif (string.match(name, "^Diabolo.*")) then
+        return Shadowbeast_Addon_Fire();
+    elseif (string.match(name, "^Hades.*")) then
+        return Shadowbeast_Skeleton();
     elseif (string.match(name, "^Captn Hook.*")) then
         return DeadPirateCaptn();
     elseif (string.match(name, "^Zek.*")) then
@@ -94,10 +103,27 @@ local function getNpcForName(name)
     end
 end
 
+
+
+
+local function getWaypointForName(playerid, name)
+
+    if (string.match(name, "^Diabolo.*")) then
+        return feuerteufel_wp[math.random(1, table.getn(feuerteufel_wp))]
+    
+    elseif (string.match(name, "^Hades.*")) then
+        return todesteufel_wp[math.random(1, table.getn(todesteufel_wp))]
+        
+    else
+        return AI_NPCList[playerid].StartWP
+    end
+
+end
+
 local function respawnNpc(playerid)
     local name = GetPlayerName(playerid);
     local world = GetPlayerWorld(playerid);
-    local wp = AI_NPCList[playerid].StartWP
+    local wp = getWaypointForName(playerid, name)
     DestroyNPC(playerid);
     SpawnNPC(getNpcForName(name), wp, world);
 end

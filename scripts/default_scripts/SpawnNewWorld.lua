@@ -217,7 +217,7 @@ function InitNewWorldNPC()
    SpawnNPC(Keiler(), "NW_FARM3_PATH_12_MONSTER_01", world);
   SpawnNPC(Keiler(), "NW_FARM3_PATH_12_MONSTER_03", world);
    SpawnNPC(Lurker(), "NW_FARM3_MOUNTAINLAKE_03", world);
-   SpawnNPC(Lurker(), "NW_FARM3_MOUNTAINLAKE_MONSTER_01", world);
+  
    SpawnNPC(Keiler(), "NW_BIGFARM_LAKE_03_MOVEMENT", world);
    SpawnNPC(Wolf(), "NW_BIGFARM_LAKE_03_MOVEMENT3", world);
    SpawnNPC(Gobbo_Skeleton(), "NW_BIGFARM_LAKE_03_MOVEMENT5", world);
@@ -266,8 +266,6 @@ function InitNewWorldNPC()
   -- Monster
   SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_12", world);
   SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_10", world);
-  SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_28", world);
-  SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_29", world);
   SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_17", world);
   SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_13", world);
   SpawnNPC(Scavenger(), "FP_ROAM_MEDIUMFOREST_KAP2_36", world);
@@ -564,7 +562,7 @@ function InitNewWorldNPC()
   SpawnNPC(SkeletonLord(), "NW_TROLLAREA_TROLLROCKCAVE_07", world);
   SpawnNPC(SkeletonLord(), "NW_TROLLAREA_TROLLROCKCAVE_10", world);
   --TROLLLAKECAVE
-  SpawnNPC(Scavenger(), "NW_TROLLAREA_TROLLLAKECAVE_02", world);
+  --SpawnNPC(Scavenger(), "NW_TROLLAREA_TROLLLAKECAVE_02", world);
   SpawnNPC(Gobbo_Warrior(), "NW_TROLLAREA_TROLLLAKECAVE_08", world);
   SpawnNPC(Gobbo_Black(), "NW_TROLLAREA_TROLLLAKECAVE_09", world);
   --RIVERSIDECAVE
@@ -614,6 +612,9 @@ function InitNewWorldNPC()
   SpawnNPC(Warg(), "FP_LIGHTTOWER_FOREST_03", world);
   SpawnNPC(Warg(), "FP_LIGHTTOWER_FOREST_04", world);
   SpawnNPC(Warg(), "FP_LIGHTTOWER_FOREST_05", world);
+
+  SpawnNPC(Shadowbeast_Addon_Fire(), "FP_ROAM_NW_FARM3_MOUNTAINLAKE_MONSTER_01", world);
+  SpawnNPC(Shadowbeast_Skeleton(), "FP_ROAM_NW_FARM4_WOOD_MONSTER_MORE_07", world);
 
   SpawnNPC(StrongBandit(), "FP_BANDIT_CAMP_PLATEU_01", world);
   SpawnNPC(Bandit(), "FP_BANDIT_CAMP_PLATEU_02", world);
