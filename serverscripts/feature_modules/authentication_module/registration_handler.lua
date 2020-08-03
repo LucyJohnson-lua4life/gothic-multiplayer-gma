@@ -78,7 +78,7 @@ local function createPlayer(handler, playerid, name, password)
         --TODO: der part muss refactored werden, wenn init inventory false dann lösche den user oder so
         if  player_dao.insertPlayer(handler, player_vals) == true and initInventory(playerid,name) == true and player_dao.updatePlayerPos(handler, name, 38994, 3901, -2235) == true and player_gold_dao.insert(handler, name, 100) == true then
             SendPlayerMessage(playerid, 0,255,0,"Der Spieler wurde erfolgreich erstellt.")
-            SendPlayerMessage(playerid, 0,255,0,"Tippe /login ein um dich einzuloggen")
+            SendPlayerMessage(playerid, 0,255,0,"Tippe /login 'name' 'passwort' ein um dich einzuloggen")
         else
             player_dao.deletePlayer(handler, name)
             SendPlayerMessage(playerid, 255,0,0,"Etwas ist bei der Erstellung des Spieler schief gelaufen.")

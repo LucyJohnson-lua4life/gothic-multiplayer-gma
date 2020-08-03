@@ -1,0 +1,33 @@
+[20:27:14]: At this point everything was ok
+[20:27:14]: Got to this point
+[20:27:14]: trying to insert armor
+[20:27:14]: trying to insert weapon
+[20:27:32]: At this point everything was ok
+[20:27:32]: Got to this point
+[20:27:32]: trying to insert armor
+[20:27:32]: trying to insert weapon
+[20:34:13]: At this point everything was ok
+[20:34:13]: Got to this point
+[20:34:13]: trying to insert armor
+[20:34:13]: trying to insert weapon
+[20:36:14]: At this point everything was ok
+[20:36:14]: Got to this point
+[20:36:14]: armor was null
+[20:36:14]: weapon was null
+[20:36:26]: At this point everything was ok
+[20:36:26]: Got to this point
+[20:36:26]: trying to insert armor
+[20:36:26]: weapon was null
+[20:36:40]: At this point everything was ok
+[20:36:40]: Got to this point
+[20:36:40]: armor was null
+[20:36:40]: weapon was null
+[20:36:47]: At this point everything was ok
+[20:36:47]: Got to this point
+[20:36:47]: trying to insert armor
+[20:36:47]: weapon was null
+[20:37:05]: At this point everything was ok
+[20:37:05]: Got to this point
+[20:37:05]: trying to insert armor
+[20:37:05]: weapon was null
+[20:42:26]: armor was null

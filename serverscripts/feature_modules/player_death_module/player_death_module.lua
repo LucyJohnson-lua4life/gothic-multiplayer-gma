@@ -21,9 +21,50 @@ local function getPlayerGoldAmount(handler, name)
 end
 
 
-local function loadStarterItems(handler, name, class_id)
-    player_dao.updatePlayerArmor(handler, name, CLASS_ARMOR[class_id])
-    player_dao.updatePlayerMelee(handler, name, CLASS_MELEE_WEAPON[class_id])
+local function loadEquipedItems(handler,playerid, class_id)
+    local name = PLAYER_ID_NAME_MAP[playerid]
+    local row = player_dao.getPlayerEquipment(handler, name)
+
+    -- give default armor if none is equipped
+    if row["armor"] == nil or row["armor"] == "NULL" then
+        --player_dao.updatePlayerArmor(handler, name, CLASS_ARMOR[class_id])
+        EquipArmor(playerid, CLASS_ARMOR[class_id])
+
+    else
+        -- give currently equipped armor + default armor for inventory
+        local armor_name = tostring(row["armor"])
+        if armor_name ~= CLASS_ARMOR[class_id] then
+            GiveItem(playerid, CLASS_ARMOR[class_id])
+        end
+        EquipArmor(playerid, armor_name)
+    end
+    
+    -- give default melee if none is equipped
+    if row["melee_weapon"] == nil or row["melee_weapon"] == "NULL" then
+        --player_dao.updatePlayerMelee(handler, name, CLASS_MELEE_WEAPON[class_id])
+        EquipMeleeWeapon(playerid, CLASS_MELEE_WEAPON[class_id])
+    else
+        -- give currently equipped weapon + default weapon for inventory
+        local melee_weapon_name  = tostring(row["melee_weapon"])
+        if melee_weapon_name ~= CLASS_MELEE_WEAPON[class_id] then
+            GiveItem(playerid, CLASS_MELEE_WEAPON[class_id])
+        end
+        EquipMeleeWeapon(playerid, melee_weapon_name)
+    end
+
+    -- if hunter
+    if class_id == 2 and  (row["ranged_weapon"] == nil or row["ranged_weapon"]=="NULL") then
+        --player_dao.updatePlayerMelee(handler, name, CLASS_MELEE_WEAPON[class_id])
+        EquipRangedWeapon(playerid, CLASS_RANGED_WEAPON[class_id])
+    elseif class_id == 2 then
+        local ranged_weapon_name = tostring(row["ranged_weapon"])
+
+        if ranged_weapon_name ~= CLASS_RANGED_WEAPON[class_id] then
+            GiveItem(playerid, CLASS_RANGED_WEAPON[class_id])
+        end
+        EquipRangedWeapon(playerid, CLASS_RANGED_WEAPON[class_id])
+    end
+
 end
 
 local function respawnPlayer(playerid)
@@ -38,7 +79,7 @@ local function respawnPlayer(playerid)
             SetPlayerPos(playerid, respawnPos[1], respawnPos[2], respawnPos[3])
             class_globals.setClassAttributes(playerid, tonumber(row["class_id"]))
             class_globals.setClassInventory(playerid, tonumber(row["class_id"]))
-            loadStarterItems(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid], tonumber(row["class_id"]))
+            loadEquipedItems(PLAYER_HANDLER_MAP[playerid], playerid, tonumber(row["class_id"]))
             SetPlayerGold(playerid, player_gold_amount)
         end
     end
@@ -56,20 +97,11 @@ function CheckDeadPlayersForRespawn()
         end
     end
 end
-
-
-
-local function removePlayerItems(handler, name)
-    player_dao.updatePlayerArmor(handler, name, "NULL")
-    player_dao.updatePlayerMelee(handler, name, "NULL")
-    player_dao.updatePlayerRanged(handler, name, "NULL")
-    inventory_dao.deleteItemByPlayerName(handler, name)
-end
  
 function player_death_module.OnPlayerDeath(playerid, p_classid, killerid, k_classid)
    if IsNPC(playerid) == 0 then
         SendPlayerMessage(playerid, 255,0,0, "Du ist gestorben, respawn geschieht in 10 Sekunden.")
-        removePlayerItems(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid])
+        inventory_dao.deleteItemByPlayerName(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid])
         time_player_dead[playerid] = os.clock()
         player_death_timer[playerid] = SetTimer("CheckDeadPlayersForRespawn",2000,1);
    end

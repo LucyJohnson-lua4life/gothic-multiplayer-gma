@@ -50,15 +50,15 @@ local function confirmSelection(playerid)
     ClearInventory(playerid)
     class_globals.setClassAttributes(playerid, player[playerid].selected_class)
     class_globals.setClassInventory(playerid, player[playerid].selected_class)
+    class_globals.setClassEquipment(playerid, player[playerid].selected_class)
     deleteMenuStates(playerid)
     DestroyAllPlayerDraws(playerid)
 end
 
 local function showPreview(playerid, classid)
     ClearInventory(playerid)
-    EquipArmor(playerid, CLASS_ARMOR[classid])
     class_globals.setClassAttributes(playerid, player[playerid].selected_class)
-    EquipMeleeWeapon(playerid, CLASS_MELEE_WEAPON[classid])
+    class_globals.setClassEquipment(playerid, player[playerid].selected_class)
 end
 
 local function navigateSelection(playerid, key)

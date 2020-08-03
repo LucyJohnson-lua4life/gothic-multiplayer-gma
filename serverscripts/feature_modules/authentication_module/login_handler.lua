@@ -25,12 +25,22 @@ local function setPlayerAttributes(playerid, row)
         SetPlayerMaxMana(playerid, tonumber(row["max_mana"]));
         SetPlayerMagicLevel(playerid, tonumber(row["magic_level"]));
         SetPlayerScience(playerid, 0, 1)
-        EquipArmor(playerid, row["armor"]);
-        EquipMeleeWeapon(playerid, row["melee_weapon"]);
+      
         SetPlayerAdditionalVisual(playerid, tostring(row["body_model"]), tonumber(row["body_tex"]), tostring(row["head_model"]), tonumber(row["head_tex"]))
     else
         SendPlayerMessage(playerid,0,70,230,ERROR_PLAYER_COULD_NOT_BE_LOADED);
     end
+end
+
+local function setPlayerEquipment(playerid, row)
+    if row ~= nil then
+        EquipArmor(playerid, row["armor"]);
+        EquipMeleeWeapon(playerid, row["melee_weapon"]);
+        EquipRangedWeapon(playerid, row["ranged_weapon"]);
+    else
+        SendPlayerMessage(playerid,0,70,230,ERROR_PLAYER_COULD_NOT_BE_LOADED);
+    end
+
 end
 
 local function loadPlayer(handler, playerid, name, password)
@@ -39,6 +49,7 @@ local function loadPlayer(handler, playerid, name, password)
         SendPlayerMessage(playerid,0,70,230,ERROR_PLAYER_COULD_NOT_BE_LOADED);
     else
         setPlayerAttributes(playerid, row)
+        setPlayerEquipment(playerid, row)
     end
 end
 

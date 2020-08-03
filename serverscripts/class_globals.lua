@@ -23,18 +23,19 @@ CLASS_HEALTH = {1595, 1015, 1160, 1015, 5075}
 CLASS_MANA = {50, 50, 75, 50, 50}
 CLASS_MAGIC_LEVEL = {1, 1, 6, 1, 1}
 CLASS_MELEE_WEAPON = {"ITMW_1H_FERROSSWORD_MIS", "ITMW_BARTAXT", "ITMW_1H_BLESSED_01", "ITMW_SCHLACHTAXT", "ITMW_1H_MIL_SWORD"}
+CLASS_RANGED_WEAPON = {"NULL", "ITRW_BOW_H_01", "NULL", "NULL", "NULL"}
 CLASS_ARMOR = {"ITAR_RANGER_ADDON", "ITAR_RANGER_ADDON", "ITAR_RANGER_ADDON", "ITAR_RANGER_ADDON", "ITAR_RANGER_ADDON"}
 CLASS_NUM = 5
 --
 CLASS_INVENTORY = {}
 CLASS_INVENTORY[1] = {"ITLSTORCH"}
-CLASS_INVENTORY[2] = {"ITRW_BOW_H_01", "ITRW_ARROW", "ITLSTORCH"}
+CLASS_INVENTORY[2] = {"ITRW_ARROW", "ITLSTORCH"}
 CLASS_INVENTORY[3] = {"ITLSTORCH", "ITRU_LIGHTNINGFLASH"}
 CLASS_INVENTORY[4] = {"ITLSTORCH"}
 CLASS_INVENTORY[5] = {"ITLSTORCH", "ITRU_PALLIGHT", "ITRU_ZAP"}
 CLASS_INVENTORY_AMOUNT = {}
 CLASS_INVENTORY_AMOUNT[1] = {1, 10}
-CLASS_INVENTORY_AMOUNT[2] = {1, 1, 100, 10}
+CLASS_INVENTORY_AMOUNT[2] = {100, 10}
 CLASS_INVENTORY_AMOUNT[3] = {1, 10, 1, 1}
 CLASS_INVENTORY_AMOUNT[4] = {1, 10}
 CLASS_INVENTORY_AMOUNT[5] = {1, 10, 1, 1}
@@ -66,9 +67,13 @@ function class_globals.setClassAttributes(playerid, classid)
     SetPlayerMana(playerid, CLASS_MANA[classid])
     SetPlayerMaxMana(playerid, CLASS_MANA[classid])
     SetPlayerMagicLevel(playerid, CLASS_MAGIC_LEVEL[classid])
+    SetPlayerScience(playerid, 0, 1)
+end
+
+function class_globals.setClassEquipment(playerid, classid)
     EquipArmor(playerid, CLASS_ARMOR[classid])
     EquipMeleeWeapon(playerid, CLASS_MELEE_WEAPON[classid])
-    SetPlayerScience(playerid, 0, 1)
+    EquipRangedWeapon(playerid, CLASS_RANGED_WEAPON[classid])
 end
 
 function class_globals.setClassInventory(playerid, classid)

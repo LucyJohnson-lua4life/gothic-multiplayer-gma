@@ -55,9 +55,21 @@ function player_dao.updatePlayerPos(handler, name, x, y, z)
     end
 end
 
+function player_dao.getPlayerEquipment(handler, name)
+    local player_name = mysql_escape_string(handler, name)
+    local result = mysql_query(handler, "SELECT armor, melee_weapon, ranged_weapon FROM player WHERE name='"..player_name.."';")
+    local vals = nil
+    if result ~= nil then
+        vals = mysql_fetch_assoc(result)
+        mysql_free_result(result)
+    end
+    return vals
+end
+
 
 function player_dao.updatePlayerMelee(handler, name, item_instance)
     local item_name = mysql_escape_string(handler, item_instance)
+    
     local result = mysql_query(handler, "UPDATE player SET melee_weapon='"..item_name.."' WHERE name='"..name.."';")
 
     if result ~= nil then
@@ -67,6 +79,7 @@ function player_dao.updatePlayerMelee(handler, name, item_instance)
         return false
     end
 end
+
 
 
 function player_dao.updatePlayerArmor(handler, name, item_instance)
@@ -80,6 +93,7 @@ function player_dao.updatePlayerArmor(handler, name, item_instance)
         return false
     end
 end
+
 
 function player_dao.updatePlayerRanged(handler, name, item_instance)
     local item_name = mysql_escape_string(handler, item_instance)
