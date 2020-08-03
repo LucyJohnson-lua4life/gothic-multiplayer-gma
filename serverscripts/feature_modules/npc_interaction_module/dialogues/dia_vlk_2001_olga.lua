@@ -1,9 +1,16 @@
 require "serverscripts/utils/script_functions"
 require "serverscripts/player_globals"
 require "serverscripts/has_item_globals"
+local buy_dia_helper = require "serverscripts/feature_modules/npc_interaction_module/dialogues/buy_dia_helper"
 
 local dia_vlk_2001_olga = {}
 local drunk_calmed_by = {}
+
+local items_to_sell = {}
+items_to_sell[2008] = true
+items_to_sell[2009] = true
+items_to_sell[2010] = true
+
  
 local function handleBuddlertruppDia(playerid, text)
     if string.match(text, "Buddlertrupp") and drunk_calmed_by[playerid] == nil then
@@ -44,6 +51,19 @@ local function handleTavernRest(playerid, text)
         return false
     end
 end
+ 
+
+
+local function handleTradeDia(playerid, text)
+    if string.match(text, "bestellen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Schau dir das Angebot an.")
+        SendPlayerMessage(playerid, 255,228,181, "Tippe '/i buy <item id> <Anzahl>' um den Gegenstand zu kaufen.")
+        SendPlayerMessage(playerid, 255,228,181, "Angebot: Wasser (id: 2008), Bier (id: 2009), Schnaps (id: 2010)")
+        return true
+    else 
+        return false
+    end
+end
 
 
 
@@ -54,9 +74,13 @@ function dia_vlk_2001_olga.handleDialogue(playerid, text)
         return
     elseif handleTavernRest(playerid, text) == true then
         return
+    elseif handleTradeDia(playerid, text) == true then
+        return
+    elseif buy_dia_helper.handleBuyDia(playerid, text, items_to_sell) == true then
+        return
     else
         -- INIT DIALOGUE
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Hallo Fremder! Was kann ich fuer dich tun? Willst du dich <ausruhen> oder etwas bestellen?")
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Hallo Fremder! Was kann ich fuer dich tun? Willst du dich <ausruhen> oder etwas <bestellen>?")
     end
 
 end
