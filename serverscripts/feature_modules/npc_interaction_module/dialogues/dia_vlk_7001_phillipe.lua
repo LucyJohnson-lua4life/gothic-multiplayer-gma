@@ -35,6 +35,24 @@ local function handleLoverquestDia(playerid, text)
     end
 end
 
+local function handleMagicMaterialDia(playerid, text)
+    if string.match(text, "magischen Stoffen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Ah! Noch ein Abenteurer auf der Suche nachdem <geheimnisvollen Material>!")
+        return true
+    elseif string.match(text, "geheimnisvollen Material") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: In der Tat ist das ein grosses Mysterium. Fuer einige Zeit hatte ich die Theorie, dass es sich dabei nur um <verzauberten Stoff> handelt. Doch nach laengerem Ueberlegen muss es doch was anderes sein.")
+        return true
+    elseif string.match(text, "verzauberten Stoff") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Zauber halten nur eine kurze Periode an. Die Stoffe selbst schienen nach all den Tagen ihre <Beschaffenheit> nicht verloren zu haben. Kein Zauber der Welt haelt so lange ohne einen magischen Speicher.")
+        return true
+    elseif string.match(text, "Beschaffenheit") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Es muss sich um wahrhaftig seltenes Material handeln! Ich wuenschte ich koennte mir die Stoffe <genauer ansehen>.")
+        return true
+    elseif string.match(text, "genauer ansehen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Ich habe einen aeusserst wertvollen Trank in meinem Inventar. Wenn du mir das <Ding> organisieren koenntest, wuerde ich dich grosszuegig damit entlohnen!")
+        return true
+    end
+end
 
 
 
@@ -53,6 +71,8 @@ end
 function dia_vlk_7001_phillipe.handleDialogue(playerid, text)
     
     if handleLoverquestDia(playerid, text) == true then
+        return
+    elseif handleMagicMaterialDia(playerid, text) == true then
         return
     else
         -- INIT DIALOGUE

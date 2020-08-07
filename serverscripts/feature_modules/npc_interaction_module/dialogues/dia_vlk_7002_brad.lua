@@ -75,10 +75,28 @@ local function handleFurSellRewardDialogue(playerid, item_instance, amount, equi
 
 end
 
+local function handleMagicMaterialDia(playerid, text)
+    if string.match(text, "magischen Stoffen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Brad sagt: Du suchst auch nach diesem Ding? Tja ich kanns dir nicht veruebeln. Wirklich ALLE suchen nach diesem <seltenen Stoff>.")
+        return true
+    elseif string.match(text, "seltenen Stoff") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Brad sagt: Ich hab kein Plan aus was das Ding sein koennte. <Tierleder> denke ich mal nicht.")
+        return true
+    elseif string.match(text, "Tierleder") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Brad sagt: Ich kenne alle Biester der Gegend und deren Haeute sind einfach zu schwer. Mich wuerde es schon echt interessieren aus was das Material ist. Das waere mir einen <Batzen Goldmuenzen> wert.")
+        return true
+    elseif string.match(text, "Batzen Goldmuenzen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Brad sagt: Wenn du mir das <Ding> besorgen wuerdest, dann wuerde ich dir... 1000 Goldmuenzen geben!")
+        return true
+    end
+end
+
 
 function dia_vlk_7002_brad.handleDialogue(playerid, text)
     
     if handleFurSellDialogue(playerid, text) == true then
+        return
+    elseif handleMagicMaterialDia(playerid, text) == true then
         return
     else
         -- INIT DIALOGUE

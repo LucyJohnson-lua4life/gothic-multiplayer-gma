@@ -1,6 +1,7 @@
 require "serverscripts/utils/script_functions"
 require "serverscripts/player_globals"
 require "serverscripts/has_item_globals"
+require "serverscripts/item_maps"
 local buy_dia_helper = require "serverscripts/feature_modules/npc_interaction_module/dialogues/buy_dia_helper"
 
 local dia_vlk_2001_olga = {}
@@ -58,7 +59,12 @@ local function handleTradeDia(playerid, text)
     if string.match(text, "bestellen") then
         SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Schau dir das Angebot an.")
         SendPlayerMessage(playerid, 255,228,181, "Tippe '/i buy <item id> <Anzahl>' um den Gegenstand zu kaufen.")
-        SendPlayerMessage(playerid, 255,228,181, "Angebot: Wasser (id: 2008), Bier (id: 2009), Schnaps (id: 2010)")
+        SendPlayerMessage(playerid, 255,228,181, "Zu verkaufen:")
+        for key, _ in pairs(items_to_sell) do
+            local item_instance = ITEM_ID_MAP[key]
+            SendPlayerMessage(playerid, 255,228,181, ITEM_NAME_MAP[item_instance].. " (id: " .. key .." ) ---> Gold: ".. PRICE_TABLE[item_instance])
+        end
+
         return true
     else 
         return false

@@ -25,7 +25,32 @@ local function handleBuddlertruppDia(playerid, text)
     else
         return false
     end
+    
 end
+
+
+local function handleMagicMaterialDia(playerid, text)
+    if string.match(text, "magischen Stoffen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Oh ja, davon habe ich schon viel gehoert. Mindestens ein mal am Abend erlebe ich eine <Pruegelei wegen dem Stoff>.")
+        return true
+    elseif string.match(text, "Pruegelei wegen dem Stoff") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Letzten Abend hatten sich der Ruestungshaendler und Phillipe betrunken aufeinander gestuerzt. Ich musste die beiden aus der <Taverne schmeissen>.")
+        return true
+    elseif string.match(text, "Taverne schmeissen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Dieser Stoff hat <ungesehene Eigenschaften>. Jeder der seine Finger drankriegt kann sich eine goldene Nase verdienen.")
+        return true
+    elseif string.match(text, "ungsehene Eigenschaften") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Es ist so hieb- und stichfest wie Stahl, aber so leicht wie Seide. Es gibt Geruechte, dass der Stoff von einem Tier stammt.")
+        return true
+    elseif string.match(text, "Stoff magisch") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Das waere die einzige Erklaerung die mir einfaellt. Wenn du aber genaueres wissen willst musst du <Ryan den Jaeger> fragen. Er scheint genaueres zu wissen.")
+        return true
+    elseif string.match(text, "Ryan den Jaeger") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Du findest Ryan im Jaegerlager in der Naehe der Taverne zur toten Harpie. Er scheint auch aktiv nach dem Stoff zu suchen.")
+        return true
+    end
+end
+
 
 local function handleTavernRest(playerid, text) 
     if string.match(text, "ausruhen") then
@@ -42,6 +67,8 @@ function dia_vlk_2003_barney.handleDialogue(playerid, text)
     if handleBuddlertruppDia(playerid, text) == true then
         return
     elseif handleTavernRest(playerid,text) then
+        return
+    elseif handleMagicMaterialDia(playerid, text) then
         return
     else
         -- INIT DIALOGUE

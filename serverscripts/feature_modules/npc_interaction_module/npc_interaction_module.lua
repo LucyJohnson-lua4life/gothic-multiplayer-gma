@@ -13,6 +13,7 @@ local dia_vlk_7004_lian = require "serverscripts/feature_modules/npc_interaction
 local dia_vlk_7003_ryan = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7003_ryan"
 local dia_vlk_7002_brad = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7002_brad"
 local dia_vlk_7001_phillipe = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7001_phillipe"
+local dia_vlk_7000_goffrey = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7000_goffrey"
 
 
 local npc_interaction_module = {}
@@ -50,7 +51,8 @@ local function handleNpcInteraction(playerid, npc_id, text)
         dia_vlk_2010_jack.handleDialogue(playerid, text)
     elseif string.match(npc_name, "^Phillipe.*") then
         dia_vlk_7001_phillipe.handleDialogue(playerid, text)
-        
+    elseif string.match(npc_name, "^Goffrey.*") then
+        dia_vlk_7000_goffrey.handleDialogue(playerid, text)
     end
     --- depending on NPC, the interaction will be forwarded to the npc handler
 end
@@ -75,6 +77,7 @@ function npc_interaction_module.OnPlayerHasItem(playerid, item_instance, amount,
     dia_vlk_2008_vivi.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     dia_vlk_2010_jack.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     dia_vlk_7001_phillipe.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
+    dia_vlk_7000_goffrey.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 end
 
 function npc_interaction_module.OnPlayerHit(playerid, killerid)

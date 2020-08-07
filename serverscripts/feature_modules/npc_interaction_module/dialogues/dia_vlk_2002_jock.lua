@@ -37,11 +37,21 @@ local function handleTavernRest(playerid, text)
     end
 end
 
+local function handleMagicMaterialDia(playerid, text)
+    if string.match(text, "magischen Stoffen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Magischer was? Nie davon gehoert. Tut mir Leid aber da musst du wen anderes fragen.")
+        return true
+    end
+end
+
+
 function dia_vlk_2002_jock.handleDialogue(playerid, text)
     
     if handleBuddlertruppDia(playerid, text) == true then
         return
     elseif handleTavernRest(playerid, text) == true then
+        return
+    elseif handleMagicMaterialDia(playerid, text) then
         return
     else
         -- INIT DIALOGUE

@@ -568,13 +568,7 @@ function InitNewWorldNPC()
   --RIVERSIDECAVE
   SpawnNPC(Shadowbeast(), "NW_TROLLAREA_RIVERSIDECAVE_02", world);
   SpawnNPC(Shadowbeast(), "NW_TROLLAREA_RIVERSIDECAVE_07", world);
-  --4679
   
-  --SkeletonSH()
-  --Lesser_Skeleton()
-  
-  -- KLOSTER MONSTER
-
   -- AT XARDAS TOWER
   SpawnNPC(OrcWarrior(), "FP_ORCS_AT_XARDAS01", world);
   SpawnNPC(OrcWarrior(), "FP_ORCS_AT_XARDAS02", world);
@@ -590,9 +584,7 @@ function InitNewWorldNPC()
   SpawnNPC(OrcShaman(), "FP_ORCS_AT_XARDAS12", world);
   SpawnNPC(OrcElite(), "FP_ORCS_AT_XARDAS17", world);
   SpawnNPC(OrcElite(), "FP_ORCS_AT_XARDAS18", world);
-  --SpawnNPC(OrcWarrior(), "FP_ORCS_AT_XARDAS19", world);
-  --SpawnNPC(OrcWarrior(), "FP_ORCS_AT_XARDAS20", world);
-  --SpawnNPC(OrcElite(), "FP_ORCS_AT_XARDAS21", world);
+
 
   --RANDOM ORCS
   SpawnNPC(OrcElite(), "FP_RANDOM_ELITE_ORC_01", world);
@@ -658,7 +650,6 @@ function InitNewWorldNPC()
   SpawnNPC(VLK_1000_AmbientFemale(), "FP_HAFEN_VENDOR_01", world);
   SpawnNPC(VLK_1000_AmbientFemale(), "FP_HAFEN_VENDOR_02", world);
 
-
   SpawnNPC(VLK_1002_AmbientFarmerM(), "FP_SMALLTALK_NW_BIGFARM_STABLE_OUT_03", world);
   SpawnNPC(VLK_1003_AmbientFarmerF(), "FP_SMALLTALK_NW_BIGFARM_STABLE_OUT_031", world);
   SpawnNPC(VLK_1003_AmbientFarmerF(), "FP_SMALLTALK_NW_BIGFARM_KITCHEN_04", world);
@@ -666,13 +657,10 @@ function InitNewWorldNPC()
   SpawnNPC(VLK_1002_AmbientFarmerM(), "FP_SMALLTALK_NW_BIGFARM_KITCHEN_02", world);
   SpawnNPC(VLK_1002_AmbientFarmerM(), "FP_SMALLTALK_NW_BIGFARM_KITCHEN_01", world);
 
-
   SpawnNPC(VLK_2008_Vivi(), "FP_STAND_KASERN_OFFICER", world)
   SpawnNPC(TrainingMilitia(), "FP_STAND_KASERN_TRAIN_01", world)
   SpawnNPC(TrainingMilitia(), "FP_STAND_KASERN_TRAIN_02", world)
   SpawnNPC(TrainingMilitia(), "FP_STAND_KASERN_TRAIN_03", world)
-
-
 
   SpawnNPC(Zek_Dead(), "FP_RUFUS_DEAD", world);
   --wisp forest lake
@@ -688,8 +676,6 @@ function InitNewWorldNPC()
   SpawnNPC(VLK_2010_Jack(), "FP_HAFEN_TAVERN_05", world);
   SpawnNPC(VLK_2011_Gordon(), "FP_STAND_BIGFARM_OUT_TORLOF", world);
   
-  
-
   SpawnNPC(VLK_7000_Goffrey(), "FP_STAND_SARAH", world);
   SpawnNPC(VLK_7001_Phillipe(), "FP_STAND_JORA", world);
   SpawnNPC(VLK_7002_Brad(), "FP_STAND_HAKON", world);
