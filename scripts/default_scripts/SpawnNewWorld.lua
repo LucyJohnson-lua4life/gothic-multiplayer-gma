@@ -658,6 +658,15 @@ function InitNewWorldNPC()
   SpawnNPC(VLK_1000_AmbientFemale(), "FP_HAFEN_VENDOR_01", world);
   SpawnNPC(VLK_1000_AmbientFemale(), "FP_HAFEN_VENDOR_02", world);
 
+
+  SpawnNPC(VLK_1002_AmbientFarmerM(), "FP_SMALLTALK_NW_BIGFARM_STABLE_OUT_03", world);
+  SpawnNPC(VLK_1003_AmbientFarmerF(), "FP_SMALLTALK_NW_BIGFARM_STABLE_OUT_031", world);
+  SpawnNPC(VLK_1003_AmbientFarmerF(), "FP_SMALLTALK_NW_BIGFARM_KITCHEN_04", world);
+  SpawnNPC(VLK_1003_AmbientFarmerF(), "FP_SMALLTALK_NW_BIGFARM_KITCHEN_03", world);
+  SpawnNPC(VLK_1002_AmbientFarmerM(), "FP_SMALLTALK_NW_BIGFARM_KITCHEN_02", world);
+  SpawnNPC(VLK_1002_AmbientFarmerM(), "FP_SMALLTALK_NW_BIGFARM_KITCHEN_01", world);
+
+
   SpawnNPC(VLK_2008_Vivi(), "FP_STAND_KASERN_OFFICER", world)
   SpawnNPC(TrainingMilitia(), "FP_STAND_KASERN_TRAIN_01", world)
   SpawnNPC(TrainingMilitia(), "FP_STAND_KASERN_TRAIN_02", world)
@@ -677,6 +686,7 @@ function InitNewWorldNPC()
   SpawnNPC(VLK_2007_Hugo(), "FP_BIGFARM_TAVERN_BARKEEPER", world);
   SpawnNPC(VLK_2009_Astren(), "FP_CITY_HUNTER_SHOP", world);
   SpawnNPC(VLK_2010_Jack(), "FP_HAFEN_TAVERN_05", world);
+  SpawnNPC(VLK_2011_Gordon(), "FP_STAND_BIGFARM_OUT_TORLOF", world);
   
   
 

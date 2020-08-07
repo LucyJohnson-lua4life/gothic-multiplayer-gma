@@ -1,18 +1,16 @@
 
-function VLK_1001_AmbientMale()
-	local npc = CreateNPC(GetNewNPCName("Buerger"));
-    local head_model = {"Hum_Head_FatBald", "Hum_Head_Fighter", "Hum_Head_Pony", "Hum_Head_Bald", "Hum_Head_Thief", "Hum_Head_Psionic"}
-    
-
-	SetPlayerAdditionalVisual(npc,"Hum_Body_Naked0",4, head_model[math.random(1,6)], math.random(35,80));
-	SetPlayerWalk(npc, "Humans_Arrogance.mds");
+function VLK_1003_AmbientFarmerF()
+	local npc = CreateNPC(GetNewNPCName("Buergerin"));
+	local head_model = { "Hum_Head_Pony","Hum_Head_Bald", "Hum_Head_Babe"}
+	SetPlayerAdditionalVisual(npc,"Hum_Body_Babe0",4, head_model[math.random(1,3)], math.random(142,155));
+	SetPlayerWalk(npc, "Humans_Babe.mds");
 	SetPlayerInstance(npc,"PC_HERO");
 	SetPlayerFatness(npc, 0.5);
     SetPlayerStrength(npc, 10);
     SetPlayerHealth(npc, 9999);
     SetPlayerMaxHealth(npc, 9999);
 	--Items:
-	local armors = {"ITAR_VLK_L","ITAR_VLK_M"}
+	local armors = {"ITAR_VlkBabe_M","ITAR_VlkBabe_L"}
 	EquipArmor(npc, armors[math.random(1,2)]);
 
 	--EquipMeleeWeapon(npc,"ItMw_1h_Bau_Mace");

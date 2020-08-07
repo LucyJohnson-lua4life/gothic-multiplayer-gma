@@ -33,13 +33,3 @@ function VLK_1000_AmbientFemale()
 end
 
 
-function TA_VLK_1000(_playerid)
-	
-	if(TA_FUNC(_playerid, 0, 0, 24, 0))then
-		AI_ClearStates(_playerid);
-		AI_SETWALKTYPE(_playerid, 0);--Let him walk!
-		--AI_GOTOFP(_playerid, "FP_SMALLTALK_CITY_04_02");
-		--AI_ALIGNTOFP(_playerid, "FP_SMALLTALK_CITY_04_02");
-		AI_PLAYANIMATION(_playerid, "S_HGUARD");
-	end
-end

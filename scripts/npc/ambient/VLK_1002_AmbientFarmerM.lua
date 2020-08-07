@@ -1,6 +1,6 @@
 
-function VLK_1001_AmbientMale()
-	local npc = CreateNPC(GetNewNPCName("Buerger"));
+function VLK_1002_AmbientFarmerM()
+	local npc = CreateNPC(GetNewNPCName("Bauer"));
     local head_model = {"Hum_Head_FatBald", "Hum_Head_Fighter", "Hum_Head_Pony", "Hum_Head_Bald", "Hum_Head_Thief", "Hum_Head_Psionic"}
     
 
@@ -12,7 +12,7 @@ function VLK_1001_AmbientMale()
     SetPlayerHealth(npc, 9999);
     SetPlayerMaxHealth(npc, 9999);
 	--Items:
-	local armors = {"ITAR_VLK_L","ITAR_VLK_M"}
+	local armors = {"ITAR_BAU_L","ITAR_BAU_M"}
 	EquipArmor(npc, armors[math.random(1,2)]);
 
 	--EquipMeleeWeapon(npc,"ItMw_1h_Bau_Mace");
