@@ -4,7 +4,7 @@ function VLK_2005_BetrunkenerSchlaeger()
 	
 	SetPlayerAdditionalVisual(npc,"Hum_Body_Naked0",4, "Hum_Head_Fighter", 70);
 	SetPlayerWalk(npc, "Humans_Arrogance.mds");
-	SetPlayerInstance(npc,"DRAGONISLE_KEYMASTER");
+	SetPlayerInstance(npc,"PC_HERO");
 	SetPlayerFatness(npc, 0.5);
     SetPlayerStrength(npc, 150);
     SetPlayerHealth(npc, 1400);

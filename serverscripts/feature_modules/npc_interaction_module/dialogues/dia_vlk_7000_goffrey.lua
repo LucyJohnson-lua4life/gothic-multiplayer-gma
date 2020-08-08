@@ -11,7 +11,7 @@ local items_to_sell = {}
 items_to_sell[1000] = true
 items_to_sell[1001] = true
 
-local function handleArmorquestDia(playerid, text)
+local function handleMagicMaterialDia(playerid, text)
     if string.match(text, "Anderem") then
         SendPlayerMessage(playerid, 255, 255, 255, "Goffrey sagt: Dann weisst du ueber die Suche nach dem <magischen Stoff> bescheid?")
         return true
@@ -84,7 +84,7 @@ function dia_vlk_7000_goffrey.handleDialogue(playerid, text)
         return
     elseif buy_dia_helper.handleBuyDia(playerid, text, items_to_sell) == true then
         return
-    elseif handleArmorquestDia(playerid, text) == true then
+    elseif handleMagicMaterialDia(playerid, text) == true then
         return
     else
         -- INIT DIALOGUE

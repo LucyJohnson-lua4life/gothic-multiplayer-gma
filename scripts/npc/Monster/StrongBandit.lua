@@ -1,6 +1,6 @@
 function StrongBandit()
 	local npc = CreateNPC(GetNewNPCName("Strong Bandit"));
-	SetPlayerInstance(npc,"DRAGONISLE_KEYMASTER");	
+	SetPlayerInstance(npc,"PC_HERO");
     SetPlayerAdditionalVisual(npc,"Hum_Body_Naked0",1, "Hum_Head_FatBald", math.random(35,80));
 	SetPlayerWalk(npc, "HumanS_Relaxed.mds");
 	SetPlayerFatness(npc, 0.5);
@@ -25,6 +25,7 @@ function StrongBandit()
 	npcarr.target_routine = AI_TA_MONSTER;
 	npcarr.onhitted = ON_WOLF_HIT;
 	npcarr.Guild = AI_GUILD_Wolf;
+	--npcarr.Guild = AI_GUILD_GuildLess;
 	--npcarr.func = StrongBandit;
 	npcarr.respawntime = 300;
 	

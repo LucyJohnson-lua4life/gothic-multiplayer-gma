@@ -100,6 +100,16 @@ local function getNpcForName(name)
         return VLK_2005_BetrunkenerSchlaeger();
     elseif (string.match(name, "^Seltsame Statue.*")) then
         return StrangeStatue("Seltsame Statue");
+    elseif (string.match(name, "^Buergerin.*")) then
+        return VLK_1000_AmbientFemale();
+    elseif (string.match(name, "^Buerger.*")) then
+        return VLK_1001_AmbientMale();
+    elseif (string.match(name, "^Baeuerin.*")) then
+        return VLK_1003_AmbientFarmerF();
+    elseif (string.match(name, "^Bauer.*")) then
+        return VLK_1002_AmbientFarmerM();
+    elseif (string.match(name, "^Seltsame Statue.*")) then
+        return StrangeStatue("Seltsame Statue");
     end
 end
 

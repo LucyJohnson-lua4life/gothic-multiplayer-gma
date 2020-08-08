@@ -1,4 +1,4 @@
-require "serverscripts/feature_modules/npc_interaction_module/invisible_npcs"
+require "serverscripts/feature_modules/npc_interaction_module/invinsible_npcs"
 local dia_vlk_2000_rose = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2000_rose"
 local dia_vlk_2001_olga = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2001_olga"
 local dia_vlk_2002_jock = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2002_jock"
@@ -83,7 +83,7 @@ end
 function npc_interaction_module.OnPlayerHit(playerid, killerid)
     if IsNPC(playerid) then
         local npc_name = GetPlayerName(playerid)
-        if INVISIBLE_NPCS[npc_name] == true then
+        if INVINSIBLE_NPCS[npc_name] == true then
             SetPlayerHealth(playerid, GetPlayerMaxHealth(playerid))
         end
     end

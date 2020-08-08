@@ -136,7 +136,7 @@ function FAI_ONEH_MASTER(player)
     else
         -- Distanz zwischen Monster und Spieler < Attack Range....
         local dangle = GetPlayerAngle(player.ID) - GetAngleToPlayer(player.ID, player.ENEMY[1]); -- Angle vom Monster - Angle vom Monster zum Spieler
-        local timeToWait = 2700 -- Milliseconds to wait for the next attack
+        local timeToWait = 2000 -- Milliseconds to wait for the next attack
         local enemyWeaponMode = GetPlayerWeaponMode(player.ENEMY[1])
         if enemyWeaponMode == WEAPON_BOW or enemyWeaponMode == WEAPON_CBOW or enemyWeaponMode == WEAPON_MAGIC then
             timeToWait = timeToWait * 0.75 -- Attack more often against ranged enemies
@@ -159,11 +159,11 @@ function FAI_ONEH_MASTER(player)
             player.attackWait = GetTickCount()
             
             
-            table.insert(player.NEXTMOVES, {type=2, waittime=300})
+            table.insert(player.NEXTMOVES, {type=2, waittime=200})
             table.insert(player.NEXTMOVES, {type=3, anim=aniHelper("T", player.WeaponMode, "ATTACKR"), victim=player.ENEMY[1]})
-            table.insert(player.NEXTMOVES, {type=2, waittime=300})
+            table.insert(player.NEXTMOVES, {type=2, waittime=200})
             table.insert(player.NEXTMOVES, {type=3, anim=aniHelper("S", player.WeaponMode, "ATTACK"), victim=player.ENEMY[1]})
-            table.insert(player.NEXTMOVES, {type=2, waittime=400})
+            table.insert(player.NEXTMOVES, {type=2, waittime=300})
             table.insert(player.NEXTMOVES, {type=1, anim=aniHelper("S", player.WeaponMode, "RUN")})
         elseif GetDistancePlayers(player.ID, player.ENEMY[1]) < AttackRange - 150 then
             -- When AI is to near to player, quick evade.
