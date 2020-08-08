@@ -1,3 +1,11 @@
+require "serverscripts/item_maps"
+require "serverscripts/price_table"
+
+local buy_dia_helper = require "serverscripts/feature_modules/npc_interaction_module/dialogues/buy_dia_helper"
+local items_to_sell = {}
+items_to_sell[2008] = true
+items_to_sell[2009] = true
+items_to_sell[2010] = true
 local dia_vlk_2007_hugo = {}
  
 local function handleBuddlertruppDia(playerid, text)
@@ -40,15 +48,36 @@ local function handleTavernRest(playerid, text)
     end
 end
 
+local function handleTradeDia(playerid, text)
+    if string.match(text, "bestellen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Schau dir das Angebot an.")
+        SendPlayerMessage(playerid, 255,228,181, "Tippe '/i buy <item id> <Anzahl>' um den Gegenstand zu kaufen.")
+        SendPlayerMessage(playerid, 255,228,181, "Zu verkaufen:")
+        for key, _ in pairs(items_to_sell) do
+            local item_instance = ITEM_ID_MAP[key]
+            SendPlayerMessage(playerid, 255,228,181, ITEM_NAME_MAP[item_instance].. " (id: " .. key ..") ---> Gold: ".. PRICE_TABLE[item_instance])
+        end
+
+        return true
+    else 
+        return false
+    end
+end
+
+
 function dia_vlk_2007_hugo.handleDialogue(playerid, text)
     
     if handleBuddlertruppDia(playerid, text) == true then
         return
     elseif handleTavernRest(playerid, text) then
         return
+    elseif handleTradeDia(playerid, text) == true then
+        return
+    elseif buy_dia_helper.handleBuyDia(playerid, text, items_to_sell) == true then
+        return
     else
         -- INIT DIALOGUE
-        SendPlayerMessage(playerid, 255, 255, 255, "Hugo sagt: Willkommen Fremder! Wie kann ich dir helfen? Willst du dich <ausruhen> oder etwas bestellen?")
+        SendPlayerMessage(playerid, 255, 255, 255, "Hugo sagt: Willkommen Fremder! Wie kann ich dir helfen? Willst du dich <ausruhen> oder etwas <bestellen>?")
     end
 
 end

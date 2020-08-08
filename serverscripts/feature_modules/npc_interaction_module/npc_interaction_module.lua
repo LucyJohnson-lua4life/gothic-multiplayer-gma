@@ -1,4 +1,11 @@
 require "serverscripts/feature_modules/npc_interaction_module/invinsible_npcs"
+
+local dia_vlk_1000_ambientfemale = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_1000_ambientfemale"
+local dia_vlk_1001_ambientmale = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_1001_ambientmale"
+local dia_vlk_1002_farmerm = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_1002_farmerm"
+local dia_vlk_1003_farmerf = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_1003_farmerf"
+
+
 local dia_vlk_2000_rose = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2000_rose"
 local dia_vlk_2001_olga = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2001_olga"
 local dia_vlk_2002_jock = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2002_jock"
@@ -53,6 +60,14 @@ local function handleNpcInteraction(playerid, npc_id, text)
         dia_vlk_7001_phillipe.handleDialogue(playerid, text)
     elseif string.match(npc_name, "^Goffrey.*") then
         dia_vlk_7000_goffrey.handleDialogue(playerid, text)
+    elseif string.match(npc_name, "^Buergerin.*") then
+        dia_vlk_1000_ambientfemale.handleDialogue(playerid, text)
+    elseif string.match(npc_name, "^Buerger.*") then
+        dia_vlk_1001_ambientmale.handleDialogue(playerid, text)
+    elseif string.match(npc_name, "^Baeuerin.*") then
+        dia_vlk_1003_farmerf.handleDialogue(playerid, text)
+    elseif string.match(npc_name, "^Bauer.*") then
+        dia_vlk_1002_farmerm.handleDialogue(playerid, text)
     end
     --- depending on NPC, the interaction will be forwarded to the npc handler
 end

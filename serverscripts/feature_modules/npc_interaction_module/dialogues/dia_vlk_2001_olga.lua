@@ -2,6 +2,7 @@ require "serverscripts/utils/script_functions"
 require "serverscripts/player_globals"
 require "serverscripts/has_item_globals"
 require "serverscripts/item_maps"
+require "serverscripts/price_table"
 local buy_dia_helper = require "serverscripts/feature_modules/npc_interaction_module/dialogues/buy_dia_helper"
 
 local dia_vlk_2001_olga = {}
@@ -62,7 +63,7 @@ local function handleTradeDia(playerid, text)
         SendPlayerMessage(playerid, 255,228,181, "Zu verkaufen:")
         for key, _ in pairs(items_to_sell) do
             local item_instance = ITEM_ID_MAP[key]
-            SendPlayerMessage(playerid, 255,228,181, ITEM_NAME_MAP[item_instance].. " (id: " .. key .." ) ---> Gold: ".. PRICE_TABLE[item_instance])
+            SendPlayerMessage(playerid, 255,228,181, ITEM_NAME_MAP[item_instance].. " (id: " .. key ..") ---> Gold: ".. PRICE_TABLE[item_instance])
         end
 
         return true
