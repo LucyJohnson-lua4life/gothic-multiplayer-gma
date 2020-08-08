@@ -92,6 +92,7 @@ function OnPlayerDisconnect(playerid, reason)
 	end
 	npc_module.OnPlayerDisconnect(playerid, reason)
 	npc_interaction_module.OnPlayerDisconnect(playerid, reason)
+	custom_items_module.OnPlayerDisconnect(playerid, reason)
 end
 
 function OnPlayerSpawn(playerid, classid)

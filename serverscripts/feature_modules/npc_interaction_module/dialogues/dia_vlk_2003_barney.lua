@@ -71,7 +71,7 @@ end
 
 local function handleTradeDia(playerid, text)
     if string.match(text, "bestellen") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Schau dir das Angebot an.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Schau dir das Angebot an.")
         SendPlayerMessage(playerid, 255,228,181, "Tippe '/i buy <item id> <Anzahl>' um den Gegenstand zu kaufen.")
         SendPlayerMessage(playerid, 255,228,181, "Zu verkaufen:")
         for key, _ in pairs(items_to_sell) do
@@ -103,7 +103,7 @@ function dia_vlk_2003_barney.handleDialogue(playerid, text)
         return
     else
         -- INIT DIALOGUE
-        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Hallo Fremder! Wie kann ich dir helfen? Willst du dich <ausruhen> oder etwas <bestellen>?")
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Hallo Fremder! Wie kann ich dir helfen? Willst du dich <ausruhen> oder etwas <bestellen>?")
     end
 
 end

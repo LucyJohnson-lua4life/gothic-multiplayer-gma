@@ -155,6 +155,10 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         GiveItem(playerid, "ITMI_FLASK",10)
     end
 
+    if cmdtext == "/shrinkpot" then
+        GiveItem(playerid, "ITPO_MANA_01",1)
+    end
+    
 
     if cmdtext == "/femr" then
         GiveItem(playerid, "ITGMA_ARMOR_START_FEM",1)

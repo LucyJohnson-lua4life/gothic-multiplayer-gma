@@ -1,3 +1,4 @@
+local custom_potions = require "serverscripts/feature_modules/custom_items_module/custom_potions"
 local custom_items_module = {}
 
 local function getRecoveryValue(current_health, max_health, percent)
@@ -19,6 +20,11 @@ function custom_items_module.OnPlayerUseItem(playerid, itemInstance, amount, han
         SetPlayerHealth(playerid, getRecoveryValue(GetPlayerHealth(playerid), GetPlayerMaxHealth(playerid), 25));
         SetPlayerMana(playerid, getRecoveryValue(GetPlayerMana(playerid), GetPlayerMaxMana(playerid), 25));
     end
+    custom_potions.OnPlayerUseItem(playerid, itemInstance, amount, hand)
+end
+
+function custom_items_module.OnPlayerDisconnect(playerid, reason)
+    custom_potions.OnPlayerDisconnect(playerid, reason)
 end
 
 return custom_items_module

@@ -53,7 +53,7 @@ end
 
 local function handleTradeDia(playerid, text)
     if string.match(text, "bestellen") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Olga sagt: Schau dir das Angebot an.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Jock sagt: Schau dir das Angebot an.")
         SendPlayerMessage(playerid, 255,228,181, "Tippe '/i buy <item id> <Anzahl>' um den Gegenstand zu kaufen.")
         SendPlayerMessage(playerid, 255,228,181, "Zu verkaufen:")
         for key, _ in pairs(items_to_sell) do
