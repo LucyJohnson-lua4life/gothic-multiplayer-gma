@@ -10,8 +10,7 @@ local check_id = ALCHEMY_CHECK_ID
 
 local ingredients_for_healpot = {["ITPL_HEALTH_HERB_01"] = 2, ["ITPL_HEALTH_HERB_03"] = 1}
 local ingredients_for_manapot = {["ITPL_MANA_HERB_01"] = 2, ["ITPL_MANA_HERB_03"] = 1}
-local ingredients_for_healpot = {["ITPL_HEALTH_HERB_01"] = 2, ["ITPL_HEALTH_HERB_03"] = 1}
-local ingredients_for_healpot = {["ITPL_HEALTH_HERB_01"] = 2, ["ITPL_HEALTH_HERB_03"] = 1}
+
 
 local function matchesIngredients(playerid, ingredients)
     for item_instance, _ in pairs(ingredients) do

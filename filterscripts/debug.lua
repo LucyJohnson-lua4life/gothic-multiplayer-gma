@@ -79,6 +79,7 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
             GiveItem(playerid, "ITPO_MANA_03",1)
             GiveItem(playerid, "ITPO_HEALTH_01",1)
             GiveItem(playerid, "ITPO_HEALTH_02",1)
+            GiveItem(playerid, "ITPO_HEALTH_03",1)
     end
 
     if cmd == "/weedallday" then

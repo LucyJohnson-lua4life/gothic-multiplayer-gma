@@ -23,6 +23,10 @@ function custom_items_module.OnPlayerUseItem(playerid, itemInstance, amount, han
     custom_potions.OnPlayerUseItem(playerid, itemInstance, amount, hand)
 end
 
+function custom_items_module.OnPlayerHit(playerid, killerid)
+    custom_potions.OnPlayerHit(playerid, killerid)
+end
+
 function custom_items_module.OnPlayerDisconnect(playerid, reason)
     custom_potions.OnPlayerDisconnect(playerid, reason)
 end

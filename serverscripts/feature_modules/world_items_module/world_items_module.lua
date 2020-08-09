@@ -606,11 +606,11 @@ local empty_item_spots = {}
 
 local regular_plants = {"ITPL_HEALTH_HERB_01", "ITPL_MANA_HERB_01"}
 
-local deep_forrest_plants = {"ITPL_HEALTH_HERB_01", "ITPL_MANA_HERB_01", "ITPL_FORESTBERRY", "ITPL_BLUEPLANT", "HEILWURZEL", "FEUERWURZEL"}
+local deep_forrest_plants = {"ITPL_HEALTH_HERB_01", "ITPL_MANA_HERB_01", "ITPL_FORESTBERRY", "ITPL_BLUEPLANT", "ITPL_HEALTH_HERB_03", "ITPL_MANA_HERB_03"}
 
 local water_plants = {"ITPL_HEALTH_HERB_01", "BLAUFLIEDER", "ITPL_SWAMPHERB"}
 
-local magic_place_plants = {"HEILWURZEL", "FEUERWURZEL", "KRONSTÖCKEL"}
+local magic_place_plants = {"ITPL_HEALTH_HERB_03", "ITPL_MANA_HERB_03", "ITPL_PERM_HERB"}
 
 local itemId_to_placeId = {}
 

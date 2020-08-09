@@ -115,7 +115,7 @@ end
 function OnPlayerHit(playerid, killerid)
 	npc_module.OnPlayerHit(playerid, killerid)
 	npc_interaction_module.OnPlayerHit(playerid, killerid)
-	
+	custom_items_module.OnPlayerHit(playerid, killerid)
 end
 
 function OnPlayerText(playerid, text)
