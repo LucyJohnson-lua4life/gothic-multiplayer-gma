@@ -73,17 +73,28 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         GiveItem(playerid, "ITMI_PAN",1)
     end
 
+    if cmd == "/wannasomepotsbro" then
+            GiveItem(playerid, "ITPO_MANA_01",1)
+            GiveItem(playerid, "ITPO_MANA_02",1)
+            GiveItem(playerid, "ITPO_MANA_03",1)
+            GiveItem(playerid, "ITPO_HEALTH_01",1)
+            GiveItem(playerid, "ITPO_HEALTH_02",1)
+    end
+
     if cmd == "/weedallday" then
         GiveItem(playerid, "ITPL_HEALTH_HERB_01",10)
+        GiveItem(playerid, "ITPL_HEALTH_HERB_03",10)
+    end
+
+    if cmd == "/makinstew" then
+        GiveItem(playerid, "ITFOMUTTON",2)
+        GiveItem(playerid, "ITFO_WATER",1)
     end
 
     if cmd == "/armor" then
         GiveItem(playerid, "ITAR_PAL_H",10)
     end
 
-    if cmd == "/specialweed" then
-        GiveItem(playerid, "ITPL_HEALTH_HERB_03",1)
-    end
 
     if cmd == "/turn" then
         local fid = GetFocus(playerid)

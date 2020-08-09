@@ -14,3 +14,5 @@ end
 
 
 - some dao methods return the result sets, others return a lua array, e.g player_dao.lua -> getPlayerClass vs getPlayerEquipment,  this should be unified
+
+- give all key,vale names in "for .... in pairs(table)" structures good names
