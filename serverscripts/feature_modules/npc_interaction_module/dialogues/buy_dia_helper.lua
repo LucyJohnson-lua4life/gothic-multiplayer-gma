@@ -54,4 +54,19 @@ function buy_dia_helper.handleBuyDia(playerid, text, sells_this_item)
 
 end
 
+
+-- string match raus, und item_tosell rein
+ function buy_dia_helper.handleTradeDia(playerid, items_to_sell, name)
+    
+    SendPlayerMessage(playerid, 255, 255, 255, name .." sagt: Schau dir das Angebot an.")
+    SendPlayerMessage(playerid, 255,228,181, "Tippe '/i buy <item id> <Anzahl>' um den Gegenstand zu kaufen.")
+    SendPlayerMessage(playerid, 255,228,181, "Zu verkaufen:")
+    for key, _ in pairs(items_to_sell) do
+        local item_instance = ITEM_ID_MAP[key]
+        SendPlayerMessage(playerid, 255,228,181, ITEM_NAME_MAP[item_instance].. " (id: " .. key ..") ---> Gold: ".. PRICE_TABLE[item_instance])
+    end
+
+
+end
+
 return buy_dia_helper

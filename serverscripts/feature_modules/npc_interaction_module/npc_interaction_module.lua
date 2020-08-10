@@ -10,6 +10,7 @@ local dia_vlk_2000_rose = require "serverscripts/feature_modules/npc_interaction
 local dia_vlk_2001_olga = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2001_olga"
 local dia_vlk_2002_jock = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2002_jock"
 local dia_vlk_2003_barney = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2003_barney"
+local dia_vlk_2004_olivia = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2004_olivia"
 local dia_vlk_2006_redford = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2006_redford"
 local dia_vlk_2007_hugo = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2007_hugo"
 local dia_vlk_2008_vivi = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2008_vivi"
@@ -46,6 +47,8 @@ local function handleNpcInteraction(playerid, npc_id, text)
         dia_vlk_2002_jock.handleDialogue(playerid, text)
     elseif string.match(npc_name, "^Barney.*") then
         dia_vlk_2003_barney.handleDialogue(playerid, text)
+    elseif string.match(npc_name, "^Olivia.*") then
+        dia_vlk_2004_olivia.handleDialogue(playerid, text)
     elseif string.match(npc_name, "^Redford.*") then
         dia_vlk_2006_redford.handleDialogue(playerid, text)
     elseif string.match(npc_name, "^Hugo.*") then

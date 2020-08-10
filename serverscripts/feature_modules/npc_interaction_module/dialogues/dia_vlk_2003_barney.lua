@@ -71,22 +71,12 @@ end
 
 local function handleTradeDia(playerid, text)
     if string.match(text, "bestellen") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Schau dir das Angebot an.")
-        SendPlayerMessage(playerid, 255,228,181, "Tippe '/i buy <item id> <Anzahl>' um den Gegenstand zu kaufen.")
-        SendPlayerMessage(playerid, 255,228,181, "Zu verkaufen:")
-        for key, _ in pairs(items_to_sell) do
-            local item_instance = ITEM_ID_MAP[key]
-            SendPlayerMessage(playerid, 255,228,181, ITEM_NAME_MAP[item_instance].. " (id: " .. key ..") ---> Gold: ".. PRICE_TABLE[item_instance])
-        end
-
+        buy_dia_helper.handleTradeDia(playerid, items_to_sell, "Barney")
         return true
     else 
         return false
     end
 end
-
-
-
 
 
 function dia_vlk_2003_barney.handleDialogue(playerid, text)
