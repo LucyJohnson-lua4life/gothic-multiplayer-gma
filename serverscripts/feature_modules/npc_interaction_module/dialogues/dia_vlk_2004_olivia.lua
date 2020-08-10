@@ -5,13 +5,21 @@ local dia_vlk_2004_olivia = {}
 
 local items_to_sell = {}
 items_to_sell[2008] = true
-items_to_sell[2009] = true
-items_to_sell[2010] = true
+items_to_sell[2001] = true
+items_to_sell[2002] = true
+items_to_sell[2003] = true
 
+local function handleTradeDia(playerid, text)
+    if string.match(text, "ansehen") then
+        buy_dia_helper.handleTradeDia(playerid, items_to_sell, "Olivia")
+        return true
+    else 
+        return false
+    end
+end
 
 function dia_vlk_2004_olivia.handleDialogue(playerid, text)
-    if string.match(text, "bestellen") then 
-        buy_dia_helper.handleTradeDia(playerid, items_to_sell, "Olivia") 
+    if handleTradeDia(playerid, text) == true then 
         return
     elseif buy_dia_helper.handleBuyDia(playerid, text, items_to_sell) == true then
         return

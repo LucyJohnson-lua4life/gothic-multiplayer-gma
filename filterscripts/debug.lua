@@ -81,10 +81,17 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
             GiveItem(playerid, "ITPO_HEALTH_02",1)
             GiveItem(playerid, "ITPO_HEALTH_03",1)
     end
+    
+
+    if cmd == "/atm" then
+        GiveItem(playerid, "ITMI_GOLDNUGGET_ADDON",10)
+    end
 
     if cmd == "/weedallday" then
         GiveItem(playerid, "ITPL_HEALTH_HERB_01",10)
         GiveItem(playerid, "ITPL_HEALTH_HERB_03",10)
+        GiveItem(playerid, "ITMI_HONIGTABAK",10)
+        
     end
 
     if cmd == "/makinstew" then

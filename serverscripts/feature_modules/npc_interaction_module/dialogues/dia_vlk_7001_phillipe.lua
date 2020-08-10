@@ -4,7 +4,15 @@ require "serverscripts/has_item_globals"
 require "serverscripts/price_table"
 local inventory_dao = require "serverscripts/daos/inventory_dao"
 local check_id = DIA_PHILLIPE_BOWQUEST_CHECKID
+local goldsell_id = DIA_PHILLIPE_GOLDSELL_CHECKID
 local dia_vlk_7001_phillipe = {}
+local buy_dia_helper = require "serverscripts/feature_modules/npc_interaction_module/dialogues/buy_dia_helper"
+local items_to_sell = {}
+items_to_sell[5000] = true
+items_to_sell[5001] = true
+items_to_sell[5002] = true
+items_to_sell[5003] = true
+
 
 local function handleLoverquestDia(playerid, text)
     if string.match(text, "seltenen Bogen") then
@@ -68,21 +76,64 @@ local function handleLoverPresentDia(playerid, item_instance, amount, equipped, 
     end
 end
 
+
+local function handleGoldSellDialogue(playerid, text)
+    if string.match(text, "Edelmetallen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Bei mir kann man <Goldbrocken> gegen Goldmuenzen eintauschen. Ich behalte selbstverstaendlich eine gewisse Provision fuers einschmelzen. Aber der Preis ist fair.")
+        return true
+    elseif string.match(text, "Goldbrocken") then
+        HasItem(playerid, "ITMI_GOLDNUGGET_ADDON", goldsell_id)
+        return true
+    else
+        return false
+    end
+end
+
+local function handleGoldSellRewardDialogue(playerid, item_instance, amount, equipped, checkid)
+    if checkid == goldsell_id and item_instance == "ITMI_GOLDNUGGET_ADDON" and amount >= 1 then
+        RemoveItem(playerid, item_instance, amount)
+        inventory_dao.deleteItemByInstance(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid], item_instance)
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Sehr schoen. Hier bekommst du das entsprechende Gold.")
+        local goldToAdd = PRICE_TABLE[item_instance] * amount
+        SetPlayerGold(playerid, GetPlayerGold(playerid) + goldToAdd)
+        SendPlayerMessage(playerid, 0, 255, 0, tostring(goldToAdd) .. " Gold erhalten.")
+    elseif checkid == goldsell_id then
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Tut mir Leid, aber es sieht nicht so aus als ob du Goldbrocken dabei hast.")
+    end
+
+end
+
+local function handleTradeDia(playerid, text)
+    if string.match(text, "begeistern") then
+        buy_dia_helper.handleTradeDia(playerid, items_to_sell, "Phillipe")
+        return true
+    else 
+        return false
+    end
+end
+
 function dia_vlk_7001_phillipe.handleDialogue(playerid, text)
     
     if handleLoverquestDia(playerid, text) == true then
         return
     elseif handleMagicMaterialDia(playerid, text) == true then
         return
+    elseif handleGoldSellDialogue(playerid, text) == true then
+        return
+    elseif handleTradeDia(playerid, text) == true then
+        return
+    elseif buy_dia_helper.handleBuyDia(playerid, text, items_to_sell) == true then
+        return
     else
         -- INIT DIALOGUE
-        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Hallo Fremder. Kann ich dich fuer meine Waren begeistern?")
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Hallo Fremder. Kann ich dich fuer meine Waren <begeistern>? Oder moechtest du mit <Edelmetallen> handeln?")
     end
 
 end
 
 function dia_vlk_7001_phillipe.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     handleLoverPresentDia(playerid, item_instance, amount, equipped, checkid)
+    handleGoldSellRewardDialogue(playerid, item_instance, amount, equipped, checkid)
 end
 
 
