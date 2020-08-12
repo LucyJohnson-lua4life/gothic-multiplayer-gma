@@ -72,6 +72,8 @@ local function getNpcForName(name)
         return Stoneguardian();
     elseif (string.match(name, "^Swampshark.*")) then
         return Swampshark();
+    elseif (string.match(name, "^Grave Guard.*")) then
+        return GraveGuard();
     elseif (string.match(name, "^Black Troll.*")) then
         return Troll_Black();
     elseif (string.match(name, "^Troll.*")) then
@@ -92,14 +94,14 @@ local function getNpcForName(name)
         return Shadowbeast_Addon_Fire();
     elseif (string.match(name, "^Hades.*")) then
         return Shadowbeast_Skeleton();
+    elseif (string.match(name, "^Quotemoc.*")) then
+        return Quotemoc();
     elseif (string.match(name, "^Captn Hook.*")) then
         return DeadPirateCaptn();
     elseif (string.match(name, "^Zek.*")) then
         return Zek_Dead();
     elseif (string.match(name, "^Betrunkener Schlaeger.*")) then
         return VLK_2005_BetrunkenerSchlaeger();
-    elseif (string.match(name, "^Seltsame Statue.*")) then
-        return StrangeStatue("Seltsame Statue");
     elseif (string.match(name, "^Buergerin.*")) then
         return VLK_1000_AmbientFemale();
     elseif (string.match(name, "^Buerger.*")) then

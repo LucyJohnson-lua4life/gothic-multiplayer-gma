@@ -63,6 +63,14 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         SetPlayerMagicLevel(playerid, 3)
     end
 
+    if cmd == "/newbalance" then
+        SetPlayerHealth(playerid, 1100);
+        SetPlayerMaxHealth(playerid, 1100);
+        SetPlayerStrength(playerid, 135)
+        SetPlayerSkillWeapon(playerid, SKILL_1H, 60);
+        SetPlayerMagicLevel(playerid, 3)
+    end
+
     if cmd == "/tools" then
         GiveItem(playerid, "ITMI_SAW",1)
         GiveItem(playerid, "ITMI_BROOM",1)
@@ -123,7 +131,7 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
     
     if(cmdtext == "/tomaya") then
         
-        SetPlayerPos(playerid,77860,4129,23121);
+        SetPlayerPos(playerid,87208,3948,18771);
     end
 
     if cmdtext == "/tohunter" then
@@ -186,7 +194,7 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
 
     if cmdtext == "/npc" then
         --38994, 3901, -2235
-        SpawnNPC(PaladinKing("FG"), "TAVERNE", "NEWWORLD\\NEWWORLD.ZEN");
+        SpawnNPC(Quotemoc(), "TAVERNE", "NEWWORLD\\NEWWORLD.ZEN");
     end
 
     

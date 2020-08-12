@@ -452,16 +452,15 @@ function InitNewWorldNPC()
   --SpawnNPC(MinecrawlerWarrior(), "FP_ROAM_RITUALFOREST_CAVE_11", world);
   ------- Die Maya Pyramiden ------  ------ HERE WILL BE A BOSSMOB
   
-  SpawnNPC(EarthTitan(), "FP_MAYA_DUNGEON_01", world);
+  SpawnNPC(Quotemoc(), "FP_MAYA_DUNGEON_01", world);
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_02", world);
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_03", world);
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_04", world);
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_05", world);
-
-  --[[
-  SpawnNPC(Swampshark(), "FP_MAYA_DUNGEON_06", world);
-  SpawnNPC(Swampshark(), "FP_MAYA_DUNGEON_07", world);
-  SpawnNPC(Swampshark(), "FP_MAYA_DUNGEON_08", world);
+  
+  --SpawnNPC(Swampshark(), "FP_MAYA_DUNGEON_06", world);
+  --SpawnNPC(Swampshark(), "FP_MAYA_DUNGEON_07", world);
+  --SpawnNPC(Swampshark(), "FP_MAYA_DUNGEON_08", world);
 
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_09", world);
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_10", world);
@@ -473,14 +472,11 @@ function InitNewWorldNPC()
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_15", world);
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_16", world);
   SpawnNPC(Stoneguardian(), "FP_MAYA_DUNGEON_17", world);
-  SpawnNPC(Blattcrawler(), "FP_MAYA_DUNGEON_15", world);
-  SpawnNPC(Blattcrawler(), "FP_MAYA_DUNGEON_16", world);
-  SpawnNPC(Blattcrawler(), "FP_MAYA_DUNGEON_17", world);
 
   SpawnNPC(DragonSnapper(), "FP_ROAM_NW_TROLLAREA_RUINS_05", world);
-  SpawnNPC(DragonSnapper(), "FP_ROAM_NW_TROLLAREA_RUINS_09", world);
-  SpawnNPC(DragonSnapper(), "FP_ROAM_NW_TROLLAREA_RUINS_14", world);
-  SpawnNPC(DragonSnapper(), "FP_ROAM_NW_TROLLAREA_RUINS_15", world);
+  SpawnNPC(Snapper(), "FP_ROAM_NW_TROLLAREA_RUINS_09", world);
+  SpawnNPC(Snapper(), "FP_ROAM_NW_TROLLAREA_RUINS_14", world);
+  SpawnNPC(Snapper(), "FP_ROAM_NW_TROLLAREA_RUINS_15", world);
   SpawnNPC(Firewaran(), "NW_TROLLAREA_RUINS_21", world);
   SpawnNPC(Firewaran(), "FP_ROAM_NW_TROLLAREA_RUINS_21", world);
   SpawnNPC(Firewaran(), "FP_ROAM_NW_TROLLAREA_RUINS_22", world);
@@ -489,14 +485,7 @@ function InitNewWorldNPC()
   SpawnNPC(OrcWarrior(), "FP_ROAM_NW_TROLLAREA_RUINS_29", world);
   SpawnNPC(OrcWarrior(), "FP_ROAM_NW_TROLLAREA_RUINS_30", world);
   SpawnNPC(Shadowbeast(), "FP_ROAM_NW_TROLLAREA_RUINS_10", world);
-  SpawnNPC(OrcWarrior(), "FP_MAYA_ORCS_01", world);
-  SpawnNPC(OrcWarrior(), "FP_MAYA_ORCS_02", world);
-  SpawnNPC(OrcElite(), "FP_MAYA_ORCS_03", world);
-  SpawnNPC(OrcWarrior(), "FP_MAYA_ORCS_04", world);
-  SpawnNPC(OrcWarrior(), "FP_MAYA_ORCS_05", world);
-  SpawnNPC(OrcWarrior(), "FP_MAYA_ORCS_06", world);
-  SpawnNPC(OrcWarrior(), "FP_MAYA_ORCS_07", world);
-  ]]
+
   --in der Maya-H�hle
   --Gobbos in Eingangsh�hle
   SpawnNPC(Gobbo_Black(), "FP_ROAM_NW_TROLLAREA_RUINS_CAVE_01", world);
