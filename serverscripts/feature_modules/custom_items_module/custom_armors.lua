@@ -24,7 +24,6 @@ local nightrobe_default_mana = {}
 
 -- besastarmor logic
 function ExecuteOnBeastarmorCooldownOver() 
-
     for k, v in pairs(beastarmor_ability_start_time) do
         if(os.clock() - v > BEASTARMOR_ABILITY_COOLDOWN_SECS) then
             beastarmor_ability_start_time[k] = nil;
@@ -32,9 +31,7 @@ function ExecuteOnBeastarmorCooldownOver()
             SendPlayerMessage(k, 0,255,0, "Dein Blutrausch verfaellt...")
         end
     end
-
 end
-
 
 local function activateBeastArmorAbility(playerid, killerid)
     SetPlayerStrength(playerid, GetPlayerStrength(playerid)+BEASTARMOR_STR_ADDED)
@@ -61,7 +58,6 @@ end
 
 
 ---- witcharmor logic
-
 local function hitAllPlayerWithWitchArmorSpell(playerid)
 
     for enemyid, value in pairs(witcharmor_enemies[playerid]) do
@@ -100,11 +96,10 @@ local function chargeWitchArmor(playerid, current_dmg)
    
 
 end
+---------------
 
 
 ------------------------------------ goldheartarmor logic
-
-
 local function chargeGoldheartArmor(playerid, current_dmg)
     goldheartarmor_charge[playerid] = goldheartarmor_charge[playerid] + current_dmg
 
@@ -117,8 +112,6 @@ local function chargeGoldheartArmor(playerid, current_dmg)
     end
 
 end
-
-
 -------
 
 
@@ -150,14 +143,13 @@ local function handleNightRobeAbility(playerid)
         SetPlayerMaxMana(playerid, nightrobe_default_mana[playerid]+150)
         SetPlayerMana(playerid, nightrobe_default_mana[playerid]+150)
         SendPlayerMessage(playerid,0,255,0, "Eine mystische Kraft durchstroemt deinen Koerper...")
+        PlayPlayerSound(playerid, GOLDHEART_ARMOR_HEAL_SOUND)
     else
         deactivateNightRobeAbility(playerid)
     end
 
 
 end
-
-
 ------
 
 
