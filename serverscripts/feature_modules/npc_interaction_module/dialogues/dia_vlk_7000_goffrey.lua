@@ -36,29 +36,24 @@ local function handleMagicMaterialDia(playerid, text)
     elseif string.match(text, "Haendler") then
         SendPlayerMessage(playerid, 255, 255, 255, "Goffrey sagt: Die meisten von denen sind verlogene Schweine. Versuch erst gar nicht mit ihnen zu reden! Kommt direkt her wenn du das <Ding> in die Finger bekommen konntest.")
         return true
-    elseif string.match(text, "Banditenkoepfe") then
-        --HasItem(playerid, "ITMI_ADDON_BLOODWYN_KOPF", check_id)
-        return true
-    elseif string.match(text, "Banditen") then
-        --SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Wenn du mir 5 <Banditenkoepfe> bringen koenntest, dann schaetze ich wuerde der ersparte Schaden den Preis des Bogens ausgleichen.")
+    elseif string.match(text, "Ding") then
+        HasItem(playerid, "ITAR_VLK_H", check_id)
         return true
     else
         return false
     end
 end
 
-
-
-
-local function handleLoverPresentDia(playerid, item_instance, amount, equipped, checkid)
-    if checkid == check_id and item_instance == "ITMI_ADDON_BLOODWYN_KOPF" and amount >= 5 then
-        RemoveItem(playerid, "ITMI_ADDON_BLOODWYN_KOPF", 5)
-        inventory_dao.updateItemOrDeleteIfAmountIsZero(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid], "ITMI_ADDON_BLOODWYN_KOPF", 5)
-        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Wunderbar! Das sollte meinen Boten einige Tage Ruhe geben. Na gut fuer deine Fleissarbeit sollst du den Bogen bekommen.")
+local function handleMagicMaterialRewardDia(playerid, item_instance, amount, equipped, checkid)
+    if checkid == check_id and item_instance == "ITAR_VLK_H" and amount >= 1 then
+        RemoveItem(playerid, "ITAR_VLK_H", 1)
+        inventory_dao.updateItemOrDeleteIfAmountIsZero(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid], "ITAR_VLK_H", 1)
+        SendPlayerMessage(playerid, 255, 255, 255, "Goffrey sagt: Ich fass es nicht. Der Stoff hat wirklich alle Eigenschaften wie beschrieben! Hier, wie abgemacht bekommst du die Ruestung die der Ruestungsbauer angefertigt hat.")
+        SendPlayerMessage(playerid, 0, 255, 0, "Quest abgeschlossen!")
         SendPlayerMessage(playerid, 0, 255, 0, "Ahornbogen erhalten.")
         GiveItem(playerid, "ITRW_BOW_L_01", 1)
     elseif checkid == check_id then
-        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Hast du die <Banditenkoepfe> dabei?");
+        SendPlayerMessage(playerid, 255, 255, 255, "Goffrey sagt: Gibts irgendwelche Neuigkeiten bezueglich dem magischen Stoff?");
     end
 end
 
@@ -87,7 +82,7 @@ function dia_vlk_7000_goffrey.handleDialogue(playerid, text)
 end
 
 function dia_vlk_7000_goffrey.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
-    handleLoverPresentDia(playerid, item_instance, amount, equipped, checkid)
+    handleMagicMaterialRewardDia(playerid, item_instance, amount, equipped, checkid)
 end
 
 

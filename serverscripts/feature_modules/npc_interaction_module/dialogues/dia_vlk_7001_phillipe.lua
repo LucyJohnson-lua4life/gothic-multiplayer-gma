@@ -5,6 +5,7 @@ require "serverscripts/price_table"
 local inventory_dao = require "serverscripts/daos/inventory_dao"
 local check_id = DIA_PHILLIPE_BOWQUEST_CHECKID
 local goldsell_id = DIA_PHILLIPE_GOLDSELL_CHECKID
+local magic_material_id = DIA_PHILLIPE_MAGICMATERIAL_CHECKID
 local dia_vlk_7001_phillipe = {}
 local buy_dia_helper = require "serverscripts/feature_modules/npc_interaction_module/dialogues/buy_dia_helper"
 local items_to_sell = {}
@@ -59,6 +60,22 @@ local function handleMagicMaterialDia(playerid, text)
     elseif string.match(text, "genauer ansehen") then
         SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Ich habe einen aeusserst wertvollen Trank in meinem Inventar. Wenn du mir das <Ding> organisieren koenntest, wuerde ich dich grosszuegig damit entlohnen!")
         return true
+    elseif string.match(text, "Ding") then
+        HasItem(playerid, "ITAR_VLK_H", magic_material_id)
+        return true
+    end
+end
+
+local function handleMagicMaterialRewardDia(playerid, item_instance, amount, equipped, checkid)
+    if checkid == magic_material_id and item_instance == "ITAR_VLK_H" and amount >= 1 then
+        RemoveItem(playerid, "ITAR_VLK_H", 1)
+        inventory_dao.updateItemOrDeleteIfAmountIsZero(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid], "ITAR_VLK_H", 1)
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Wunderbar! Das Material hat genau die selben Eigenschaften wie beschrieben! Hier nimm das, du hast es dir verdient!")
+        SendPlayerMessage(playerid, 0, 255, 0, "Quest abgeschlossen!")
+        SendPlayerMessage(playerid, 0, 255, 0, "Ahornbogen erhalten.")
+        GiveItem(playerid, "ITRW_BOW_L_01", 1)
+    elseif checkid == magic_material_id then
+        SendPlayerMessage(playerid, 255, 255, 255, "Phillipe sagt: Hast du was neues vom magischen Stoff erfahren?");
     end
 end
 
@@ -134,6 +151,7 @@ end
 function dia_vlk_7001_phillipe.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     handleLoverPresentDia(playerid, item_instance, amount, equipped, checkid)
     handleGoldSellRewardDialogue(playerid, item_instance, amount, equipped, checkid)
+    handleMagicMaterialRewardDia(playerid, item_instance, amount, equipped, checkid)
 end
 
 

@@ -66,9 +66,27 @@ local function handleLoverPresentDia(playerid, item_instance, amount, equipped, 
     end
 end
 
+
+----- magischer stoff
+
+local function handleMagicMaterialDia(playerid, text)
+    if string.match(text, "magischen Stoffen") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Jack sagt: Ah, ich dachte schon es kommt keiner mehr her. Ich kann dir sagen wo du den <Stoff> findest.")
+        return true
+    elseif string.match(text, "Stoff") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Jack sagt: Wenn du ins Hafenbecken springst und dich dann rechts haelst, dann wirst du einen <kleinen Strand> finden.")
+        return true
+    elseif string.match(text, "kleinen Strand") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Jack sagt: Von dort aus wirst du dann schon wissen was zu tun ist. (grinst)")
+        return true
+    end
+end
+
 function dia_vlk_2010_jack.handleDialogue(playerid, text)
     
     if handleLoverquestDia(playerid, text) == true then
+        return
+    elseif handleMagicMaterialDia(playerid, text) == true then
         return
     else
         -- INIT DIALOGUE

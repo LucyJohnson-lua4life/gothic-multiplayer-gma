@@ -99,6 +99,10 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         GiveItem(playerid, "ITMI_GOLDNUGGET_ADDON",10)
     end
 
+    if cmd == "/questitems" then
+        GiveItem(playerid, "ITAR_VLK_H",1)
+    end
+
     if cmd == "/weedallday" then
         GiveItem(playerid, "ITPL_HEALTH_HERB_01",10)
         GiveItem(playerid, "ITPL_HEALTH_HERB_03",10)

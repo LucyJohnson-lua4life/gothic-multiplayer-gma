@@ -44,16 +44,16 @@ local function handleMagicMaterialDia(playerid, text)
         SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Letzten Abend hatten sich der Ruestungshaendler und Phillipe betrunken aufeinander gestuerzt. Ich musste die beiden aus der <Taverne schmeissen>.")
         return true
     elseif string.match(text, "Taverne schmeissen") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Dieser Stoff hat <ungesehene Eigenschaften>. Jeder der seine Finger drankriegt kann sich eine goldene Nase verdienen.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Dieser Stoff hat <ungesehene Eigenschaften>. Jeder der seine Finger drankriegt kann sich eine goldene Nase daran verdienen.")
         return true
     elseif string.match(text, "ungsehene Eigenschaften") then
         SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Es ist so hieb- und stichfest wie Stahl, aber so leicht wie Seide. Es gibt Geruechte, dass der Stoff von einem Tier stammt.")
         return true
     elseif string.match(text, "Stoff magisch") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Das waere die einzige Erklaerung die mir einfaellt. Wenn du aber genaueres wissen willst musst du <Ryan den Jaeger> fragen. Er scheint genaueres zu wissen.")
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Das waere die einzige Erklaerung die mir einfaellt. Wenn du aber genaueres wissen willst musst du <Jack den Pirat> fragen. Er scheint genaueres zu wissen.")
         return true
-    elseif string.match(text, "Ryan den Jaeger") then
-        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Du findest Ryan im Jaegerlager in der Naehe der Taverne zur toten Harpie. Er scheint auch aktiv nach dem Stoff zu suchen.")
+    elseif string.match(text, "Jack den Pirat") then
+        SendPlayerMessage(playerid, 255, 255, 255, "Barney sagt: Du findest Jack in der Hafenkneipe. Als Pirat hat er bestimmt geheimes Wissen an die wir Normalbuerger nicht rankommen.")
         return true
     end
 end

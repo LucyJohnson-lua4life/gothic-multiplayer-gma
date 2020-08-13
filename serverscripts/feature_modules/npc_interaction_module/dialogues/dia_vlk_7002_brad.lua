@@ -4,6 +4,7 @@ require "serverscripts/has_item_globals"
 require "serverscripts/price_table"
 local inventory_dao = require "serverscripts/daos/inventory_dao"
 local check_id = DIA_BRAD_FURSELL_CHECKID
+local magic_material_id = DIA_BRAD_MAGICMATERIA_CHECKID
 local dia_vlk_7002_brad = {}
  
 local function handleFurSellDialogue(playerid, text)
@@ -88,6 +89,22 @@ local function handleMagicMaterialDia(playerid, text)
     elseif string.match(text, "Batzen Goldmuenzen") then
         SendPlayerMessage(playerid, 255, 255, 255, "Brad sagt: Wenn du mir das <Ding> besorgen wuerdest, dann wuerde ich dir... 1000 Goldmuenzen geben!")
         return true
+    elseif string.match(text, "Ding") then
+        HasItem(playerid, "ITAR_VLK_H", magic_material_id)
+        return true
+    end
+end
+
+local function handleMagicMaterialRewardDia(playerid, item_instance, amount, equipped, checkid)
+    if checkid == magic_material_id and item_instance == "ITAR_VLK_H" and amount >= 1 then
+        RemoveItem(playerid, "ITAR_VLK_H", 1)
+        inventory_dao.updateItemOrDeleteIfAmountIsZero(PLAYER_HANDLER_MAP[playerid], PLAYER_ID_NAME_MAP[playerid], "ITAR_VLK_H", 1)
+        SendPlayerMessage(playerid, 255, 255, 255, "Brad sagt: Wow, so sieht also der seltene Stoff aus. Wirklich faszinierend. Hier das Gold hast du dir verdient.")
+        SendPlayerMessage(playerid, 0, 255, 0, "Quest abgeschlossen!")
+        SetPlayerGold(playerid, GetPlayerGold(playerid) + 1000)
+        SendPlayerMessage(playerid, 0, 255, 0, tostring(1000) .. " Gold erhalten.")
+    elseif checkid == magic_material_id then
+        SendPlayerMessage(playerid, 255, 255, 255, "Brad sagt: Gibts Neuigkeiten zum Stoff?");
     end
 end
 
@@ -109,7 +126,7 @@ end
 function dia_vlk_7002_brad.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     
     handleFurSellRewardDialogue(playerid, item_instance, amount, equipped, checkid)
-
+    handleMagicMaterialRewardDia(playerid, item_instance, amount, equipped, checkid)
 end
 
 
