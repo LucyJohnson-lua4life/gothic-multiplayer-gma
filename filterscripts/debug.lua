@@ -33,6 +33,10 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
         SetTime (8,0)
     end
 
+    if cmd == "/night" then
+        SetTime (23,0)
+    end
+
 
     if (cmd == "/goto") then
         local spl = params:split(" ");
@@ -110,6 +114,8 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
     if cmd == "/armors" then
         GiveItem(playerid, "ITAR_THORUS_ADDON",1)
         GiveItem(playerid, "ITAR_DJG_H",1)
+        GiveItem(playerid, "ITAR_PAL_H",1)
+        GiveItem(playerid, "ITAR_KDW_H",1)
     end
 
 
@@ -270,3 +276,4 @@ end
 
 
 return debug
+

@@ -82,31 +82,39 @@ function ExecuteOnEmberbloodCooldownOver()
 end
 
 local function shrinkPlayer(playerid)
-    SetPlayerScale(playerid,0.1,0.1,0.1);
-    shrink_mode_start_time[playerid] = os.clock()
-    SetTimer("ExecuteOnShrinkmodeCooldownOver", (SHRINK_MODE_COOLDOWN_SECS*1000)+100, 0);
-    SendPlayerMessage(playerid, 255,228,181, "Du spuerst wie eine unsichtbare Macht dich veraendert...")
+    if shrink_mode_start_time[playerid] == nil then
+        SetPlayerScale(playerid,0.1,0.1,0.1);
+        shrink_mode_start_time[playerid] = os.clock()
+        SetTimer("ExecuteOnShrinkmodeCooldownOver", (SHRINK_MODE_COOLDOWN_SECS*1000)+100, 0);
+        SendPlayerMessage(playerid, 255,228,181, "Du spuerst wie eine unsichtbare Macht dich veraendert...")
+    end
 end 
 
 local function sizePlayerUp(playerid)
-    SetPlayerScale(playerid,2.0,3.0,2.0);
-    giant_mode_start_time[playerid] = os.clock()
-    SetTimer("ExecuteOnGiantmodeCooldownOver", (GIANT_MODE_COOLDOWN_SECS*1000)+100, 0);
-    SendPlayerMessage(playerid, 255,228,181, "Du spuerst wie eine unsichtbare Macht dich veraendert...")
+    if giant_mode_start_time[playerid] == nil then
+        SetPlayerScale(playerid,2.0,3.0,2.0);
+        giant_mode_start_time[playerid] = os.clock()
+        SetTimer("ExecuteOnGiantmodeCooldownOver", (GIANT_MODE_COOLDOWN_SECS*1000)+100, 0);
+        SendPlayerMessage(playerid, 255,228,181, "Du spuerst wie eine unsichtbare Macht dich veraendert...")
+    end
 end 
 
 local function increasePlayerStrength(playerid)
-    SetPlayerStrength(playerid, GetPlayerStrength(playerid)+STRENGTH_ADDED)
-    strength_pot_start_time[playerid] = os.clock()
-    SetTimer("ExecuteOnStrengthPotCooldownOver", (STRENGTH_POT_COOLDOWN_SECS*1000)+100, 0);
-    SendPlayerMessage(playerid, 255,228,181, "Du fuehlst dich vorruebergehend kraeftiger.")
+    if strength_pot_start_time[playerid] == nil then
+        SetPlayerStrength(playerid, GetPlayerStrength(playerid)+STRENGTH_ADDED)
+        strength_pot_start_time[playerid] = os.clock()
+        SetTimer("ExecuteOnStrengthPotCooldownOver", (STRENGTH_POT_COOLDOWN_SECS*1000)+100, 0);
+        SendPlayerMessage(playerid, 255,228,181, "Du fuehlst dich vorruebergehend kraeftiger.")
+    end
 end
 
 local function increasePlayerDex(playerid)
-    SetPlayerDexterity(playerid, GetPlayerDexterity(playerid)+DEX_ADDED)
-    dex_pot_start_time[playerid] = os.clock()
-    SetTimer("ExecuteOnDexPotCooldownOver", (DEX_POT_COOLDOWN_SECS*1000)+100, 0);
-    SendPlayerMessage(playerid, 255,228,181, "Du fuehlst dich vorruebergehend geschickter.")
+    if dex_pot_start_time[playerid] == nil then
+        SetPlayerDexterity(playerid, GetPlayerDexterity(playerid)+DEX_ADDED)
+        dex_pot_start_time[playerid] = os.clock()
+        SetTimer("ExecuteOnDexPotCooldownOver", (DEX_POT_COOLDOWN_SECS*1000)+100, 0);
+        SendPlayerMessage(playerid, 255,228,181, "Du fuehlst dich vorruebergehend geschickter.")
+    end
 end
 
 
