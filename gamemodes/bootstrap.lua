@@ -102,6 +102,7 @@ function OnPlayerSpawn(playerid, classid)
 end
 
 function OnPlayerChangeHealth(playerid, currHealth, oldHealth)
+	custom_items_module.OnPlayerChangeHealth(playerid, currHealth, oldHealth)
 end
 
 function OnPlayerDeath(playerid, p_classid, killerid, k_classid)
@@ -189,6 +190,7 @@ end
 function OnPlayerChangeArmor(playerid, currArmor, oldArmor)
 	if(IsNPC(playerid) == 0) then
 		inventory_module.OnPlayerChangeArmor(playerid, currArmor, oldArmor)
+		custom_items_module.OnPlayerChangeArmor(playerid, currArmor, oldArmor)
 	end
 end
 
@@ -208,5 +210,5 @@ function OnPlayerUnconscious(playerid, p_classid, killerid, k_classid)
 end
 
 function OnPlayerWeaponMode(playerid, weaponmode)
-
+	custom_items_module.OnPlayerWeaponMode(playerid, weaponmode)
 end

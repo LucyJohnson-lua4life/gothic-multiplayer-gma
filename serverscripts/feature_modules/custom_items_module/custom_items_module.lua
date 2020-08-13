@@ -29,9 +29,25 @@ function custom_items_module.OnPlayerHit(playerid, killerid)
     custom_armors.OnPlayerHit(playerid, killerid)
 end
 
+function custom_items_module.OnPlayerChangeArmor(playerid, currArmor, oldArmor)
+    custom_armors.OnPlayerChangeArmor(playerid, currArmor, oldArmor)
+end
+
+
+function custom_items_module.OnPlayerChangeHealth(playerid, currHealth, oldHealth)
+    custom_armors.OnPlayerChangeHealth(playerid, currHealth, oldHealth)
+end
+
+function custom_items_module.OnPlayerWeaponMode(playerid, weaponmode)
+    custom_armors.OnPlayerWeaponMode(playerid, weaponmode)
+end
+
 function custom_items_module.OnPlayerDisconnect(playerid, reason)
     custom_potions.OnPlayerDisconnect(playerid, reason)
     custom_armors.OnPlayerDisconnect(playerid, reason)
 end
+
+
+
 
 return custom_items_module

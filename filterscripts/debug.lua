@@ -109,6 +109,7 @@ function debug.OnPlayerCommandText(playerid, cmdtext)
 
     if cmd == "/armors" then
         GiveItem(playerid, "ITAR_THORUS_ADDON",1)
+        GiveItem(playerid, "ITAR_DJG_H",1)
     end
 
 
