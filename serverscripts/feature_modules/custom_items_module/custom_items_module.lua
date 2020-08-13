@@ -1,4 +1,5 @@
 local custom_potions = require "serverscripts/feature_modules/custom_items_module/custom_potions"
+local custom_armors = require "serverscripts/feature_modules/custom_items_module/custom_armors"
 local custom_items_module = {}
 
 local function getRecoveryValue(current_health, max_health, percent)
@@ -25,10 +26,12 @@ end
 
 function custom_items_module.OnPlayerHit(playerid, killerid)
     custom_potions.OnPlayerHit(playerid, killerid)
+    custom_armors.OnPlayerHit(playerid, killerid)
 end
 
 function custom_items_module.OnPlayerDisconnect(playerid, reason)
     custom_potions.OnPlayerDisconnect(playerid, reason)
+    custom_armors.OnPlayerDisconnect(playerid, reason)
 end
 
 return custom_items_module

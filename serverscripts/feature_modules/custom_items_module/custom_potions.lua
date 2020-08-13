@@ -154,13 +154,11 @@ end
 
 
 function custom_potions.OnPlayerDisconnect(playerid, reason)
-    if shrink_mode_start_time[playerid] ~= nil then
-        shrink_mode_start_time[playerid] = nil
-        giant_mode_start_time[playerid] = nil
-        strength_pot_start_time[playerid] = nil
-        dex_pot_start_time[playerid] = nil
-        emberblood_start_time[playerid] = nil
-    end
+    shrink_mode_start_time[playerid] = nil
+    giant_mode_start_time[playerid] = nil
+    strength_pot_start_time[playerid] = nil
+    dex_pot_start_time[playerid] = nil
+    emberblood_start_time[playerid] = nil
 end
 
 
