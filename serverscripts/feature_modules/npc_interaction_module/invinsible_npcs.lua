@@ -10,6 +10,7 @@ INVINSIBLE_NPCS["Vivi"] = true
 INVINSIBLE_NPCS["Astren"] = true
 INVINSIBLE_NPCS["Jack"] = true
 INVINSIBLE_NPCS["Gordon"] = true
+INVINSIBLE_NPCS["Skit"] = true
 INVINSIBLE_NPCS["Goffrey"] = true
 INVINSIBLE_NPCS["Phillipe"] = true
 INVINSIBLE_NPCS["Brad"] = true

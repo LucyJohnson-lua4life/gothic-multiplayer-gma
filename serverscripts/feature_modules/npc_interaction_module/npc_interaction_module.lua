@@ -16,6 +16,7 @@ local dia_vlk_2007_hugo = require "serverscripts/feature_modules/npc_interaction
 local dia_vlk_2008_vivi = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2008_vivi"
 local dia_vlk_2009_astren = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2009_astren"
 local dia_vlk_2010_jack = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2010_jack"
+local dia_vlk_2012_skit = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_2012_skit"
 local dia_vlk_7005_bryan = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7005_bryan"
 local dia_vlk_7004_lian = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7004_lian"
 local dia_vlk_7003_ryan = require "serverscripts/feature_modules/npc_interaction_module/dialogues/dia_vlk_7003_ryan"
@@ -59,6 +60,8 @@ local function handleNpcInteraction(playerid, npc_id, text)
         dia_vlk_2009_astren.handleDialogue(playerid, text)
     elseif string.match(npc_name, "^Jack.*") then
         dia_vlk_2010_jack.handleDialogue(playerid, text)
+    elseif string.match(npc_name, "^Skit.*") then
+        dia_vlk_2012_skit.handleDialogue(playerid, text)
     elseif string.match(npc_name, "^Phillipe.*") then
         dia_vlk_7001_phillipe.handleDialogue(playerid, text)
     elseif string.match(npc_name, "^Goffrey.*") then
@@ -94,6 +97,7 @@ function npc_interaction_module.OnPlayerHasItem(playerid, item_instance, amount,
     dia_vlk_2000_rose.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     dia_vlk_2008_vivi.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     dia_vlk_2010_jack.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
+    dia_vlk_2012_skit.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     dia_vlk_7001_phillipe.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
     dia_vlk_7000_goffrey.OnPlayerHasItem(playerid, item_instance, amount, equipped, checkid)
 end

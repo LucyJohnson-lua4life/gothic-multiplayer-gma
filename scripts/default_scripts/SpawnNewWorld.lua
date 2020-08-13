@@ -664,6 +664,7 @@ function InitNewWorldNPC()
   SpawnNPC(VLK_2009_Astren(), "FP_CITY_HUNTER_SHOP", world);
   SpawnNPC(VLK_2010_Jack(), "FP_HAFEN_TAVERN_05", world);
   SpawnNPC(VLK_2011_Gordon(), "FP_STAND_BIGFARM_OUT_TORLOF", world);
+  SpawnNPC(VLK_2012_Skit(), "FP_CAMPFIRE_NW_CITY_PIRATESCAMP_01", world);
   
   SpawnNPC(VLK_7000_Goffrey(), "FP_STAND_SARAH", world);
   SpawnNPC(VLK_7001_Phillipe(), "FP_STAND_JORA", world);
