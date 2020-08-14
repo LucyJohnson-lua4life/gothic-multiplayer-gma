@@ -1,59 +1,54 @@
-# gothic-multiplayer-adventures-server
-Servercode für den Gothic Multiplayer Adventures Server
+# gothic-multiplayer-adventures-server - Khorinis stories expansion base
+Server code for the Gothic Multiplayer Adventures Server.
+Contains the additional base code that is used for the 'Khorinis stories' expansion features.
 
 # GMA
+This project contains the server code for the 'Gothic Multiplayer Adventure Server'. The goal is to show how such a server can be set up and how certain features like login, registration, npc's can be implemented.
+To run the code you need the 'Gothic Multiplayer Server' and the 'Gothic Multiplayer Client'. Both the server and client wont be provided here, but can be found in the World of Gothic community.
 
-Dieses Projekt enthält den Servercode für den Gothic Multiplayer Adventure Server. Das Repository soll dazu dienen Interessierten zu zeigen wie die Features umgesetzt wurden. Um den Server aufzusetzen braucht ihr allerdings noch den Gothic Multiplayer Server, die GMA.mod und den Gothic Multiplayer Client. Da diese Dateien sehr groß sind, werde ich Sie hier aber nicht hochladen. Der Gothic Multiplayer Server und Client sollten in der Community im Umlauf sein. Die GMA.mod enthält veränderte Waffen, Rüstungen und eine veränderte .ZEN. 
-Ihr braucht die GMA.mod also nicht zwangsläufig wenn ihr z.B die Waffen nicht mitverwenden wollt. 
-Skripte die neue Waffen/Rüstungs-Instanznamen verwenden sind z.B "class_globals.lua", oder "price_table.lua". Diese müsst ihr gegebenenfalls anpassen. Jeder der daran interessiert ist, kann mir bei Bedarf auch eine Nachricht an: "lucy.johnson.99.08.18@gmail.com" schicken. 
+I tried to remove all code that initially required the specific GMA.mod that contained custom items like weapons, armors etc. However it's still possible that you will find code snippets with unknown item instances. These can be safely removed if you find them. The code should run without them. 
 
-Den Code allerdings könnt ihr euch clonen, verändern und verteilen wie ihr wollt. Es ist sogar erwünscht, dass jemand anderes den Code als Grundlage für einen eigenen Server verwendet. 
+Unfortunately i have not written any test cases for the code. Most features were superfically tested manually and probably still contain a lot of bugs. If you run into issues you can't fix yourself you're invited to send me an email at 'lucy.johnson.99.08.18@gmail.com'. Either in in english, german, or spanish.
 
-## Ordner:
-Das Projekt beginnt mit 5 Ordnern. Im folgenden werden die Inhalte genauer beschrieben.
+Youre allowed to use the code in this repository as you please. If you set up some badass server i would be happy to here from it.
+
+## Directories:
+The project contains 5 main directories. 
 
 ### filterscripts: 
-Enthält lediglich ein Skript, dass ich zum debuggen verwendet habe.
+Contains a debug script that should me removed, once you run your server publicly.
 
 ### gamemodes:
-Hier ist die "bootstrap.lua" enthalten. Dies ist der Einstiegspunkt des Servers. Von hier wird der gesamte Server-Code aufgerufen.
+Contains the 'bootstrap.lua'. This is the entry point of the server. All server code modules will be loaded here.
 
 ### scripts: 
-Hier sind sämtliche Skripte für die Monster-KI enthalten. Der Code wurde hauptsächlich von Mainclain geschrieben und ich habe hier lediglich ein paar NPC's hinzugefügt.
+Contains all scrips that are used for the monster AI. The code was mainly written by Mainclain (Greatest Senpai in the history of GMP). 
+Most changes by GMA were additional NPC's
 
 ### serverscripts: 
-Hier sind sämtliche von mir geschriebenen Serverskripte gelagert welche die Features des Servers umfassen. Genaueres beschreibe ich in der Macro-Architektur, die ihr euch durchlesen solltet um den workflow mit dem Code zu verstehen.
+Contains the main scripts for the GMA Server. For more information read the Macro architecture section.
 
 ### sqlscripts: 
-Hier sind sämtliche SQL-Skripts enthalten mit welcher ihr das Datenbankmodell anlegen könnt.
+Contains all SQL-Scripts that you need to reconstruct the database model.
 
+## Macro architecture:
 
-## Macro-Architektur:
-
-Die Macro-Architektur sieht folgendermaßen aus.
+This is the macro architecture of the server.
 
 ![Macroarchitektur](macro_architektur.png)
 
-Ganz oben seht ihr den Einstiegspunkt "bootstrap.lua". Von dort aus werden die Aufrufe zum Code "feature modules" getätigt. Bei den "feature modules" handelt es sich um Unterordner welche die Skripte für einzelne Features enthalten.
+The application starts with the 'bootstrap.lua'. From there on all calls will be redirected to 'feature modules'. Feature modules are subdirectories which contain the scripts for specific features. 
 
-**Wichtig:** Die Idee hierbei ist, dass "feature modules" sich untereinander NICHT aufrufen. Das sorgt dafür, dass man Features schnell rein und raus slotten kann und soll diesbezüglich eine Veränderbarkeit der Codebasis ermöglichen.
+**Important:** It's recommended that 'feature modules' dont make calls between each other. That makes it possible to slot them out easily. This is a useful property since you have to remove/add new features regulary as an server owner for your players.
 
-"feature modules" können aber jeden anderen Code aufrufen der nicht in anderen "feature modules" steckt wie z.B "utils", "globals" oder "DAO's (data access objects)". "feature modules" können auch Code innerhalb des eigenen "feature module" Ordners aufrufen.
+However feature modules are allowed to call any other code that are outside of other 'feature modules' like 'utils', 'globals', 'DAO's (data access objects)'. Feature modules are also allowed to call functions scripts inside their own module/subdirectory.
 
-Die DAO's spielen eine besondere Rolle, weil sie mit der Datenbank kommunizieren. Hier finden die gesamten Queries statt. DAO's sollen eine Schicht zwischen der Datenbank und dem Feature-Code bilden um Verantwortlichkeiten voneinander zu trennen und damit eine losere Koppelung zu ermöglichen (was wiederum die Wartbarkeit und Wandelbarkeit des Codes verbessert).
+DAO's (data access objects) play an important role since they represent the layer that communicates with the database. All queries will be executed here. I havent thought of a way yet to perfectly separate query code from the feature code. So you might find strange constellations where you are calling mysql functions in a feature module. Sorry for that.
 
-## Bisheriger workflow:
+## Possible workflow:
 
-Wenn ihr ein neues Feature implementieren wollt, dann fangt ihr am Besten damit an im "feature_modules" Ordner einen neuen Subordner für das Feature anzulegen, dass ihr programmieren wollt. 
+If you want to implement a new feature, it's recommended that you create a new subdirectory in the 'feature_modules' directory. The code uses Lua's module syntax to encapsulate the functionality. A feature module directory normally has a single bootstrap script that redirects all calls to the scripts in the subdirectory and exposes these functionalies in a single table. So for example if you have a subdirectory called 'respawn_module' there should be a file called 'respawn_module.lua' that redirects all calls to the files in the subdirectory.
 
-Ich verwende dabei Lua's "module Syntax" (am Besten schaut ihr euch dazu den Code mal an) um die Funktionalitäten zu kapseln. Am Ende expose ich eine einzige table mit allen Funktionen und Variablen für das "feature module" drin.
-
-Diese table wird dann in der "bootstrap.lua" eingefügt und in die entsprechenden Gothic-Multiplayer Callbacks integriert.
-
-
-## Sonstiges:
-
-Ich weiß nicht wie lange ich noch aktiv sein werde in der Gothic-Multiplayer-Community. Deshalb möchte ich mich im vorraus entschuldigen, wenn keine Antwort von mir mehr zurückkommt. Die Leute die wissen wie man einen Multiplayer Server programmiert sollten in der Lage sein mit dem Code arbeiten zu können, wobei die meisten Features wahrscheinlich nichts innovatives sind und schon vielfach bereits implementiert wurden. Für die Anderen empfehle ich erstmal selbst einige Skripte zu schreiben um ein Gefühl für die Gothic Server Programmierung zu bekommen. 
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
