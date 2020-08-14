@@ -12,6 +12,9 @@ Unfortunately i have not written any test cases for the code. Most features were
 
 Youre allowed to use the code in this repository as you please. If you set up some badass server i would be happy to here from it.
 
+# Features
+These are some the features in the repository: registration/login, monster + ai + respawn, plants + respawn, alchemy, cooking, simple statless questing system
+
 ## Directories:
 The project contains 5 main directories. 
 
