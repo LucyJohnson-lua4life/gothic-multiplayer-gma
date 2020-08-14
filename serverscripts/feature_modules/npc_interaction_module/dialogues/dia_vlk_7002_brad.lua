@@ -4,7 +4,7 @@ require "serverscripts/has_item_globals"
 require "serverscripts/price_table"
 local inventory_dao = require "serverscripts/daos/inventory_dao"
 local check_id = DIA_BRAD_FURSELL_CHECKID
-local magic_material_id = DIA_BRAD_MAGICMATERIA_CHECKID
+local magic_material_id = DIA_BRAD_MAGICMATERIAL_CHECKID
 local dia_vlk_7002_brad = {}
  
 local function handleFurSellDialogue(playerid, text)
